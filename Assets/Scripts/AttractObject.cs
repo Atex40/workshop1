@@ -20,4 +20,9 @@ public class AttractObject : MonoBehaviour {
 
      	Destroy(gameObject);
      }
+
+     void OnDestroy () 
+     {
+     	SpawnerManag.Instance().RandoPop();
+     }
  }
