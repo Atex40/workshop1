@@ -1,0 +1,21 @@
+fileFormatVersion: 2
+guid: f17800928720e0445937934f5a2d6926
+timeCreated: 1508342141
+licenseType: Free
+TrueTypeFontImporter:
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontName: Space Marine
+  fontNames:
+  - Space Marine
+  fallbackFontReferences: []
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
