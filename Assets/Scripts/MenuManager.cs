@@ -43,5 +43,10 @@ public class MenuManager : MonoBehaviour {
         Application.Quit();
     }
 
+    public void ReturnToMenu()
+    {
+        SceneManager.LoadScene("SceneCodeUIPierre");
+    }
+
 }
 
