@@ -17,7 +17,7 @@ public class MouvementCube : MonoBehaviour {
 
 	if (Input.GetKeyDown("a")){
 		Debug.Log(Input.GetKeyDown("a"));
-		transform.rotation = Quartenion(0,0,90);
+//		transform.rotation = Quartenion(0,0,90);
 		}	
 	}
 }
