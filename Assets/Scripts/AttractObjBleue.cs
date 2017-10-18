@@ -23,6 +23,11 @@ public class AttractObjBleue : MonoBehaviour {
      		Destroy(gameObject);
      		UImanag.Instance().AddScore();
      	}
+
+        if (collision.gameObject.tag == other)
+        {
+            Destroy(gameObject);
+        }
      }
 
      void OnDestroy () 

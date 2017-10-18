@@ -8,6 +8,8 @@ public class UImanag : MonoBehaviour {
 	public Text score;
 	private int addscore;
 
+	private int vie = 3;
+
 	private static UImanag instance ;
     public static UImanag Instance () 
     {
@@ -46,4 +48,9 @@ public void AddScore (){
 
     	addscore += 10;
     }
+
+public void Vies (){
+
+		vie -= 1;
+	}
 }
