@@ -2,9 +2,9 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class AttractObject : MonoBehaviour {
+public class AttractObjVert : MonoBehaviour {
 
- 	public GameObject attractedTo;
+public GameObject attractedTo;
     public float speed = 5.0f;
 
      void Start () {}
@@ -18,7 +18,7 @@ public class AttractObject : MonoBehaviour {
 
     void OnCollisionEnter(Collision collision){
 
-     	if (collision.gameObject.tag == "Rouge")
+     	if (collision.gameObject.tag == "Vert")
      	{
      		Destroy(gameObject);
      		UImanag.Instance().AddScore();
