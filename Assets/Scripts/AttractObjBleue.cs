@@ -24,7 +24,7 @@ public class AttractObjBleue : MonoBehaviour {
      		UImanag.Instance().AddScore();
      	}
 
-        if (collision.gameObject.tag == other)
+        if (collision.gameObject.tag != "Bleu" )
         {
             Destroy(gameObject);
         }
