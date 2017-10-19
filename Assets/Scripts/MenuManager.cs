@@ -21,7 +21,7 @@ public class MenuManager : MonoBehaviour {
 
     public void GoToGame()
     {
-        SceneManager.LoadScene("ScenePierreCube");
+        SceneManager.LoadScene("SceneCubePierre");
     }
 
     public void OpenShop()
