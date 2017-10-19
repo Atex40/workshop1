@@ -7,6 +7,7 @@ public class MouvementCube : MonoBehaviour {
 	private float x = 0;
 	private float y = 0;
 	private float z = 0;
+	private float r = 0;
 	private float time = 0.2f;
 
 	void Start () {
@@ -17,6 +18,7 @@ public class MouvementCube : MonoBehaviour {
 		Turn();
 		Turn2();
 		Turn3();
+		Turn4();
 	}
 
 	void Turn () {
@@ -57,7 +59,7 @@ public class MouvementCube : MonoBehaviour {
 
 	if (Input.GetKeyDown("e")){
 		Debug.Log(Input.GetKeyDown("e"));
-		StartCoroutine(WaitTime2());
+		StartCoroutine(WaitTime3());
 		}	
 	}
 
@@ -67,6 +69,23 @@ public class MouvementCube : MonoBehaviour {
     	transform.rotation = Quaternion.Euler(x,y,z);
         yield return new WaitForSeconds(time);
         x += 45;
+        transform.rotation = Quaternion.Euler(x,y,z);
+    }
+
+    void Turn4 () {
+
+	if (Input.GetKeyDown("r")){
+		Debug.Log(Input.GetKeyDown("r"));
+		StartCoroutine(WaitTime4());
+		}	
+	}
+
+	IEnumerator WaitTime4()
+    {
+    	y -= 45;
+    	transform.rotation = Quaternion.Euler(x,y,z);
+        yield return new WaitForSeconds(time);
+        y -= 45;
         transform.rotation = Quaternion.Euler(x,y,z);
     }
 }
