@@ -12,6 +12,9 @@ public class UImanag : MonoBehaviour {
 
 	private int vie = 2;
 
+	public GameObject canvasHUD;
+	public GameObject canvasFin;
+
 	private static UImanag instance ;
     public static UImanag Instance () 
     {
@@ -55,10 +58,13 @@ public void LooseLife (){
 
 		lifeObjects[vie].SetActive(false);
 		vie --;
+		Time.timeScale = 1;
 
 		if (vie == -1)
 		{
-			
+			Time.timeScale = 0;
+			canvasHUD.SetActive(false);
+			canvasFin.SetActive(true);
 		}
 
 	}
