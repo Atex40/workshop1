@@ -9,5 +9,5 @@ EditorBuildSettings:
     path: Assets/Scenes/SceneCodeUIPierre.unity
     guid: 5180688b2f7522d498734f1c89eaa36c
   - enabled: 1
-    path: Assets/Scenes/ScenePierreCube.unity
+    path: Assets/Scenes/SceneCubePierre.unity
     guid: ffc51706d8bc9e9488ac7bb4b4ba5b60
