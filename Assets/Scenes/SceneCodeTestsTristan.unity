@@ -156,6 +156,7 @@ MonoBehaviour:
   - {fileID: 592921602}
   - {fileID: 1330466037}
   - {fileID: 1551514284}
+  mainCube: {fileID: 0}
 --- !u!1001 &230302218
 Prefab:
   m_ObjectHideFlags: 0
@@ -356,6 +357,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   score: {fileID: 1817853868}
+  lifeObjects: []
 --- !u!4 &1046512005
 Transform:
   m_ObjectHideFlags: 0
@@ -645,6 +647,22 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!1 &2043100362 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1939337289160524, guid: de399d78af44df74a95663e4ecae6e54,
+    type: 2}
+  m_PrefabInternal: {fileID: 1968760038}
+--- !u!114 &2043100363
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2043100362}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0fe54d28fc556234287eae04461e18f6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &2045049324 stripped
 GameObject:
   m_PrefabParentObject: {fileID: 1734590642815502, guid: de399d78af44df74a95663e4ecae6e54,
