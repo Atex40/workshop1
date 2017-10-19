@@ -23,7 +23,7 @@ GameObject:
   - component: {fileID: 65047477740450146}
   - component: {fileID: 23933621157513148}
   - component: {fileID: 54913526978197046}
-  - component: {fileID: 114616002259080184}
+  - component: {fileID: 114192394600432998}
   m_Layer: 0
   m_Name: Objet 3
   m_TagString: Vert
@@ -110,7 +110,7 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &114616002259080184
+--- !u!114 &114192394600432998
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -118,9 +118,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1195133762921346}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0d33cbebaa598f846b9ca79c1add5d0e, type: 3}
+  m_Script: {fileID: 11500000, guid: 93d617dac79246341a08cff982f282c2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  attractedTo: {fileID: 1939337289160524, guid: de399d78af44df74a95663e4ecae6e54,
-    type: 2}
   speed: 50

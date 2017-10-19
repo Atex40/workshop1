@@ -7,6 +7,7 @@ public class SpawnerManag : MonoBehaviour {
 	public List<GameObject> spawnItems = new List<GameObject>();
 	public Transform[] spawnPoints;
 	private float nbmaxprefab =0f;
+	public Transform mainCube;
 
 	private static SpawnerManag instance ;
     public static SpawnerManag Instance ()
@@ -44,6 +45,7 @@ public class SpawnerManag : MonoBehaviour {
     		GameObject iGo;
     		iGo = Instantiate(spawnItems[tempory], spawnPoints[spwn].position, Quaternion.identity);
         	nbmaxprefab += 1f;
+        	iGo.GetComponent<AttractObject>().SetTarget(mainCube);
   		}
 	}
 }

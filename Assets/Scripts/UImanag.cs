@@ -8,7 +8,9 @@ public class UImanag : MonoBehaviour {
 	public Text score;
 	private int addscore;
 
-	private int vie = 3;
+	public List<GameObject> lifeObjects;
+
+	private int vie = 2;
 
 	private static UImanag instance ;
     public static UImanag Instance () 
@@ -49,8 +51,15 @@ public void AddScore (){
     	addscore += 10;
     }
 
-public void Vies (){
+public void LooseLife (){
 
-		vie -= 1;
+		lifeObjects[vie].SetActive(false);
+		vie --;
+
+		if (vie == -1)
+		{
+			
+		}
+
 	}
 }

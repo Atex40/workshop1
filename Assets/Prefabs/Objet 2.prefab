@@ -23,7 +23,7 @@ GameObject:
   - component: {fileID: 65521130518398060}
   - component: {fileID: 23139473338316654}
   - component: {fileID: 54156513800292308}
-  - component: {fileID: 114351621976613932}
+  - component: {fileID: 114393574758450834}
   m_Layer: 0
   m_Name: Objet 2
   m_TagString: Bleu
@@ -110,7 +110,7 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &114351621976613932
+--- !u!114 &114393574758450834
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -118,9 +118,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1495867315539112}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c57a9a08a56d2c74f9a1b6ee6305c61d, type: 3}
+  m_Script: {fileID: 11500000, guid: 93d617dac79246341a08cff982f282c2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  attractedTo: {fileID: 1939337289160524, guid: de399d78af44df74a95663e4ecae6e54,
-    type: 2}
   speed: 50
