@@ -9,6 +9,7 @@ public class UImanag : MonoBehaviour {
 	private int addscore;
 
 	public List<GameObject> lifeObjects;
+	public List<GameObject> objSetActive;
 
 	private int vie = 2;
 
@@ -58,13 +59,12 @@ public void LooseLife (){
 
 		lifeObjects[vie].SetActive(false);
 		vie --;
-		Time.timeScale = 1;
 
 		if (vie == -1)
 		{
-			Time.timeScale = 0;
 			canvasHUD.SetActive(false);
 			canvasFin.SetActive(true);
+
 		}
 
 	}
