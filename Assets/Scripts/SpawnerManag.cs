@@ -8,6 +8,7 @@ public class SpawnerManag : MonoBehaviour {
 	public Transform[] spawnPoints;
 	private float nbmaxprefab =0f;
 	public Transform mainCube;
+	private GameObject iGo;
 
 	private static SpawnerManag instance ;
     public static SpawnerManag Instance ()
@@ -42,10 +43,13 @@ public class SpawnerManag : MonoBehaviour {
     	{
     		int tempory = UnityEngine.Random.Range(0,spawnItems.Count);
     		int spwn = UnityEngine.Random.Range(0, spawnPoints.Length);
-    		GameObject iGo;
     		iGo = Instantiate(spawnItems[tempory], spawnPoints[spwn].position, Quaternion.identity);
         	nbmaxprefab += 1f;
         	iGo.GetComponent<AttractObject>().SetTarget(mainCube);
   		}
+	}
+
+	public void DeactivateiGo () {
+		iGo.SetActive(false);
 	}
 }
