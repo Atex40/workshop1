@@ -388,6 +388,12 @@ Prefab:
     - {fileID: 114234022550587038, guid: cf3c797b78bd0bb4aaf30484d37778da, type: 2}
   m_ParentPrefab: {fileID: 100100000, guid: cf3c797b78bd0bb4aaf30484d37778da, type: 2}
   m_IsPrefabParent: 0
+--- !u!114 &528474904 stripped
+MonoBehaviour:
+  m_PrefabParentObject: {fileID: 114757468706790624, guid: c87769eba34fce544be9067b8ce34289,
+    type: 2}
+  m_PrefabInternal: {fileID: 1528190929}
+  m_Script: {fileID: 708705254, guid: f70555f144d8491a825f0804e09c671c, type: 3}
 --- !u!4 &555200926 stripped
 Transform:
   m_PrefabParentObject: {fileID: 4109157124871278, guid: de399d78af44df74a95663e4ecae6e54,
@@ -433,6 +439,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1046512005}
   - component: {fileID: 1046512004}
+  - component: {fileID: 1046512006}
   m_Layer: 0
   m_Name: UImanager
   m_TagString: Untagged
@@ -462,9 +469,7 @@ MonoBehaviour:
   canvasHUD: {fileID: 1121619233}
   canvasFin: {fileID: 1536661622}
   cubeFin: {fileID: 1954737901}
-  item1: {fileID: 1354719269935242, guid: 4ed29078f2ecbcc46863457953f23ef9, type: 2}
-  item2: {fileID: 1495867315539112, guid: fdc2756d29de9ed4a9a8119359e9597e, type: 2}
-  item3: {fileID: 1195133762921346, guid: 3676beb329394fc4caf72398ef0212a2, type: 2}
+  picesGagnees: {fileID: 528474904}
 --- !u!4 &1046512005
 Transform:
   m_ObjectHideFlags: 0
@@ -478,6 +483,19 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1046512006
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1046512003}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 541b8ac2793e54846a253b945551c2d9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  addMoney: 0
+  money: {fileID: 0}
 --- !u!1 &1121619233 stripped
 GameObject:
   m_PrefabParentObject: {fileID: 1140602324197058, guid: 35a743c1b27d892488ba73c9c8810356,

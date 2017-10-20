@@ -46,6 +46,7 @@ public class UImanag : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 		AffichageScore();
+		CoinsAffichage();
 	}
 
 	void AffichageScore () {
@@ -83,7 +84,7 @@ public void ReturnToMenu()
 
     void CoinsAffichage () {
 
-    picesGagnees.text = "Pièces gagnées : " + EconomyManager.Instance().GetMoney().ToString();
+    picesGagnees.text = "Pieces gagnees : " + EconomyManager.Instance().GetMoney().ToString();
     	
     }
 }
