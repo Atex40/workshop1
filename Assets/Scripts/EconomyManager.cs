@@ -97,4 +97,9 @@ public class EconomyManager : MonoBehaviour {
 
         currentMoney += 1;
     }
+
+    public int GetMoney () {
+
+        return currentMoney;
+    }
 }

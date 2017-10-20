@@ -18,7 +18,7 @@ public class UImanag : MonoBehaviour {
 	public GameObject canvasFin;
 	public GameObject cubeFin;
 
-	public GameObject picesGagnees;
+	public Text picesGagnees;
 
 	private static UImanag instance ;
     public static UImanag Instance () 
@@ -81,8 +81,9 @@ public void ReturnToMenu()
        // SceneManager.LoadScene("SceneCodeUIPierre");
     }
 
-    void AddCoins () {
+    void CoinsAffichage () {
 
-
+    picesGagnees.text = "Pièces gagnées : " + EconomyManager.Instance().GetMoney().ToString();
+    	
     }
 }
