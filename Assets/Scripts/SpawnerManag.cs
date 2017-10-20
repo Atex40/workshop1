@@ -49,7 +49,7 @@ public class SpawnerManag : MonoBehaviour {
   		}
 	}
 
-	public void DeactivateiGo () {
-		Destroy(iGo);
-	}
+	// public void DeactivateiGo () {
+	// 	iGo.SetActive(false);
+	// }
 }

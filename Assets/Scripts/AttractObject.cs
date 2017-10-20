@@ -7,7 +7,12 @@ public class AttractObject : MonoBehaviour {
  	private Transform attractedTo;
     public float speed = 50.0f;
 
-     void Start () {}
+     void Start () {
+     	if(!UImanag.Instance().IsGameOn())
+     	{
+     		gameObject.SetActive(false);
+     	}
+     }
      void FixedUpdate ()
 
      {

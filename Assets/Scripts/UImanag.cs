@@ -20,6 +20,8 @@ public class UImanag : MonoBehaviour {
 
 	public Text picesGagnees;
 
+	private bool gameOnOff = true;
+
 	private static UImanag instance ;
     public static UImanag Instance () 
     {
@@ -77,7 +79,7 @@ public void LooseLife (){
 			canvasHUD.SetActive(false);
 			canvasFin.SetActive(true);
 			cubeFin.SetActive(false);
-			SpawnerManag.Instance().DeactivateiGo();
+			gameOnOff = false;
 		}
 
 	}
@@ -96,5 +98,13 @@ public void ReturnToMenu()
 public int ScoreSpeed () {
 
 	return addscore;
-}
+
+	}
+
+public bool IsGameOn () {
+
+	return gameOnOff;
+
+	}
+
 }
