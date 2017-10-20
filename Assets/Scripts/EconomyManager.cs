@@ -31,8 +31,8 @@ public class EconomyManager : MonoBehaviour {
 
     // Use this for initialization
     void Start () {
-        //currentMoney = 0;
-	}
+        currentMoney = PlayerPrefs.GetInt("currentMoney");
+    }
 	
 	// Update is called once per frame
 	void Update () {
@@ -42,6 +42,7 @@ public class EconomyManager : MonoBehaviour {
         {
             currentMoney = currentMoney + 250;
             Debug.Log("Plus de cash");
+            PlayerPrefs.SetInt("currentMoney", currentMoney);
         }
 
 	}
