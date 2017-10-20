@@ -41,6 +41,7 @@ public class MenuManager : MonoBehaviour {
     public void QuitApp()
     {
         Application.Quit();
+        Debug.Log("Quitter application");
     }
 
     public void ReturnToMenu()
