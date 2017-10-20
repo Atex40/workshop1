@@ -5,7 +5,7 @@ using UnityEngine;
 public class AttractObject : MonoBehaviour {
 
  	private Transform attractedTo;
-    public float speed = 5.0f;
+    public float speed = 50.0f;
 
      void Start () {}
      void FixedUpdate ()
@@ -13,6 +13,7 @@ public class AttractObject : MonoBehaviour {
      {
         Vector3 direction = attractedTo.position - transform.position;
         gameObject.GetComponent<Rigidbody>().AddForce((0.01f * speed) * direction);
+        UpSpeed ();
  
      }
 
@@ -43,6 +44,51 @@ public class AttractObject : MonoBehaviour {
      public void SetTarget (Transform leCube) {
 
      	attractedTo = leCube;
+
+     }
+
+     void UpSpeed () {
+
+     	if (UImanag.Instance().ScoreSpeed() >= 1000)
+     	{
+     		speed = 80;
+     	}
+
+     	if (UImanag.Instance().ScoreSpeed() >= 2000)
+     	{
+     		speed = 110;
+     	}
+
+     	if (UImanag.Instance().ScoreSpeed() >= 3000)
+     	{
+     		speed = 175;
+     	}
+
+     	if (UImanag.Instance().ScoreSpeed() >= 5000)
+     	{
+     		speed = 230;
+     	}
+
+     	if (UImanag.Instance().ScoreSpeed() >= 6000)
+     	{
+     		speed = 300;
+     	}
+
+     	if (UImanag.Instance().ScoreSpeed() >= 8000)
+     	{
+     		speed = 380;
+     	}
+
+     	if (UImanag.Instance().ScoreSpeed() >= 9000)
+     	{
+     		speed = 450;
+     	}
+
+     	if (UImanag.Instance().ScoreSpeed() >= 10000)
+     	{
+     		speed = 600;
+     	}
+
 
      }
  }

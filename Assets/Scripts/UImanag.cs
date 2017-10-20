@@ -47,6 +47,10 @@ public class UImanag : MonoBehaviour {
 	void Update () {
 		AffichageScore();
 		CoinsAffichage();
+		if (Input.GetKeyDown("e")){
+		Debug.Log(Input.GetKeyDown("e"));
+		addscore +=500;
+		}	
 	}
 
 	void AffichageScore () {
@@ -58,7 +62,8 @@ public class UImanag : MonoBehaviour {
 
 public void AddScore (){
 
-    	addscore += 10;
+    	addscore += 100;
+
     }
 
 public void LooseLife (){
@@ -87,4 +92,9 @@ public void ReturnToMenu()
     picesGagnees.text = "Pieces gagnees : " + EconomyManager.Instance().GetMoney().ToString();
     	
     }
+
+public int ScoreSpeed () {
+
+	return addscore;
+}
 }
