@@ -544,7 +544,7 @@ GameObject:
   - component: {fileID: 114264970930081944}
   - component: {fileID: 114545483324862764}
   m_Layer: 5
-  m_Name: PrefabCanvasMenuAcceuil
+  m_Name: PrefabCanvasMenuAcceuilPurpleNebula
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

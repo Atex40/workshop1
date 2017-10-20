@@ -75,7 +75,7 @@ GameObject:
   - component: {fileID: 114331988296208254}
   - component: {fileID: 114219770303383546}
   m_Layer: 5
-  m_Name: PrefabCanvasDefaite
+  m_Name: PrefabCanvasDefaitePurpleNebula
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
