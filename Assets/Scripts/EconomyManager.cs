@@ -92,7 +92,7 @@ public class EconomyManager : MonoBehaviour {
 
 
 
-    public void AddCoins () {
+    public void AddMoney () {
 
         currentMoney += 1;
     }
