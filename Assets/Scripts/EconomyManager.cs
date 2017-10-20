@@ -5,7 +5,7 @@ using UnityEngine.UI;
 
 public class EconomyManager : MonoBehaviour {
 
-    private int currentMoney;
+    private int currentMoney = 0;
     public int addMoney;
     public Text money;
     private bool bi1 = false;
@@ -31,7 +31,7 @@ public class EconomyManager : MonoBehaviour {
 
     // Use this for initialization
     void Start () {
-        currentMoney = 0;
+        //currentMoney = 0;
 	}
 	
 	// Update is called once per frame
