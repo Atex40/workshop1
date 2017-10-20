@@ -69,7 +69,7 @@ public void LooseLife (){
 			canvasHUD.SetActive(false);
 			canvasFin.SetActive(true);
 			cubeFin.SetActive(false);
-			SpawnerManag.Instance().RandoPop().GameObject(iGo).SetActive(false);
+	//		SpawnerManag.Instance().RandoPop().GameObject(iGo).SetActive(false);
 		}
 
 	}
