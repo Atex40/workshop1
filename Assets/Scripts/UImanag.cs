@@ -18,6 +18,8 @@ public class UImanag : MonoBehaviour {
 	public GameObject canvasFin;
 	public GameObject cubeFin;
 
+	public GameObject picesGagnees;
+
 	private static UImanag instance ;
     public static UImanag Instance () 
     {
@@ -77,5 +79,10 @@ public void LooseLife (){
 public void ReturnToMenu()
     {
        // SceneManager.LoadScene("SceneCodeUIPierre");
+    }
+
+    void AddCoins () {
+
+    	
     }
 }
