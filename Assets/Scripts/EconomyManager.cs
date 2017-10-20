@@ -12,8 +12,25 @@ public class EconomyManager : MonoBehaviour {
     private bool bi2 = false;
     private bool bi3 = false;
 
-	// Use this for initialization
-	void Start () {
+    private static EconomyManager instance;
+    public static EconomyManager Instance()
+    {
+        return instance;
+    }
+    void Awake()
+    {
+        if (instance != null)
+        {
+            Destroy(gameObject);
+        }
+        else
+        {
+            instance = this;
+        }
+    }
+
+    // Use this for initialization
+    void Start () {
         currentMoney = 0;
 	}
 	
@@ -30,10 +47,6 @@ public class EconomyManager : MonoBehaviour {
 	}
 
 
-    public void EarnMoney()
-    {
-        currentMoney = currentMoney + addMoney;
-    }
 
     public void BuyItem1()
     {
