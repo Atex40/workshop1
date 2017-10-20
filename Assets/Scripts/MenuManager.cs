@@ -21,7 +21,7 @@ public class MenuManager : MonoBehaviour {
 
     public void GoToGame()
     {
-        SceneManager.LoadScene("SceneCubePierre");
+        SceneManager.LoadScene("InGame");
     }
 
     public void OpenShop()
@@ -46,7 +46,12 @@ public class MenuManager : MonoBehaviour {
 
     public void ReturnToMenu()
     {
-        SceneManager.LoadScene("SceneCodeUIPierre");
+        SceneManager.LoadScene("MainMenu");
+    }
+
+    public void TryAgain()
+    {
+        SceneManager.LoadScene("InGame");
     }
 
 }

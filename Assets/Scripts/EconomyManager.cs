@@ -50,7 +50,7 @@ public class EconomyManager : MonoBehaviour {
 
     public void BuyItem1()
     {
-        if (currentMoney > 500 && bi1 == false)
+        if (currentMoney >= 500 && bi1 == false)
         {
             currentMoney = currentMoney - 500;
             bi1 = true;
@@ -64,7 +64,7 @@ public class EconomyManager : MonoBehaviour {
 
     public void BuyItem2()
     {
-        if (currentMoney > 1000 && bi2 == false)
+        if (currentMoney >= 1000 && bi2 == false)
         {
             currentMoney = currentMoney - 1000;
             bi2 = true;
@@ -78,7 +78,7 @@ public class EconomyManager : MonoBehaviour {
 
     public void BuyItem3()
     {
-        if (currentMoney > 2000 && bi3 == false)
+        if (currentMoney >= 2000 && bi3 == false)
         {
             currentMoney = currentMoney - 2000;
             bi3 = true;
