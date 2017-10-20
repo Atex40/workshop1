@@ -89,4 +89,11 @@ public class EconomyManager : MonoBehaviour {
         Debug.Log("Item 3 ne peut etre acheté");
         }
     }
+
+
+
+    public void AddCoins () {
+
+        currentMoney += 1;
+    }
 }

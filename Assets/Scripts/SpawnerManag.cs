@@ -50,6 +50,6 @@ public class SpawnerManag : MonoBehaviour {
 	}
 
 	public void DeactivateiGo () {
-		iGo.SetActive(false);
+		Destroy(iGo);
 	}
 }
