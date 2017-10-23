@@ -8,9 +8,9 @@ public class EconomyManager : MonoBehaviour {
     private int currentMoney = 0;
     public int addMoney;
     public Text money;
-    private int bi1YES = 0;
-    private int bi2YES = 0;
-    private int bi3YES = 0;
+    private int bi1YES;
+    private int bi2YES;
+    private int bi3YES;
     public GameObject buy1Button;
     public GameObject buy2Button;
     public GameObject buy3Button;
@@ -38,6 +38,21 @@ public class EconomyManager : MonoBehaviour {
         bi1YES = PlayerPrefs.GetInt("boolean1");
         bi2YES = PlayerPrefs.GetInt("boolean2");
         bi3YES = PlayerPrefs.GetInt("boolean3");
+
+        if (bi1YES == 1)
+        {
+            Destroy(buy1Button);
+        }
+
+        if (bi2YES == 1)
+        {
+            Destroy(buy2Button);
+        }
+
+        if (bi3YES == 1)
+        {
+            Destroy(buy3Button);
+        }
     }
 	
 	// Update is called once per frame
@@ -76,6 +91,7 @@ public class EconomyManager : MonoBehaviour {
             bi1YES = 1;
             PlayerPrefs.SetInt("currentMoney", currentMoney);
             PlayerPrefs.SetInt("boolean1", bi1YES);
+            Destroy(buy1Button);
             Debug.Log("Item 1 acheté");
         }
         else
@@ -92,6 +108,7 @@ public class EconomyManager : MonoBehaviour {
             bi2YES = 1;
             PlayerPrefs.SetInt("currentMoney", currentMoney);
             PlayerPrefs.SetInt("boolean2", bi2YES);
+            Destroy(buy2Button);
             Debug.Log("Item 2 acheté");
         }
         else
@@ -102,12 +119,13 @@ public class EconomyManager : MonoBehaviour {
 
     public void BuyItem3()
     {
-        if (currentMoney >= 2000 && bi3YES == 0)
+        if (currentMoney >= 1500 && bi3YES == 0)
         {
-            currentMoney = currentMoney - 2000;
+            currentMoney = currentMoney - 1500;
             bi3YES = 1;
             PlayerPrefs.SetInt("currentMoney", currentMoney);
             PlayerPrefs.SetInt("boolean3", bi3YES);
+            Destroy(buy3Button);
             Debug.Log("Item 3 acheté");
         }
         else
