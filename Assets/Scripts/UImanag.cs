@@ -22,6 +22,8 @@ public class UImanag : MonoBehaviour {
 
 	private bool gameOnOff = true;
 
+	public GameObject canvasMMIG;
+
 	private static UImanag instance ;
     public static UImanag Instance () 
     {
@@ -86,7 +88,7 @@ public void LooseLife (){
 
 public void ReturnToMenu()
     {
-       // SceneManager.LoadScene("SceneCodeUIPierre");
+   //     SceneManager.LoadScene("MainMenu");
     }
 
     void CoinsAffichage () {
@@ -107,4 +109,23 @@ public bool IsGameOn () {
 
 	}
 
+public	void Recommencer () {
+
+		SceneManager.LoadScene("SceneLucas");
+	}
+
+public void MainMenuIG () {
+
+	canvasMMIG.SetActive(true);
+}
+
+public void BackMenuOui () {
+
+	SceneManager.LoadScene("");
+}
+
+public void BackMenuNon () {
+
+	canvasMMIG.SetActive(false);
+}
 }

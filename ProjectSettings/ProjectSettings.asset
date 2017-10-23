@@ -138,12 +138,13 @@ PlayerSettings:
       depthFormat: 1
   protectGraphicsMemory: 0
   useHDRDisplay: 0
-  targetPixelDensity: 0
-  resolutionScalingMode: 0
-  applicationIdentifier: {}
+  targetPixelDensity: 200
+  resolutionScalingMode: 1
+  applicationIdentifier:
+    Android: com.cubx
   buildNumber: {}
-  AndroidBundleVersionCode: 1
-  AndroidMinSdkVersion: 16
+  AndroidBundleVersionCode: 2
+  AndroidMinSdkVersion: 19
   AndroidTargetSdkVersion: 0
   AndroidPreferredInstallLocation: 1
   aotOptions: 
