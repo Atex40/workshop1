@@ -32,3 +32,5 @@ sysinfo.txt
 # Builds
 *.apk
 *.unitypackage
+Assets/Scenes/Scenes Final/SceneLucas.unity
+Assets/Scenes/Scenes Final/SceneLucas.unity.meta
