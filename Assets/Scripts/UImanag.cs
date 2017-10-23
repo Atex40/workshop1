@@ -88,7 +88,7 @@ public void LooseLife (){
 
 public void ReturnToMenu()
     {
-   //     SceneManager.LoadScene("MainMenu");
+	     SceneManager.LoadScene("MainMenu");
     }
 
     void CoinsAffichage () {
@@ -121,7 +121,7 @@ public void MainMenuIG () {
 
 public void BackMenuOui () {
 
-	SceneManager.LoadScene("");
+	SceneManager.LoadScene("MainMenu");
 }
 
 public void BackMenuNon () {
