@@ -4,13 +4,19 @@ using UnityEngine;
 
 public class MouvementCube : MonoBehaviour {
 
-	private float x = 0;
-	private float y = 0;
-	private float z = 0;
-	// private float r = 0;
-	private float time = 0.2f;
+	public float turnSpeed = 1.0f;
+	// private float x = 0;
+	// private float y = 0;
+	// private float z = 0;
+	// private float time = 0.02f;
 	private Vector3 direction;
 	private Vector3 startPos;
+	private bool turnRight = false;
+	private bool turnLeft = false;
+	private bool turnRightUp = false;
+	private bool turnLeftUp = false;
+	private bool turnRightDown = false;
+	private bool turnLeftDown = false;
 
 	void Start () {
 	
@@ -31,18 +37,62 @@ public class MouvementCube : MonoBehaviour {
 			}
 			if (Input.GetMouseButtonUp(0)){
 				direction.Normalize();
-				if (direction.x > 0 && direction.y < 0.3 && direction.y > -0.3){
+				if (direction.x > 0.2 && direction.y < 0.2 && direction.y > -0.2){
+					//turnLeft = true;
+					//turnLeft = false;
 					StartCoroutine("WaitTime2");
 				}
-				if (direction.x < 0 && direction.y < 0.3 && direction.y > -0.3){
+				else if (direction.x < -0.2 && direction.y < 0.2 && direction.y > -0.2){
+					//turnRight = true;
+					//turnRight = false;
 					StartCoroutine("WaitTime4");
 				}
-				if (direction.y < 0 && direction.x < 0.5 && direction.x > -0.5){
+				else if (direction.y < -0.2 && direction.x > 0.2){
+					//turnRightDown = true;
+					//turnRightDown = false;
+					StartCoroutine("WaitTime5");
+				}
+				else if (direction.y > 0.2 && direction.x > 0.2){
+					//turnLeftUp = true;
+					//turnLeftUp = false;
+					StartCoroutine("WaitTime6");
+				}
+				else if (direction.y < -0.2 && direction.x < -0.2){
+					//turnLeftDown = true;
+					//turnLeftDown = false;
 					StartCoroutine("WaitTime3");
 				}
-				if (direction.y > 0 && direction.x < 0.5 && direction.x > -0.5){
+				else if (direction.y > 0.2 && direction.x < -0.2){
+					//turnRightUp = true;
+					//turnRightUp = false;
 					StartCoroutine("WaitTime");
 				}
+
+			}
+
+			if (turnRight)
+			{
+				transform.Rotate(Vector3.up * turnSpeed * Time.deltaTime, Space.World);
+			}
+			if (turnLeft)
+			{
+				transform.Rotate(-Vector3.up * turnSpeed * Time.deltaTime, Space.World);
+			}
+			if (turnRightUp)
+			{
+				transform.Rotate(Vector3.forward * turnSpeed * Time.deltaTime, Space.World);
+			}
+			if (turnLeftUp)
+			{
+				transform.Rotate(Vector3.right * turnSpeed * Time.deltaTime, Space.World);
+			}
+			if (turnRightDown)
+			{
+				transform.Rotate(-Vector3.forward * turnSpeed * Time.deltaTime, Space.World);
+			}
+			if (turnLeftDown)
+			{
+				transform.Rotate(-Vector3.right * turnSpeed * Time.deltaTime, Space.World);
 			}
 		}
 
@@ -57,14 +107,17 @@ public class MouvementCube : MonoBehaviour {
 //		}	
 //	}
 
-	IEnumerator WaitTime()
-    {
-    	z += 45;
-    	transform.rotation = Quaternion.Euler(x,y,z);
-        yield return new WaitForSeconds(time);
-        z += 45;
-        transform.rotation = Quaternion.Euler(x,y,z);
-    }
+IEnumerator WaitTime()
+ {
+ 	turnRightUp = true;
+	yield return new WaitForSeconds(1);
+	turnRightUp = false;
+ //    	z += 45;
+ //    	transform.rotation = Quaternion.Euler(x,y,z);
+ //        yield return new WaitForSeconds(time);
+ //        z += 45;
+ //        transform.rotation = Quaternion.Euler(x,y,z);
+ }
 
     //void Turn2 () 
     //{
@@ -75,15 +128,17 @@ public class MouvementCube : MonoBehaviour {
 //		}	
 //	}
 
-	IEnumerator WaitTime2()
-    {
-    	Debug.Log("Time2");
-    	y += 45;
-    	transform.rotation = Quaternion.Euler(x,y,z);
-        yield return new WaitForSeconds(time);
-        y += 45;
-        transform.rotation = Quaternion.Euler(x,y,z);
-    }
+IEnumerator WaitTime2()
+ {
+ 	turnLeft = true;
+	yield return new WaitForSeconds(1);
+	turnLeft = false;
+ //    	y += 45;
+ //    	transform.rotation = Quaternion.Euler(x,y,z);
+ //        yield return new WaitForSeconds(time);
+ //        y += 45;
+ //        transform.rotation = Quaternion.Euler(x,y,z);
+ }
 
     //void Turn3 () 
     //{
@@ -94,14 +149,17 @@ public class MouvementCube : MonoBehaviour {
 //		}	
 //	}
 
-	IEnumerator WaitTime3()
-    {
-    	x += 45;
-    	transform.rotation = Quaternion.Euler(x,y,z);
-        yield return new WaitForSeconds(time);
-        x += 45;
-        transform.rotation = Quaternion.Euler(x,y,z);
-    }
+IEnumerator WaitTime3()
+ {
+ 	turnLeftDown = true;
+	yield return new WaitForSeconds(1);
+	turnLeftDown = false;
+ //    	x -= 45;
+ //    	transform.rotation = Quaternion.Euler(x,y,z);
+ //        yield return new WaitForSeconds(time);
+ //        x -= 45;
+ //        transform.rotation = Quaternion.Euler(x,y,z);
+ }
 
     //void Turn4 () 
   //  {
@@ -112,12 +170,39 @@ public class MouvementCube : MonoBehaviour {
 	//	}	
 	//}
 
-	IEnumerator WaitTime4()
-    {
-    	y -= 45;
-    	transform.rotation = Quaternion.Euler(x,y,z);
-        yield return new WaitForSeconds(time);
-        y -= 45;
-        transform.rotation = Quaternion.Euler(x,y,z);
-    }
+IEnumerator WaitTime4()
+{
+	turnRight = true;
+	yield return new WaitForSeconds(1);
+	turnRight = false;
+//     	y -= 45;
+//     	transform.rotation = Quaternion.Euler(x,y,z);
+//         yield return new WaitForSeconds(time);
+//         y -= 45;
+//         transform.rotation = Quaternion.Euler(x,y,z);
+}
+
+IEnumerator WaitTime5()
+{
+	turnRightDown = true;
+	yield return new WaitForSeconds(1);
+	turnRightDown = false;
+//     	z -= 45;
+//     	transform.rotation = Quaternion.Euler(x,y,z);
+//         yield return new WaitForSeconds(time);
+//         z -= 45;
+//         transform.rotation = Quaternion.Euler(x,y,z);
+}
+
+IEnumerator WaitTime6()
+{
+	turnLeftUp = true;
+	yield return new WaitForSeconds(1);
+	turnLeftUp = false;
+//     	x += 45;
+//     	transform.rotation = Quaternion.Euler(x,y,z);
+//         yield return new WaitForSeconds(time);
+//         x += 45;
+//         transform.rotation = Quaternion.Euler(x,y,z);
+}
 }
