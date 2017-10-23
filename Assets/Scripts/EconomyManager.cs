@@ -73,26 +73,50 @@ public class EconomyManager : MonoBehaviour {
         bi3YES = PlayerPrefs.GetInt("boolean3");
         bi1BOUGHT = PlayerPrefs.GetInt("EspaceVert");
 
-        if (bi1YES == 1) // SI LE SKIN ESPACE VERT EST SELECTIONNE
+        if (bi1BOUGHT == 1) // SI LE SKIN ESPACE VERT EST ACHETE
         {
             Destroy(buy1Button);
-            //RenderSettings.skybox = skybox2;
         }
 
-        if (bi2YES == 1)
+        if (bi2BOUGHT == 1)
         {
             Destroy(buy2Button);
         }
 
-        if (bi3YES == 1)
+        if (bi3BOUGHT == 1)
         {
             Destroy(buy3Button);
+        }
+        if (bi1YES == 1) // SI LE SKIN ESPACE VERT EST SELECTIONNE
+        {
+            bi2YES = 0;
+            bi3YES = 0;
+            Destroy(select1);
+            PlayerPrefs.SetInt("boolean1", bi1YES);
+            RenderSettings.skybox = skybox2;
+            quitButton.image.overrideSprite = quitSprite2;
+            playButton.image.overrideSprite = playSprite2;
+            shopButton.image.overrideSprite = shopSprite2;
+            money.color = Color.green;
+            highScore.color = Color.green;
+            moneyLogo.sprite = moneyImage2;
+
+        }
+
+        if (bi2YES == 1)
+        {
+            
+        }
+
+        if (bi3YES == 1)
+        {
+            
         }
     }
 	
 	// Update is called once per frame
 	void Update () {
-
+        
         money.text = currentMoney.ToString();
         if (Input.GetKeyDown("c")) // Ajoute monnaie au joueur
         {
@@ -114,7 +138,10 @@ public class EconomyManager : MonoBehaviour {
             Debug.Log("monnaie reinitialisee");
         }
 
-	}
+        AffichagePieces();
+
+
+    }
 
 
 
