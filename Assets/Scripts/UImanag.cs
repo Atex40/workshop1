@@ -86,7 +86,7 @@ public void LooseLife (){
 
 public void ReturnToMenu()
     {
-       // SceneManager.LoadScene("SceneCodeUIPierre");
+   //     SceneManager.LoadScene("MainMenu");
     }
 
     void CoinsAffichage () {
@@ -105,6 +105,11 @@ public bool IsGameOn () {
 
 	return gameOnOff;
 
+	}
+
+public	void Recommencer () {
+
+		SceneManager.LoadScene("SceneLucas");
 	}
 
 }
