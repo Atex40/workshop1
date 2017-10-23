@@ -10,23 +10,30 @@ public class EconomyManager : MonoBehaviour {
     private int bi1YES;
     private int bi2YES;
     private int bi3YES;
-    public GameObject buy1Button;
-    public GameObject buy2Button;
-    public GameObject buy3Button;
+
     public Material skybox2;
 
+    // ELEMENTS UI
     public Button quitButton;
     public Button playButton;
     public Button shopButton;
+    public Button unlockBuy1;
+    public Button unlockBuy2;
+    public Button unlockBuy3;
     public Image moneyLogo;
     public Text highScore;
     public Text money;
+    public GameObject buy1Button;
+    public GameObject buy2Button;
+    public GameObject buy3Button;
 
+    // SKIN DE BASE
     public Sprite quitSprite1;
     public Sprite playSprite1;
     public Sprite shopSprite1;
     public Sprite moneySprite1;
 
+    // SKIN ESPACE VERT
     public Sprite quitSprite2;
     public Sprite playSprite2;
     public Sprite shopSprite2;
@@ -105,11 +112,13 @@ public class EconomyManager : MonoBehaviour {
     {
         if (currentMoney >= 500 && bi1YES == 0)
         {
+            Destroy(buy1Button);
             currentMoney = currentMoney - 500;
             bi1YES = 1;
             PlayerPrefs.SetInt("currentMoney", currentMoney);
             PlayerPrefs.SetInt("boolean1", bi1YES);
-            Destroy(buy1Button);
+            Debug.Log("Item 1 acheté");
+
             RenderSettings.skybox = skybox2;
             quitButton.image.overrideSprite = quitSprite2;
             playButton.image.overrideSprite = playSprite2;
@@ -117,7 +126,7 @@ public class EconomyManager : MonoBehaviour {
             money.color = Color.green;
             highScore.color = Color.green;
             moneyLogo.sprite = moneyImage2;
-            Debug.Log("Item 1 acheté");
+            
         }
         else
         {
