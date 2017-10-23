@@ -164,6 +164,16 @@ Prefab:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 114643833196056974, guid: 35a743c1b27d892488ba73c9c8810356,
+        type: 2}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114408138724698014, guid: 35a743c1b27d892488ba73c9c8810356,
+        type: 2}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 224100983325426726, guid: 35a743c1b27d892488ba73c9c8810356,
         type: 2}
       propertyPath: m_LocalPosition.x
@@ -269,6 +279,66 @@ Prefab:
     - target: {fileID: 1788984907523160, guid: 35a743c1b27d892488ba73c9c8810356, type: 2}
       propertyPath: m_IsActive
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114643833196056974, guid: 35a743c1b27d892488ba73c9c8810356,
+        type: 2}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114643833196056974, guid: 35a743c1b27d892488ba73c9c8810356,
+        type: 2}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 114643833196056974, guid: 35a743c1b27d892488ba73c9c8810356,
+        type: 2}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1046512004}
+    - target: {fileID: 114643833196056974, guid: 35a743c1b27d892488ba73c9c8810356,
+        type: 2}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: BackMenuOui
+      objectReference: {fileID: 0}
+    - target: {fileID: 114643833196056974, guid: 35a743c1b27d892488ba73c9c8810356,
+        type: 2}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 114408138724698014, guid: 35a743c1b27d892488ba73c9c8810356,
+        type: 2}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114408138724698014, guid: 35a743c1b27d892488ba73c9c8810356,
+        type: 2}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 114408138724698014, guid: 35a743c1b27d892488ba73c9c8810356,
+        type: 2}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1046512004}
+    - target: {fileID: 114408138724698014, guid: 35a743c1b27d892488ba73c9c8810356,
+        type: 2}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: BackMenuNon
+      objectReference: {fileID: 0}
+    - target: {fileID: 114408138724698014, guid: 35a743c1b27d892488ba73c9c8810356,
+        type: 2}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 114292166708170764, guid: 35a743c1b27d892488ba73c9c8810356,
+        type: 2}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1046512004}
+    - target: {fileID: 114292166708170764, guid: 35a743c1b27d892488ba73c9c8810356,
+        type: 2}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: MainMenuIG
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 35a743c1b27d892488ba73c9c8810356, type: 2}
@@ -434,6 +504,11 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!1 &1017054083 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1788984907523160, guid: 35a743c1b27d892488ba73c9c8810356,
+    type: 2}
+  m_PrefabInternal: {fileID: 230302218}
 --- !u!1 &1046512003
 GameObject:
   m_ObjectHideFlags: 0
@@ -474,6 +549,7 @@ MonoBehaviour:
   canvasFin: {fileID: 1536661622}
   cubeFin: {fileID: 1954737901}
   picesGagnees: {fileID: 528474904}
+  canvasMMIG: {fileID: 1017054083}
 --- !u!4 &1046512005
 Transform:
   m_ObjectHideFlags: 0
