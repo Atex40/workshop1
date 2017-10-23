@@ -7,7 +7,7 @@ public class MouvementCube : MonoBehaviour {
 	private float x = 0;
 	private float y = 0;
 	private float z = 0;
-	private float r = 0;
+	// private float r = 0;
 	private float time = 0.2f;
 	private Vector3 direction;
 	private Vector3 startPos;
@@ -22,7 +22,7 @@ public class MouvementCube : MonoBehaviour {
 		//Turn3();
 		//Turn4();
 
-		if (UImanag.Instance().IsGameOn() == true){
+		if (UImanag.Instance().IsGameOn()){
 			if (Input.GetMouseButtonDown(0)){
 				startPos = Input.mousePosition;
 			}
@@ -30,17 +30,18 @@ public class MouvementCube : MonoBehaviour {
 				direction = Input.mousePosition - startPos;
 			}
 			if (Input.GetMouseButtonUp(0)){
+				direction.Normalize();
 				if (direction.x > 0 && direction.y < 0.3 && direction.y > -0.3){
-					WaitTime2();
+					StartCoroutine("WaitTime2");
 				}
 				if (direction.x < 0 && direction.y < 0.3 && direction.y > -0.3){
-					WaitTime4();
+					StartCoroutine("WaitTime4");
 				}
-				if (direction.y < 0 && direction.x < 0.3 && direction.x > -0.3){
-					WaitTime3();
+				if (direction.y < 0 && direction.x < 0.5 && direction.x > -0.5){
+					StartCoroutine("WaitTime3");
 				}
-				if (direction.y > 0 && direction.x < 0.3 && direction.x > -0.3){
-					WaitTime();
+				if (direction.y > 0 && direction.x < 0.5 && direction.x > -0.5){
+					StartCoroutine("WaitTime");
 				}
 			}
 		}
@@ -76,6 +77,7 @@ public class MouvementCube : MonoBehaviour {
 
 	IEnumerator WaitTime2()
     {
+    	Debug.Log("Time2");
     	y += 45;
     	transform.rotation = Quaternion.Euler(x,y,z);
         yield return new WaitForSeconds(time);
