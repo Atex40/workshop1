@@ -26,7 +26,7 @@ RenderSettings:
   m_AmbientIntensity: 1
   m_AmbientMode: 0
   m_SubtractiveShadowColor: {r: 0.42, g: 0.478, b: 0.627, a: 1}
-  m_SkyboxMaterial: {fileID: 2100000, guid: b8f20d5ca50d16143afc11f5e4af6fc1, type: 2}
+  m_SkyboxMaterial: {fileID: 2100000, guid: 88ec9a13802800449aaf825aff3aadc7, type: 2}
   m_HaloStrength: 0.5
   m_FlareStrength: 1
   m_FlareFadeSpeed: 3
@@ -441,6 +441,14 @@ Prefab:
       value: 
       objectReference: {fileID: 21300000, guid: c145ade34fb718f468a87bb4b6ff9e40,
         type: 3}
+    - target: {fileID: 1286764034065366, guid: bf16395e9471bac449626f801b9eb9c5, type: 2}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1938687872799226, guid: bf16395e9471bac449626f801b9eb9c5, type: 2}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: bf16395e9471bac449626f801b9eb9c5, type: 2}
   m_IsPrefabParent: 0
@@ -590,16 +598,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   addMoney: 0
-  buy1Button: {fileID: 1397749220}
-  buy2Button: {fileID: 2019375857}
-  buy3Button: {fileID: 982495778}
   skybox2: {fileID: 2100000, guid: 5b21c6a8ce40f9641bd1204324b90b2c, type: 2}
   quitButton: {fileID: 1398121573}
   playButton: {fileID: 368519342}
   shopButton: {fileID: 2086909260}
+  unlockBuy1: {fileID: 0}
+  unlockBuy2: {fileID: 0}
+  unlockBuy3: {fileID: 0}
   moneyLogo: {fileID: 1219388069}
   highScore: {fileID: 758066514}
   money: {fileID: 1184876247}
+  buy1Button: {fileID: 1397749220}
+  buy2Button: {fileID: 2019375857}
+  buy3Button: {fileID: 982495778}
   quitSprite1: {fileID: 21300000, guid: 1c0ddfdb152771c4a867978d61413c87, type: 3}
   playSprite1: {fileID: 21300000, guid: 5b38eedf9287774428a2ac1f7ce38b66, type: 3}
   shopSprite1: {fileID: 21300000, guid: 4d5c2c6d0df692f4e9022e21e8322fd9, type: 3}

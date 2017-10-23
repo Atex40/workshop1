@@ -8,9 +8,15 @@ public class AttractObject : MonoBehaviour {
     public float speed = 50.0f;
 
      void Start () {
+
      	if(!UImanag.Instance().IsGameOn())
      	{
      		gameObject.SetActive(false);
+     	}
+
+     	else if (UImanag.Instance().IsGameOn()) {
+
+     		gameObject.SetActive(true);
      	}
      }
      void FixedUpdate ()
@@ -44,6 +50,7 @@ public class AttractObject : MonoBehaviour {
      void OnDestroy () 
      {
      	SpawnerManag.Instance().RandoPop();
+
      }
 
      public void SetTarget (Transform leCube) {

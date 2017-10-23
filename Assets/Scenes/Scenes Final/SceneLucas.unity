@@ -575,16 +575,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   addMoney: 0
-  buy1Button: {fileID: 0}
-  buy2Button: {fileID: 0}
-  buy3Button: {fileID: 0}
   skybox2: {fileID: 0}
   quitButton: {fileID: 0}
   playButton: {fileID: 0}
   shopButton: {fileID: 0}
+  unlockBuy1: {fileID: 0}
+  unlockBuy2: {fileID: 0}
+  unlockBuy3: {fileID: 0}
   moneyLogo: {fileID: 0}
   highScore: {fileID: 0}
   money: {fileID: 0}
+  buy1Button: {fileID: 0}
+  buy2Button: {fileID: 0}
+  buy3Button: {fileID: 0}
   quitSprite1: {fileID: 0}
   playSprite1: {fileID: 0}
   shopSprite1: {fileID: 0}

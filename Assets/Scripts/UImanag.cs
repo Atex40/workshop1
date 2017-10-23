@@ -86,9 +86,10 @@ public void LooseLife (){
 
 	}
 
-public void ReturnToMenu()
-    {
-   //     SceneManager.LoadScene("MainMenu");
+public void ReturnToMenu(){
+
+    SceneManager.LoadScene("MainMenu");
+
     }
 
     void CoinsAffichage () {
@@ -111,7 +112,8 @@ public bool IsGameOn () {
 
 public	void Recommencer () {
 
-		SceneManager.LoadScene("SceneLucas");
+	SceneManager.LoadScene("SceneLucas");
+
 	}
 
 public void MainMenuIG () {
@@ -121,7 +123,7 @@ public void MainMenuIG () {
 
 public void BackMenuOui () {
 
-	SceneManager.LoadScene("");
+	SceneManager.LoadScene("MainMenu");
 }
 
 public void BackMenuNon () {

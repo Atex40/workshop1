@@ -48,8 +48,4 @@ public class SpawnerManag : MonoBehaviour {
         	iGo.GetComponent<AttractObject>().SetTarget(mainCube);
   		}
 	}
-
-	// public void DeactivateiGo () {
-	// 	iGo.SetActive(false);
-	// }
 }
