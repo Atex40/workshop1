@@ -26,7 +26,7 @@ RenderSettings:
   m_AmbientIntensity: 1
   m_AmbientMode: 0
   m_SubtractiveShadowColor: {r: 0.42, g: 0.478, b: 0.627, a: 1}
-  m_SkyboxMaterial: {fileID: 10304, guid: 0000000000000000f000000000000000, type: 0}
+  m_SkyboxMaterial: {fileID: 2100000, guid: b8f20d5ca50d16143afc11f5e4af6fc1, type: 2}
   m_HaloStrength: 0.5
   m_FlareStrength: 1
   m_FlareFadeSpeed: 3
@@ -174,12 +174,18 @@ Transform:
 GameObject:
   m_PrefabParentObject: {fileID: 1938687872799226, guid: bf16395e9471bac449626f801b9eb9c5,
     type: 2}
-  m_PrefabInternal: {fileID: 1411856384}
+  m_PrefabInternal: {fileID: 1595485779}
+--- !u!114 &368519342 stripped
+MonoBehaviour:
+  m_PrefabParentObject: {fileID: 114403418376539364, guid: bf16395e9471bac449626f801b9eb9c5,
+    type: 2}
+  m_PrefabInternal: {fileID: 1595485779}
+  m_Script: {fileID: 1392445389, guid: f70555f144d8491a825f0804e09c671c, type: 3}
 --- !u!1 &603559928 stripped
 GameObject:
   m_PrefabParentObject: {fileID: 1286764034065366, guid: bf16395e9471bac449626f801b9eb9c5,
     type: 2}
-  m_PrefabInternal: {fileID: 1411856384}
+  m_PrefabInternal: {fileID: 1595485779}
 --- !u!1 &724134001
 GameObject:
   m_ObjectHideFlags: 0
@@ -245,23 +251,41 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 50, y: -30, z: 0}
+--- !u!114 &758066514 stripped
+MonoBehaviour:
+  m_PrefabParentObject: {fileID: 114068705523154932, guid: bf16395e9471bac449626f801b9eb9c5,
+    type: 2}
+  m_PrefabInternal: {fileID: 1595485779}
+  m_Script: {fileID: 708705254, guid: f70555f144d8491a825f0804e09c671c, type: 3}
 --- !u!1 &982495778 stripped
 GameObject:
   m_PrefabParentObject: {fileID: 1527121652200258, guid: bf16395e9471bac449626f801b9eb9c5,
     type: 2}
-  m_PrefabInternal: {fileID: 1411856384}
+  m_PrefabInternal: {fileID: 1595485779}
 --- !u!114 &1184876247 stripped
 MonoBehaviour:
   m_PrefabParentObject: {fileID: 114170349739705424, guid: bf16395e9471bac449626f801b9eb9c5,
     type: 2}
-  m_PrefabInternal: {fileID: 1411856384}
+  m_PrefabInternal: {fileID: 1595485779}
   m_Script: {fileID: 708705254, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+--- !u!114 &1219388069 stripped
+MonoBehaviour:
+  m_PrefabParentObject: {fileID: 114723724059793066, guid: bf16395e9471bac449626f801b9eb9c5,
+    type: 2}
+  m_PrefabInternal: {fileID: 1595485779}
+  m_Script: {fileID: -765806418, guid: f70555f144d8491a825f0804e09c671c, type: 3}
 --- !u!1 &1397749220 stripped
 GameObject:
   m_PrefabParentObject: {fileID: 1550434787867566, guid: bf16395e9471bac449626f801b9eb9c5,
     type: 2}
-  m_PrefabInternal: {fileID: 1411856384}
---- !u!1001 &1411856384
+  m_PrefabInternal: {fileID: 1595485779}
+--- !u!114 &1398121573 stripped
+MonoBehaviour:
+  m_PrefabParentObject: {fileID: 114244199138725490, guid: bf16395e9471bac449626f801b9eb9c5,
+    type: 2}
+  m_PrefabInternal: {fileID: 1595485779}
+  m_Script: {fileID: 1392445389, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+--- !u!1001 &1595485779
 Prefab:
   m_ObjectHideFlags: 0
   serializedVersion: 2
@@ -358,84 +382,41 @@ Prefab:
       propertyPath: m_Pivot.y
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 114403418376539364, guid: bf16395e9471bac449626f801b9eb9c5,
-        type: 2}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
-      value: 
-      objectReference: {fileID: 1935515922}
-    - target: {fileID: 114403418376539364, guid: bf16395e9471bac449626f801b9eb9c5,
-        type: 2}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: GoToGame
-      objectReference: {fileID: 0}
-    - target: {fileID: 114244199138725490, guid: bf16395e9471bac449626f801b9eb9c5,
-        type: 2}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
-      value: 
-      objectReference: {fileID: 1935515922}
-    - target: {fileID: 114244199138725490, guid: bf16395e9471bac449626f801b9eb9c5,
-        type: 2}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: QuitApp
-      objectReference: {fileID: 0}
-    - target: {fileID: 114063033451835048, guid: bf16395e9471bac449626f801b9eb9c5,
-        type: 2}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
-      value: 
-      objectReference: {fileID: 1935515922}
-    - target: {fileID: 114063033451835048, guid: bf16395e9471bac449626f801b9eb9c5,
-        type: 2}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: OpenShop
-      objectReference: {fileID: 0}
-    - target: {fileID: 1286764034065366, guid: bf16395e9471bac449626f801b9eb9c5, type: 2}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 114094341615545236, guid: bf16395e9471bac449626f801b9eb9c5,
-        type: 2}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
-      value: 
-      objectReference: {fileID: 1935515922}
-    - target: {fileID: 114094341615545236, guid: bf16395e9471bac449626f801b9eb9c5,
-        type: 2}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: CloseShop
-      objectReference: {fileID: 0}
     - target: {fileID: 114678542315948494, guid: bf16395e9471bac449626f801b9eb9c5,
-        type: 2}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
-      value: 
-      objectReference: {fileID: 1935515924}
-    - target: {fileID: 114678542315948494, guid: bf16395e9471bac449626f801b9eb9c5,
-        type: 2}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: BuyItem1
-      objectReference: {fileID: 0}
-    - target: {fileID: 114174635013105758, guid: bf16395e9471bac449626f801b9eb9c5,
-        type: 2}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
-      value: 
-      objectReference: {fileID: 1935515924}
-    - target: {fileID: 114174635013105758, guid: bf16395e9471bac449626f801b9eb9c5,
-        type: 2}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: BuyItem2
-      objectReference: {fileID: 0}
-    - target: {fileID: 114663707124651708, guid: bf16395e9471bac449626f801b9eb9c5,
         type: 2}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 1935515924}
     - target: {fileID: 114663707124651708, guid: bf16395e9471bac449626f801b9eb9c5,
         type: 2}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: BuyItem3
-      objectReference: {fileID: 0}
-    - target: {fileID: 1570226685699704, guid: bf16395e9471bac449626f801b9eb9c5, type: 2}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1935515924}
+    - target: {fileID: 114403418376539364, guid: bf16395e9471bac449626f801b9eb9c5,
+        type: 2}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1935515922}
+    - target: {fileID: 114244199138725490, guid: bf16395e9471bac449626f801b9eb9c5,
+        type: 2}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1935515922}
+    - target: {fileID: 114174635013105758, guid: bf16395e9471bac449626f801b9eb9c5,
+        type: 2}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1935515924}
+    - target: {fileID: 114094341615545236, guid: bf16395e9471bac449626f801b9eb9c5,
+        type: 2}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1935515922}
+    - target: {fileID: 114063033451835048, guid: bf16395e9471bac449626f801b9eb9c5,
+        type: 2}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1935515922}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: bf16395e9471bac449626f801b9eb9c5, type: 2}
   m_IsPrefabParent: 0
@@ -538,6 +519,7 @@ GameObject:
   - component: {fileID: 1935515923}
   - component: {fileID: 1935515922}
   - component: {fileID: 1935515924}
+  - component: {fileID: 1935515925}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -584,17 +566,48 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   addMoney: 0
-  money: {fileID: 1184876247}
   buy1Button: {fileID: 1397749220}
   buy2Button: {fileID: 2019375857}
   buy3Button: {fileID: 982495778}
+  skybox2: {fileID: 2100000, guid: 5b21c6a8ce40f9641bd1204324b90b2c, type: 2}
+  quitButton: {fileID: 1398121573}
+  playButton: {fileID: 368519342}
+  shopButton: {fileID: 2086909260}
+  moneyLogo: {fileID: 1219388069}
+  highScore: {fileID: 758066514}
+  money: {fileID: 1184876247}
+  quitSprite1: {fileID: 21300000, guid: 1c0ddfdb152771c4a867978d61413c87, type: 3}
+  playSprite1: {fileID: 21300000, guid: 5b38eedf9287774428a2ac1f7ce38b66, type: 3}
+  shopSprite1: {fileID: 21300000, guid: 4d5c2c6d0df692f4e9022e21e8322fd9, type: 3}
+  moneySprite1: {fileID: 21300000, guid: aed48b7717bf936468a2a889f02f5fcf, type: 3}
+  quitSprite2: {fileID: 21300000, guid: d9ba32b0206786248bc4467ab33c8f36, type: 3}
+  playSprite2: {fileID: 21300000, guid: affe81e0ad7c8c941a1c0a8af8124c1b, type: 3}
+  shopSprite2: {fileID: 21300000, guid: a2b92339206b61043b9ae6da93ca4675, type: 3}
+  moneyImage2: {fileID: 21300000, guid: 9f0a01bad7394d24591be6ec5ed11f4d, type: 3}
+--- !u!114 &1935515925
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1935515921}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 05071cb330f0df64582a8db24b5eb918, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &2019375857 stripped
 GameObject:
   m_PrefabParentObject: {fileID: 1099851103111852, guid: bf16395e9471bac449626f801b9eb9c5,
     type: 2}
-  m_PrefabInternal: {fileID: 1411856384}
+  m_PrefabInternal: {fileID: 1595485779}
 --- !u!1 &2086909258 stripped
 GameObject:
   m_PrefabParentObject: {fileID: 1139362960898326, guid: bf16395e9471bac449626f801b9eb9c5,
     type: 2}
-  m_PrefabInternal: {fileID: 1411856384}
+  m_PrefabInternal: {fileID: 1595485779}
+--- !u!114 &2086909260 stripped
+MonoBehaviour:
+  m_PrefabParentObject: {fileID: 114063033451835048, guid: bf16395e9471bac449626f801b9eb9c5,
+    type: 2}
+  m_PrefabInternal: {fileID: 1595485779}
+  m_Script: {fileID: 1392445389, guid: f70555f144d8491a825f0804e09c671c, type: 3}
