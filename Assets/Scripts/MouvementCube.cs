@@ -1,4 +1,4 @@
-﻿using System.Collections;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -19,6 +19,27 @@ public class MouvementCube : MonoBehaviour {
 		Turn2();
 		Turn3();
 		Turn4();
+
+		if (UImanag.GameOnOff = true){
+			if (Input.GetMouseButtonDown(0)){
+				startPos = Input.mousePosition;
+			}
+			if (Input.GetMouseButton(0)){
+				direction = Input.mousePosition - startPos;
+			}
+			if (Input.GetMouseButtonUp(0)){
+				if (direction.x > 0 && direction.y < 0.3 && direction.y > -0.3){
+					WaitTime2();
+				if (direction.x < 0 && direction.y < 0.3 && direction.y > -0.3){
+					WaitTime4();
+				if (direction.y < 0 && direction.x < 0.3 && direction.x > -0.3){
+					WaitTime3();
+				if (direction.y > 0 && direction.x < 0.3 && direction.x > -0.3){
+					WaitTime();
+				}
+			}
+		}
+
 	}
 
 	void Turn () {
@@ -38,7 +59,7 @@ public class MouvementCube : MonoBehaviour {
         transform.rotation = Quaternion.Euler(x,y,z);
     }
 
-    	void Turn2 () {
+    void Turn2 () {
 
 	if (Input.GetKeyDown("z")){
 		Debug.Log(Input.GetKeyDown("z"));
@@ -55,7 +76,7 @@ public class MouvementCube : MonoBehaviour {
         transform.rotation = Quaternion.Euler(x,y,z);
     }
 
-        	void Turn3 () {
+    void Turn3 () {
 
 	if (Input.GetKeyDown("e")){
 		Debug.Log(Input.GetKeyDown("e"));
