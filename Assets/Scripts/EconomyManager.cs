@@ -7,19 +7,24 @@ public class EconomyManager : MonoBehaviour {
 
     private int currentMoney = 0;
     public int addMoney;
+
+    private int bi1BOUGHT;
+    private int bi2BOUGHT;
+    private int bi3BOUGHT;
+
     private int bi1YES;
     private int bi2YES;
     private int bi3YES;
 
-    public Material skybox2;
+    
 
     // ELEMENTS UI
     public Button quitButton;
     public Button playButton;
     public Button shopButton;
-    public Button unlockBuy1;
-    public Button unlockBuy2;
-    public Button unlockBuy3;
+    public GameObject select1;
+    public GameObject select2;
+    public GameObject select3;
     public Image moneyLogo;
     public Text highScore;
     public Text money;
@@ -38,6 +43,10 @@ public class EconomyManager : MonoBehaviour {
     public Sprite playSprite2;
     public Sprite shopSprite2;
     public Sprite moneyImage2;
+    public Material skybox2;
+
+    public Text afficherMontant;
+    
 
     private static EconomyManager instance;
     public static EconomyManager Instance()
@@ -62,11 +71,12 @@ public class EconomyManager : MonoBehaviour {
         bi1YES = PlayerPrefs.GetInt("boolean1");
         bi2YES = PlayerPrefs.GetInt("boolean2");
         bi3YES = PlayerPrefs.GetInt("boolean3");
+        bi1BOUGHT = PlayerPrefs.GetInt("EspaceVert");
 
-        if (bi1YES == 1)
+        if (bi1YES == 1) // SI LE SKIN ESPACE VERT EST SELECTIONNE
         {
             Destroy(buy1Button);
-            RenderSettings.skybox = skybox2;
+            //RenderSettings.skybox = skybox2;
         }
 
         if (bi2YES == 1)
@@ -108,17 +118,33 @@ public class EconomyManager : MonoBehaviour {
 
 
 
-    public void BuyItem1()
+    public void BuyItem1() // ACHETER OBJET ESPACE VERT
     {
-        if (currentMoney >= 500 && bi1YES == 0)
+        if (currentMoney >= 500)
         {
+            bi1BOUGHT = 1;
+            PlayerPrefs.SetInt("EspaceVert", bi1BOUGHT);
             Destroy(buy1Button);
-            currentMoney = currentMoney - 500;
-            bi1YES = 1;
-            PlayerPrefs.SetInt("currentMoney", currentMoney);
-            PlayerPrefs.SetInt("boolean1", bi1YES);
+            select1.SetActive(true);
+            currentMoney = currentMoney - 500;        
+            PlayerPrefs.SetInt("currentMoney", currentMoney);           
             Debug.Log("Item 1 acheté");
+        }
+       
+        else
+        {
+            Debug.Log("Item 1 ne peut etre acheté");
+        }
+    }
 
+    public void ChooseItem1() // CHOISIR OBJET ESPACE VERT
+    {
+
+            bi1YES = 1;
+            bi2YES = 0;
+            bi3YES = 0;
+            Destroy(select1);
+            PlayerPrefs.SetInt("boolean1", bi1YES);
             RenderSettings.skybox = skybox2;
             quitButton.image.overrideSprite = quitSprite2;
             playButton.image.overrideSprite = playSprite2;
@@ -126,12 +152,8 @@ public class EconomyManager : MonoBehaviour {
             money.color = Color.green;
             highScore.color = Color.green;
             moneyLogo.sprite = moneyImage2;
-            
-        }
-        else
-        {
-            Debug.Log("Item 1 ne peut etre acheté");
-        }
+            Debug.Log("Item 1 sélectionné");
+
     }
 
     public void BuyItem2()
@@ -178,5 +200,10 @@ public class EconomyManager : MonoBehaviour {
     public int GetMoney () {
 
         return currentMoney;
+    }
+
+    public void AffichagePieces()
+    {
+        afficherMontant.text = currentMoney.ToString();
     }
 }
