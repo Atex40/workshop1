@@ -1029,7 +1029,7 @@ MonoBehaviour:
   shopSprite2: {fileID: 21300000, guid: a2b92339206b61043b9ae6da93ca4675, type: 3}
   moneyImage2: {fileID: 21300000, guid: 9f0a01bad7394d24591be6ec5ed11f4d, type: 3}
   skybox2: {fileID: 2100000, guid: 5b21c6a8ce40f9641bd1204324b90b2c, type: 2}
-  afficherMontant: {fileID: 0}
+  afficherMontant: {fileID: 1184876247}
 --- !u!114 &1935515925
 MonoBehaviour:
   m_ObjectHideFlags: 0
