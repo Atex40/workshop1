@@ -52,7 +52,16 @@ public class EconomyManager : MonoBehaviour {
     public Image checkItemChoice2;
     public Image checkItemChoice3;
     public Image checkItemChoice4;
+    public Button tutorialButton;
+    public Button closeTutorialButton;
+    public Text tutorialTextUp;
+    public Text tutorialTextDown;
+    public Font pixelFont;
+    public Font basicFont;
 
+    public Image cadenas1;
+    public Image cadenas2;
+    public Image cadenas3;
 
 
 
@@ -65,6 +74,9 @@ public class EconomyManager : MonoBehaviour {
     public Material skyboxSkin1;
     public Sprite buyItemButtonSkin1;  
     public Sprite chooseItemButtonSkin1;
+    public Sprite tutorialButtonSkin1;
+    public Sprite closeTutorialButtonSkin1;
+    public Sprite cadenasOpened1;
 
     // SKIN 2 : ESPACE ROUGE
     public Sprite quitButtonSkin2;
@@ -75,6 +87,9 @@ public class EconomyManager : MonoBehaviour {
     public Material skyboxSkin2;
     public Sprite buyItemButtonSkin2;
     public Sprite chooseItemButtonSkin2;
+    public Sprite tutorialButtonSkin2;
+    public Sprite closeTutorialButtonSkin2;
+    public Sprite cadenasOpened2;
 
     // SKIN 3 : ARCADE NOIR ET BLANC
     public Sprite quitButtonSkin3;
@@ -85,6 +100,9 @@ public class EconomyManager : MonoBehaviour {
     public Material skyboxSkin3;
     public Sprite buyItemButtonSkin3;
     public Sprite chooseItemButtonSkin3;
+    public Sprite tutorialButtonSkin3;
+    public Sprite closeTutorialButtonSkin3;
+    public Sprite cadenasOpened3;
 
     // SKIN 4 : PAR DEFAUT
     public Sprite quitButtonSkin4;
@@ -95,6 +113,8 @@ public class EconomyManager : MonoBehaviour {
     public Material skyboxSkin4;
     public Sprite buyItemButtonSkin4;
     public Sprite chooseItemButtonSkin4;
+    public Sprite tutorialButtonSkin4;
+    public Sprite closeTutorialButtonSkin4;
 
 
     private static EconomyManager instance;
@@ -140,6 +160,7 @@ public class EconomyManager : MonoBehaviour {
 
         if (buyItem1Bool == 1) // SI LE SKIN 1 EST ACHETE
         {
+            cadenas1.overrideSprite = cadenasOpened1;
             buyItem1Button.gameObject.SetActive(false);
             priceItem1Panel.gameObject.SetActive(false);
             priceItem1Text.gameObject.SetActive(false);
@@ -147,6 +168,7 @@ public class EconomyManager : MonoBehaviour {
 
         if (buyItem2Bool == 1) // SI LE SKIN 2 EST ACHETE
         {
+            cadenas2.overrideSprite = cadenasOpened2;
             buyItem2Button.gameObject.SetActive(false);
             priceItem2Panel.gameObject.SetActive(false);
             priceItem2Text.gameObject.SetActive(false);
@@ -154,6 +176,7 @@ public class EconomyManager : MonoBehaviour {
 
         if (buyItem3Bool == 1) // SI LE SKIN 3 EST ACHETE
         {
+            cadenas3.overrideSprite = cadenasOpened3;
             buyItem3Button.gameObject.SetActive(false);
             priceItem3Panel.gameObject.SetActive(false);
             priceItem3Text.gameObject.SetActive(false);
@@ -267,7 +290,9 @@ public class EconomyManager : MonoBehaviour {
             Destroy(priceItem1Text);
 
             buyItem1Button.gameObject.SetActive(false);
-            chooseItem1Button.gameObject.SetActive(true); 
+            chooseItem1Button.gameObject.SetActive(true);
+
+            cadenas1.overrideSprite = cadenasOpened1;
             
             Debug.Log("Item 1 acheté");
         }
@@ -297,6 +322,15 @@ public class EconomyManager : MonoBehaviour {
         shopButton.image.overrideSprite = shopButtonSkin1;
         closeShopButton.image.overrideSprite = closeShopButtonSkin1;
 
+        tutorialButton.image.overrideSprite = tutorialButtonSkin1;
+        tutorialTextUp.color = Color.green;
+        tutorialTextDown.color = Color.green;
+
+        tutorialTextUp.font = basicFont;
+        tutorialTextDown.font = basicFont;
+        moneyText.font = basicFont;
+        highScoreText.font = basicFont;
+
         buyItem2Button.image.overrideSprite = buyItemButtonSkin1;
         buyItem3Button.image.overrideSprite = buyItemButtonSkin1;
 
@@ -311,6 +345,8 @@ public class EconomyManager : MonoBehaviour {
 
         moneyImage.overrideSprite = moneyImageSkin1;
 
+        closeTutorialButton.image.overrideSprite = closeTutorialButtonSkin1;
+
         moneyText.color = Color.green;
         highScoreText.color = Color.green;
         //infoItem1Text.color = Color.green;
@@ -320,6 +356,7 @@ public class EconomyManager : MonoBehaviour {
 
         if (buyItem2Bool == 0)
         {
+            priceItem2Text.font = basicFont;
             priceItem2Text.color = Color.green;            
         }
 
@@ -349,6 +386,8 @@ public class EconomyManager : MonoBehaviour {
             buyItem2Button.gameObject.SetActive(false);
             chooseItem2Button.gameObject.SetActive(true);
 
+            cadenas2.overrideSprite = cadenasOpened2;
+
             Debug.Log("Item 2 acheté");
         }
 
@@ -377,6 +416,15 @@ public class EconomyManager : MonoBehaviour {
         shopButton.image.overrideSprite = shopButtonSkin2;
         closeShopButton.image.overrideSprite = closeShopButtonSkin2;
 
+        tutorialButton.image.overrideSprite = tutorialButtonSkin2;
+        tutorialTextUp.color = Color.red;
+        tutorialTextDown.color = Color.red;
+
+        tutorialTextDown.font = basicFont;
+        tutorialTextUp.font = basicFont;
+        moneyText.font = basicFont;
+        highScoreText.font = basicFont;
+
         buyItem1Button.image.overrideSprite = buyItemButtonSkin2;
         buyItem3Button.image.overrideSprite = buyItemButtonSkin2;
 
@@ -391,6 +439,8 @@ public class EconomyManager : MonoBehaviour {
 
         moneyImage.overrideSprite = moneyImageSkin2;
 
+        closeTutorialButton.image.overrideSprite = closeTutorialButtonSkin2;
+
         moneyText.color = Color.red;
         highScoreText.color = Color.red;
         //infoItem1Text.color = Color.red;
@@ -400,6 +450,7 @@ public class EconomyManager : MonoBehaviour {
 
         if (buyItem1Bool == 0)
         {
+            priceItem1Text.font = basicFont;
             priceItem1Text.color = Color.red;
         }
 
@@ -427,6 +478,8 @@ public class EconomyManager : MonoBehaviour {
 
             buyItem3Button.gameObject.SetActive(false);
             chooseItem3Button.gameObject.SetActive(true);
+
+            cadenas3.overrideSprite = cadenasOpened3;
 
             Debug.Log("Item 3 acheté");
         }
@@ -459,6 +512,20 @@ public class EconomyManager : MonoBehaviour {
         shopButton.image.overrideSprite = shopButtonSkin3;
         closeShopButton.image.overrideSprite = closeShopButtonSkin3;
 
+        tutorialButton.image.overrideSprite = tutorialButtonSkin3;
+        tutorialTextDown.color = Color.white;
+        tutorialTextUp.color = Color.white;
+
+        tutorialTextUp.font = basicFont;
+        tutorialTextDown.font = basicFont;
+        moneyText.font = basicFont;
+        highScoreText.font = basicFont;
+
+        tutorialTextDown.font = pixelFont;
+        tutorialTextUp.font = pixelFont;
+        moneyText.font = pixelFont;
+        highScoreText.font = pixelFont;
+
         buyItem1Button.image.overrideSprite = buyItemButtonSkin3;
         buyItem2Button.image.overrideSprite = buyItemButtonSkin3;
 
@@ -473,6 +540,8 @@ public class EconomyManager : MonoBehaviour {
 
         moneyImage.overrideSprite = moneyImageSkin3;
 
+        closeTutorialButton.image.overrideSprite = closeTutorialButtonSkin3;
+
         moneyText.color = Color.white;
         highScoreText.color = Color.white;
         //infoItem1Text.color = Color.white;
@@ -482,11 +551,13 @@ public class EconomyManager : MonoBehaviour {
 
         if (buyItem1Bool == 0)
         {
+            priceItem1Text.font = pixelFont;
             priceItem1Text.color = Color.white;
         }
 
         if (buyItem2Bool == 0)
         {
+            priceItem2Text.font = pixelFont;
             priceItem2Text.color = Color.white;
         }
 
@@ -514,6 +585,15 @@ public class EconomyManager : MonoBehaviour {
         shopButton.image.overrideSprite = shopButonSkin4;
         closeShopButton.image.overrideSprite = closeShopButtonSkin4;
 
+        tutorialButton.image.overrideSprite = tutorialButtonSkin4;
+        tutorialTextUp.color = Color.white;
+        tutorialTextDown.color = Color.white;
+
+        tutorialTextDown.font = basicFont;
+        tutorialTextUp.font = basicFont;
+        moneyText.font = basicFont;
+        highScoreText.font = basicFont;
+
         buyItem1Button.image.overrideSprite = buyItemButtonSkin4;
         buyItem2Button.image.overrideSprite = buyItemButtonSkin4;
         buyItem3Button.image.overrideSprite = buyItemButtonSkin4;
@@ -529,6 +609,8 @@ public class EconomyManager : MonoBehaviour {
 
         moneyImage.overrideSprite = moneyImageSkin4;
 
+        closeTutorialButton.image.overrideSprite = closeTutorialButtonSkin4; 
+
         moneyText.color = Color.white;
         highScoreText.color = Color.white;
         //infoItem1Text.color = Color.white;
@@ -538,11 +620,13 @@ public class EconomyManager : MonoBehaviour {
 
         if (buyItem1Bool == 0)
         {
+            priceItem1Text.font = basicFont;
             priceItem1Text.color = Color.white;
         }
 
         if (buyItem2Bool == 0)
         {
+            priceItem2Text.font = basicFont;
             priceItem2Text.color = Color.white;
         }
 
@@ -554,6 +638,8 @@ public class EconomyManager : MonoBehaviour {
         Debug.Log("Item 4 sélectionné");
 
     }
+
+    
 
     public void ChooseItemButtonFunction()
     {

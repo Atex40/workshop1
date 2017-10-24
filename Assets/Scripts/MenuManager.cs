@@ -8,6 +8,9 @@ public class MenuManager : MonoBehaviour {
     public GameObject shopWindow;
     public GameObject playButton;
     public GameObject shopButton;
+    public GameObject tutorialCanvas;
+    public GameObject shopCanvas;
+ 
 
 	// Use this for initialization
 	void Start () {
@@ -36,6 +39,23 @@ public class MenuManager : MonoBehaviour {
         shopWindow.SetActive(false);
         playButton.SetActive(true);
         shopButton.SetActive(true);
+    }
+
+    public void OpenTutorialCanvas()
+    {
+        shopButton.gameObject.SetActive(false);
+        tutorialCanvas.SetActive(true);        
+        playButton.gameObject.SetActive(false);
+        shopCanvas.SetActive(false);
+        
+
+    }
+
+    public void CloseTutorialCanvas()
+    {
+        shopButton.gameObject.SetActive(true);
+        tutorialCanvas.SetActive(false);
+        playButton.gameObject.SetActive(true);
     }
 
     public void QuitApp()
