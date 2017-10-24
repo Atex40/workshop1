@@ -207,11 +207,35 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 1827848371486820, guid: c87769eba34fce544be9067b8ce34289, type: 2}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: c87769eba34fce544be9067b8ce34289, type: 2}
   m_IsPrefabParent: 0
+--- !u!114 &101107049 stripped
+MonoBehaviour:
+  m_PrefabParentObject: {fileID: 114465564555230736, guid: c87769eba34fce544be9067b8ce34289,
+    type: 2}
+  m_PrefabInternal: {fileID: 101107048}
+  m_Script: {fileID: -765806418, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+--- !u!114 &101107050 stripped
+MonoBehaviour:
+  m_PrefabParentObject: {fileID: 114686465957741080, guid: c87769eba34fce544be9067b8ce34289,
+    type: 2}
+  m_PrefabInternal: {fileID: 101107048}
+  m_Script: {fileID: 708705254, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+--- !u!114 &101107051 stripped
+MonoBehaviour:
+  m_PrefabParentObject: {fileID: 114757468706790624, guid: c87769eba34fce544be9067b8ce34289,
+    type: 2}
+  m_PrefabInternal: {fileID: 101107048}
+  m_Script: {fileID: 708705254, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+--- !u!114 &101107052 stripped
+MonoBehaviour:
+  m_PrefabParentObject: {fileID: 114687520149679982, guid: c87769eba34fce544be9067b8ce34289,
+    type: 2}
+  m_PrefabInternal: {fileID: 101107048}
+  m_Script: {fileID: 708705254, guid: f70555f144d8491a825f0804e09c671c, type: 3}
 --- !u!1001 &155100099
 Prefab:
   m_ObjectHideFlags: 0
@@ -313,7 +337,7 @@ Prefab:
         type: 2}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 1176746407}
+      objectReference: {fileID: 0}
     - target: {fileID: 114292166708170764, guid: 35a743c1b27d892488ba73c9c8810356,
         type: 2}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
@@ -330,6 +354,36 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 35a743c1b27d892488ba73c9c8810356, type: 2}
   m_IsPrefabParent: 0
+--- !u!114 &155100100 stripped
+MonoBehaviour:
+  m_PrefabParentObject: {fileID: 114457853840674318, guid: 35a743c1b27d892488ba73c9c8810356,
+    type: 2}
+  m_PrefabInternal: {fileID: 155100099}
+  m_Script: {fileID: 708705254, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+--- !u!114 &155100101 stripped
+MonoBehaviour:
+  m_PrefabParentObject: {fileID: 114408138724698014, guid: 35a743c1b27d892488ba73c9c8810356,
+    type: 2}
+  m_PrefabInternal: {fileID: 155100099}
+  m_Script: {fileID: 1392445389, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+--- !u!114 &155100102 stripped
+MonoBehaviour:
+  m_PrefabParentObject: {fileID: 114643833196056974, guid: 35a743c1b27d892488ba73c9c8810356,
+    type: 2}
+  m_PrefabInternal: {fileID: 155100099}
+  m_Script: {fileID: 1392445389, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+--- !u!114 &155100103 stripped
+MonoBehaviour:
+  m_PrefabParentObject: {fileID: 114709160159715848, guid: 35a743c1b27d892488ba73c9c8810356,
+    type: 2}
+  m_PrefabInternal: {fileID: 155100099}
+  m_Script: {fileID: 708705254, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+--- !u!114 &155100104 stripped
+MonoBehaviour:
+  m_PrefabParentObject: {fileID: 114292166708170764, guid: 35a743c1b27d892488ba73c9c8810356,
+    type: 2}
+  m_PrefabInternal: {fileID: 155100099}
+  m_Script: {fileID: 1392445389, guid: f70555f144d8491a825f0804e09c671c, type: 3}
 --- !u!1 &657979244
 GameObject:
   m_ObjectHideFlags: 0
@@ -505,12 +559,34 @@ MonoBehaviour:
   m_GameObject: {fileID: 1176746406}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 43d5895e1ea285c4ea8dc6ce9f2af899, type: 3}
+  m_Script: {fileID: 11500000, guid: 314912ff8b5a18848b649a54528ca4b3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  shopWindow: {fileID: 0}
-  playButton: {fileID: 0}
-  shopButton: {fileID: 0}
+  quitButton: {fileID: 155100104}
+  quitConfirmationText: {fileID: 155100103}
+  quitYesButton: {fileID: 155100102}
+  quitNoButton: {fileID: 155100101}
+  scoreText: {fileID: 155100100}
+  youLooseText: {fileID: 101107052}
+  finalScoreText: {fileID: 101107050}
+  moneyWinText: {fileID: 101107051}
+  moneyImage: {fileID: 101107049}
+  quitButtonSkin1: {fileID: 21300000, guid: 155e22e11b5783543b260ad72b062a5c, type: 3}
+  quitYesButtonSkin1: {fileID: 21300000, guid: 4c74fdc0ed1651344a937d751daee4d2, type: 3}
+  quitNoButtonSkin1: {fileID: 21300000, guid: f61d3bb1e93da4f4fad752f974d7aaaf, type: 3}
+  moneyImageSkin1: {fileID: 21300000, guid: 9f0a01bad7394d24591be6ec5ed11f4d, type: 3}
+  quitButtonSkin2: {fileID: 21300000, guid: 7d7ac864925547b4ba1802ed153f0e6b, type: 3}
+  quitYesButtonSkin2: {fileID: 21300000, guid: 69cdef9239fc8354398242fc39059a54, type: 3}
+  quitNoButtonSkin2: {fileID: 21300000, guid: bd97ecaac4feec2498048f2b137dd834, type: 3}
+  moneyImageSkin2: {fileID: 21300000, guid: f52297246aa676d46b917f55a7bb9c67, type: 3}
+  quitButtonSkin3: {fileID: 0}
+  quitYesButtonSkin3: {fileID: 0}
+  quitNoButtonSkin3: {fileID: 0}
+  moneyImageSkin3: {fileID: 0}
+  quitButtonSkin4: {fileID: 0}
+  quitYesButtonSkin4: {fileID: 0}
+  quitNoButtonSkin4: {fileID: 0}
+  moneyImageSkin4: {fileID: 0}
 --- !u!4 &1176746408
 Transform:
   m_ObjectHideFlags: 0

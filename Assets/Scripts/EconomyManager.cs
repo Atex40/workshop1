@@ -17,6 +17,8 @@ public class EconomyManager : MonoBehaviour {
     private int activateItem3Bool;
     private int activateItem4Bool;
 
+    private int choixHUD;
+
     
 
     // ELEMENTS UI
@@ -98,6 +100,8 @@ public class EconomyManager : MonoBehaviour {
         return instance;
     }
 
+
+
     void Awake()
     {
         if (instance != null)
@@ -159,6 +163,9 @@ public class EconomyManager : MonoBehaviour {
         {
             ChooseItem4();
         }
+
+        chooseItem4Button.gameObject.SetActive(false);
+
     }
 	
 	// Update is called once per frame
@@ -195,6 +202,27 @@ public class EconomyManager : MonoBehaviour {
 
         AffichagePieces();
 
+        if (activateItem1Bool == 1)
+        {
+            choixHUD = 1;
+        }
+
+        if (activateItem2Bool == 1)
+        {
+            choixHUD = 2;
+        }
+
+        if (activateItem3Bool == 1)
+        {
+            choixHUD = 3;
+        }
+
+        if (activateItem4Bool == 1)
+        {
+            choixHUD = 4;
+        }
+
+        PlayerPrefs.SetInt("choixHUD", choixHUD);
 
     }
 
@@ -232,6 +260,9 @@ public class EconomyManager : MonoBehaviour {
         activateItem3Bool = 0;
         activateItem4Bool = 0;
         PlayerPrefs.SetInt("boolean1", activateItem1Bool);
+        PlayerPrefs.SetInt("boolean2", activateItem2Bool);
+        PlayerPrefs.SetInt("boolean3", activateItem3Bool);
+        PlayerPrefs.SetInt("boolean4", activateItem4Bool);
 
         ChooseItemButtonFunction();
 
@@ -256,8 +287,16 @@ public class EconomyManager : MonoBehaviour {
         infoItem2Text.color = Color.green;
         infoItem3Text.color = Color.green;
         infoItem4Text.color = Color.green;
-        priceItem2Text.color = Color.green;
-        priceItem3Text.color = Color.green;
+
+        if (buyItem2Bool == 0)
+        {
+            priceItem2Text.color = Color.green;            
+        }
+
+        if (buyItem3Bool == 0)
+        {
+            priceItem3Text.color = Color.green;
+        }
 
         Debug.Log("Item 1 sélectionné");
 
@@ -295,7 +334,10 @@ public class EconomyManager : MonoBehaviour {
         activateItem2Bool = 1;
         activateItem3Bool = 0;
         activateItem4Bool = 0;
+        PlayerPrefs.SetInt("boolean1", activateItem1Bool);
         PlayerPrefs.SetInt("boolean2", activateItem2Bool);
+        PlayerPrefs.SetInt("boolean3", activateItem3Bool);
+        PlayerPrefs.SetInt("boolean4", activateItem4Bool);
 
         ChooseItemButtonFunction();
         
@@ -320,8 +362,17 @@ public class EconomyManager : MonoBehaviour {
         infoItem2Text.color = Color.red;
         infoItem3Text.color = Color.red;
         infoItem4Text.color = Color.red;
-        priceItem1Text.color = Color.red;
-        priceItem4Text.color = Color.red;
+
+        if (buyItem1Bool == 0)
+        {
+            priceItem1Text.color = Color.red;
+        }
+
+        if (buyItem3Bool == 0)
+        {
+            priceItem3Text.color = Color.red;
+        }
+
 
         Debug.Log("Item 2 sélectionné");
     }
@@ -360,7 +411,10 @@ public class EconomyManager : MonoBehaviour {
         activateItem2Bool = 0;
         activateItem3Bool = 1;
         activateItem4Bool = 0;
+        PlayerPrefs.SetInt("boolean1", activateItem1Bool);
+        PlayerPrefs.SetInt("boolean2", activateItem2Bool);
         PlayerPrefs.SetInt("boolean3", activateItem3Bool);
+        PlayerPrefs.SetInt("boolean4", activateItem4Bool);
 
         ChooseItemButtonFunction();
 
@@ -385,8 +439,16 @@ public class EconomyManager : MonoBehaviour {
         infoItem2Text.color = Color.white;
         infoItem3Text.color = Color.white;
         infoItem4Text.color = Color.white;
-        priceItem1Text.color = Color.white;
-        priceItem2Text.color = Color.white;        
+
+        if (buyItem1Bool == 0)
+        {
+            priceItem1Text.color = Color.white;
+        }
+
+        if (buyItem2Bool == 0)
+        {
+            priceItem2Text.color = Color.white;
+        }
 
         Debug.Log("Item 3 sélectionné");
 
@@ -399,6 +461,9 @@ public class EconomyManager : MonoBehaviour {
         activateItem2Bool = 0;
         activateItem3Bool = 0;
         activateItem4Bool = 1;
+        PlayerPrefs.SetInt("boolean1", activateItem1Bool);
+        PlayerPrefs.SetInt("boolean2", activateItem2Bool);
+        PlayerPrefs.SetInt("boolean3", activateItem3Bool);
         PlayerPrefs.SetInt("boolean4", activateItem4Bool);
 
         ChooseItemButtonFunction();
@@ -425,9 +490,21 @@ public class EconomyManager : MonoBehaviour {
         infoItem2Text.color = Color.blue;
         infoItem3Text.color = Color.blue;
         infoItem4Text.color = Color.blue;
-        priceItem1Text.color = Color.blue;
-        priceItem2Text.color = Color.blue;
-        priceItem3Text.color = Color.blue;        
+
+        if (buyItem1Bool == 0)
+        {
+            priceItem1Text.color = Color.blue;
+        }
+
+        if (buyItem2Bool == 0)
+        {
+            priceItem2Text.color = Color.blue;
+        }
+
+        if (buyItem3Bool == 0)
+        {
+            priceItem3Text.color = Color.blue;
+        }
 
         Debug.Log("Item 4 sélectionné");
 
@@ -491,5 +568,10 @@ public class EconomyManager : MonoBehaviour {
     public void AffichagePieces()
     {
         moneyText.text = currentMoney.ToString();
+    }
+
+    public int ChoixSkinHUD()
+    {
+        return choixHUD;
     }
 }
