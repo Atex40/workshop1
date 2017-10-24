@@ -59,6 +59,7 @@ public class UImanag : MonoBehaviour {
 		if (Input.GetKeyDown("e")){
 		Debug.Log(Input.GetKeyDown("e"));
 		addscore +=500;
+		countVieReset +=500;
 		}
 
 		WinLife ();
@@ -94,16 +95,12 @@ public void LooseLife (){
 
 	void WinLife ()
 	{
-		if (addVie)
-		{
-			if (addscore == 2500)
+			if (countVieReset == 2500)
 		{
 			vie ++;
 			lifeObjects[vie].SetActive(true);
-			addVie = false;
-		}
-	}
-		
+			countVieReset = 0;
+		}		
 	}
 
     void CoinsAffichage () {
@@ -142,5 +139,10 @@ public void BackMenuOui () {
 public void BackMenuNon () {
 
 	canvasMMIG.SetActive(false);
+}
+
+public void CountVie (){
+
+	countVieReset += 100;
 }
 }

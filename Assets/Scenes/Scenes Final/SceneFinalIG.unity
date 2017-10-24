@@ -345,6 +345,7 @@ MonoBehaviour:
   cubeFin: {fileID: 336887306}
   picesGagnees: {fileID: 916545732}
   canvasMMIG: {fileID: 15479935}
+  addVie: 1
 --- !u!4 &451611210
 Transform:
   m_ObjectHideFlags: 0
