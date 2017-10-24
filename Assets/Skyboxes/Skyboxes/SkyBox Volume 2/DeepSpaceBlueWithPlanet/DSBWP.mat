@@ -48,7 +48,11 @@ Material:
         m_Offset: {x: 0, y: 0}
     m_Floats:
     - _Exposure: 1
+<<<<<<< HEAD
     - _Rotation: 34.07246
+=======
+    - _Rotation: 63.69973
+>>>>>>> 5f0bb7a325b2cdc637d4a7eac6700160b75ce01c
     m_Colors:
     - _Color: {r: 1, g: 1, b: 1, a: 1}
     - _Tint: {r: 0.5, g: 0.5, b: 0.5, a: 0.5}
