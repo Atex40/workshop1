@@ -24,8 +24,8 @@ public class MouvementCube : MonoBehaviour {
 	private bool tourYL = false;
 	private bool tourYR = false;
 	private bool tourZRU = false;
-	private bool tourXLU = false;
 	private bool tourZRD = false;
+	private bool tourXLU = false;
 	private bool tourXLD = false;
 
 	void Start () {
@@ -33,6 +33,7 @@ public class MouvementCube : MonoBehaviour {
 		startAngleY = transform.eulerAngles.y;
 		startAngleZ = transform.eulerAngles.z;
 		startAngleX = transform.eulerAngles.x;
+		Debug.Log(transform.eulerAngles.x);
 	
 	}
 	
@@ -157,13 +158,12 @@ public class MouvementCube : MonoBehaviour {
 						startAngleZ = transform.eulerAngles.z;
 						tourZRU = false;
 						turnRightUp = false;
-					}
+					} 
 			}
 			// if (turnLeftUp)
 			// {
 			// 		transform.Rotate(Vector3.right * turnSpeed * Time.deltaTime, Space.World);
 			// 		if ((transform.eulerAngles.x - startAngleX) >= rotationAngle)
-			// 		Debug.Log(transform.eulerAngles.x);
 			// 		{
 			// 			Vector3 tmpDirXLU = new Vector3(startAngleX + rotationAngle,transform.eulerAngles.y,transform.eulerAngles.z);
 			// 			transform.eulerAngles = tmpDirXLU;
@@ -210,33 +210,33 @@ public class MouvementCube : MonoBehaviour {
 						turnRightDown = false;
 					}
 			}
-			// if (turnLeftDown)
-			// {
-			// 		transform.Rotate(-Vector3.right * turnSpeed * Time.deltaTime, Space.World);
-			// 		if (startAngleX == 0)
-			// 		{
-			// 			startAngleX = 360f;
-			// 		}
-			// 		if ((startAngleX - transform.eulerAngles.x) >= rotationAngle)
-			// 		{
-			// 			Vector3 tmpDirXLD = new Vector3(startAngleX + rotationAngle,transform.eulerAngles.y,transform.eulerAngles.z);
-			// 			transform.eulerAngles = tmpDirXLD;
-			// 			startAngleX = transform.eulerAngles.x;
-			// 			turnLeftDown = false;
-			// 		}
-			// 		if (transform.eulerAngles.x < 30) 
-			// 		{
-			// 			tourXLD = true;
-			// 		}
-			// 		if (tourXLD && transform.eulerAngles.x < 360 && transform.eulerAngles.x > 340)
-			// 		{
-			// 			Vector3 tmpTourXLD = new Vector3(0,transform.eulerAngles.y,transform.eulerAngles.z);
-			// 			transform.eulerAngles = tmpTourXLD;
-			// 			startAngleX = transform.eulerAngles.x;
-			// 			tourXLD = false;
-			// 			turnLeftDown = false;
-			// 		}
-			// }
+			if (turnLeftDown)
+			{
+					transform.Rotate(-Vector3.right * turnSpeed * Time.deltaTime, Space.World);
+					if (startAngleX == 0)
+					{
+						startAngleX = 360f;
+					}
+					if ((startAngleX - transform.eulerAngles.x) >= rotationAngle)
+					{
+						Vector3 tmpDirXLD = new Vector3(startAngleX + rotationAngle, transform.eulerAngles.y,transform.eulerAngles.z );
+						transform.eulerAngles = tmpDirXLD;
+						startAngleX = transform.eulerAngles.x;
+						turnLeftDown = false;
+					}
+					if (transform.eulerAngles.x < 30) 
+					{
+						tourXLD = true;
+					}
+					if (tourXLD && transform.eulerAngles.x < 360 && transform.eulerAngles.x > 340)
+					{
+						Vector3 tmpTourXLD = new Vector3(0,transform.eulerAngles.y,transform.eulerAngles.z);
+						transform.eulerAngles = tmpTourXLD;
+						startAngleX = transform.eulerAngles.x;
+						tourXLD = false;
+						turnLeftDown = false;
+					}
+			}
 		}
 	}
 }
