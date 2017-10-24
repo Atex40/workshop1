@@ -15,6 +15,12 @@ public class HUDManager : MonoBehaviour {
     public Button quitYesButton;
     public Button quitNoButton;
 
+    public Image vie1;
+    public Image vie2;
+    public Image vie3;
+    public Image vie4;
+    public Image vie5;
+
     public Button tryAgainButton;
     public Button goToMenuButton;
 
@@ -25,11 +31,15 @@ public class HUDManager : MonoBehaviour {
     public Text moneyWinText;
     public Image moneyImage;
 
+    public GameObject confirmPanel;
+
     // SKIN 1 : ESPACE VERT
 
     public Sprite quitButtonSkin1;
     public Sprite quitYesButtonSkin1;
     public Sprite quitNoButtonSkin1;
+
+    public Sprite vieSkin1;
 
     public Sprite tryAgainButtonSkin1;
     public Sprite goToMenuButtonSkin1;
@@ -44,6 +54,8 @@ public class HUDManager : MonoBehaviour {
     public Sprite quitYesButtonSkin2;
     public Sprite quitNoButtonSkin2;
 
+    public Sprite vieSkin2;
+
     public Sprite tryAgainButtonSkin2;
     public Sprite goToMenuButtonSkin2;
 
@@ -57,6 +69,8 @@ public class HUDManager : MonoBehaviour {
     public Sprite quitYesButtonSkin3;
     public Sprite quitNoButtonSkin3;
 
+    public Sprite vieSkin3;
+
     public Sprite tryAgainButtonSkin3;
     public Sprite goToMenuButtonSkin3;
 
@@ -69,6 +83,8 @@ public class HUDManager : MonoBehaviour {
     public Sprite quitButtonSkin4;
     public Sprite quitYesButtonSkin4;
     public Sprite quitNoButtonSkin4;
+
+    public Sprite vieSkin4;
 
     public Sprite tryAgainButtonSkin4;
     public Sprite goToMenuButtonSkin4;
@@ -102,6 +118,16 @@ public class HUDManager : MonoBehaviour {
        
 	}
 
+    public void OpenConfirmPanel()
+    {
+        confirmPanel.SetActive(true);
+    }
+
+    public void CloseConfirmPanel()
+    {
+        confirmPanel.SetActive(false);
+    }
+
     public void Skin1() // SKIN 1 ACTIF
     {
         quitButton.image.overrideSprite = quitButtonSkin1;
@@ -111,6 +137,12 @@ public class HUDManager : MonoBehaviour {
 
         tryAgainButton.image.overrideSprite = tryAgainButtonSkin1;
         goToMenuButton.image.overrideSprite = goToMenuButtonSkin1;
+
+        vie1.overrideSprite = vieSkin1;
+        vie2.overrideSprite = vieSkin1;
+        vie3.overrideSprite = vieSkin1;
+        vie4.overrideSprite = vieSkin1;
+        vie5.overrideSprite = vieSkin1;
 
         RenderSettings.skybox = skyboxSkin1;
 
@@ -133,6 +165,12 @@ public class HUDManager : MonoBehaviour {
         tryAgainButton.image.overrideSprite = tryAgainButtonSkin2;
         goToMenuButton.image.overrideSprite = goToMenuButtonSkin2;
 
+        vie1.overrideSprite = vieSkin2;
+        vie2.overrideSprite = vieSkin2;
+        vie3.overrideSprite = vieSkin2;
+        vie4.overrideSprite = vieSkin2;
+        vie5.overrideSprite = vieSkin2;
+
         RenderSettings.skybox = skyboxSkin2;
 
         scoreText.color = Color.red;
@@ -153,6 +191,12 @@ public class HUDManager : MonoBehaviour {
         tryAgainButton.image.overrideSprite = tryAgainButtonSkin3;
         goToMenuButton.image.overrideSprite = goToMenuButtonSkin3;
 
+        vie1.overrideSprite = vieSkin3;
+        vie2.overrideSprite = vieSkin3;
+        vie3.overrideSprite = vieSkin3;
+        vie4.overrideSprite = vieSkin3;
+        vie5.overrideSprite = vieSkin3;
+
         RenderSettings.skybox = skyboxSkin3;
 
         scoreText.color = Color.white;
@@ -168,19 +212,25 @@ public class HUDManager : MonoBehaviour {
         quitButton.image.overrideSprite = quitButtonSkin4;
         quitYesButton.image.overrideSprite = quitYesButtonSkin4;
         quitNoButton.image.overrideSprite = quitNoButtonSkin4;
-        quitConfirmationText.color = Color.blue;
+        quitConfirmationText.color = Color.white;
 
         tryAgainButton.image.overrideSprite = tryAgainButtonSkin4;
         goToMenuButton.image.overrideSprite = goToMenuButtonSkin4;
 
+        vie1.overrideSprite = vieSkin4;
+        vie2.overrideSprite = vieSkin4;
+        vie3.overrideSprite = vieSkin4;
+        vie4.overrideSprite = vieSkin4;
+        vie5.overrideSprite = vieSkin4;
+
         RenderSettings.skybox = skyboxSkin4;
 
-        scoreText.color = Color.blue;
+        scoreText.color = Color.white;
 
         moneyImage.overrideSprite = moneyImageSkin4;
-        finalScoreText.color = Color.blue;
-        moneyWinText.color = Color.blue;
-        youLooseText.color = Color.blue;
+        finalScoreText.color = Color.white;
+        moneyWinText.color = Color.white;
+        youLooseText.color = Color.white;
     }
 
     public void GoBackToMenu()

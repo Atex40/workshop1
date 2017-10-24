@@ -48,6 +48,10 @@ public class EconomyManager : MonoBehaviour {
     public GameObject priceItem2Panel;
     public GameObject priceItem3Panel;
     public GameObject priceItem4Panel;
+    public Image checkItemChoice1;
+    public Image checkItemChoice2;
+    public Image checkItemChoice3;
+    public Image checkItemChoice4;
 
 
 
@@ -117,7 +121,10 @@ public class EconomyManager : MonoBehaviour {
     // Use this for initialization
     void Start ()
     {
-        
+        infoItem1Text.color = Color.green;
+        infoItem2Text.color = Color.red;
+        infoItem3Text.color = Color.white;
+        infoItem4Text.color = Color.white;
         currentMoney = PlayerPrefs.GetInt("currentMoney");
         activateItem1Bool = PlayerPrefs.GetInt("boolean1");
         activateItem2Bool = PlayerPrefs.GetInt("boolean2");
@@ -297,14 +304,19 @@ public class EconomyManager : MonoBehaviour {
         chooseItem3Button.image.overrideSprite = chooseItemButtonSkin1;
         chooseItem4Button.image.overrideSprite = chooseItemButtonSkin1;
 
+        checkItemChoice1.gameObject.SetActive(true);
+        checkItemChoice2.gameObject.SetActive(false);
+        checkItemChoice3.gameObject.SetActive(false);
+        checkItemChoice4.gameObject.SetActive(false);
+
         moneyImage.overrideSprite = moneyImageSkin1;
 
         moneyText.color = Color.green;
         highScoreText.color = Color.green;
-        infoItem1Text.color = Color.green;
-        infoItem2Text.color = Color.green;
-        infoItem3Text.color = Color.green;
-        infoItem4Text.color = Color.green;
+        //infoItem1Text.color = Color.green;
+        //infoItem2Text.color = Color.green;
+        //infoItem3Text.color = Color.green;
+        //infoItem4Text.color = Color.green;
 
         if (buyItem2Bool == 0)
         {
@@ -372,14 +384,19 @@ public class EconomyManager : MonoBehaviour {
         chooseItem3Button.image.overrideSprite = chooseItemButtonSkin2;
         chooseItem4Button.image.overrideSprite = chooseItemButtonSkin2;
 
+        checkItemChoice1.gameObject.SetActive(false);
+        checkItemChoice2.gameObject.SetActive(true);
+        checkItemChoice3.gameObject.SetActive(false);
+        checkItemChoice4.gameObject.SetActive(false);
+
         moneyImage.overrideSprite = moneyImageSkin2;
 
         moneyText.color = Color.red;
         highScoreText.color = Color.red;
-        infoItem1Text.color = Color.red;
-        infoItem2Text.color = Color.red;
-        infoItem3Text.color = Color.red;
-        infoItem4Text.color = Color.red;
+        //infoItem1Text.color = Color.red;
+        //infoItem2Text.color = Color.red;
+        //infoItem3Text.color = Color.red;
+        //infoItem4Text.color = Color.red;
 
         if (buyItem1Bool == 0)
         {
@@ -449,14 +466,19 @@ public class EconomyManager : MonoBehaviour {
         chooseItem2Button.image.overrideSprite = chooseItemButtonSkin3;
         chooseItem4Button.image.overrideSprite = chooseItemButtonSkin3;
 
+        checkItemChoice1.gameObject.SetActive(false);
+        checkItemChoice2.gameObject.SetActive(false);
+        checkItemChoice3.gameObject.SetActive(true);
+        checkItemChoice4.gameObject.SetActive(false);
+
         moneyImage.overrideSprite = moneyImageSkin3;
 
         moneyText.color = Color.white;
         highScoreText.color = Color.white;
-        infoItem1Text.color = Color.white;
-        infoItem2Text.color = Color.white;
-        infoItem3Text.color = Color.white;
-        infoItem4Text.color = Color.white;
+        //infoItem1Text.color = Color.white;
+        //infoItem2Text.color = Color.white;
+        //infoItem3Text.color = Color.white;
+        //infoItem4Text.color = Color.white;
 
         if (buyItem1Bool == 0)
         {
@@ -500,28 +522,33 @@ public class EconomyManager : MonoBehaviour {
         chooseItem2Button.image.overrideSprite = chooseItemButtonSkin4;
         chooseItem3Button.image.overrideSprite = chooseItemButtonSkin4;
 
+        checkItemChoice1.gameObject.SetActive(false);
+        checkItemChoice2.gameObject.SetActive(false);
+        checkItemChoice3.gameObject.SetActive(false);
+        checkItemChoice4.gameObject.SetActive(true);
+
         moneyImage.overrideSprite = moneyImageSkin4;
 
-        moneyText.color = Color.blue;
-        highScoreText.color = Color.blue;
-        infoItem1Text.color = Color.blue;
-        infoItem2Text.color = Color.blue;
-        infoItem3Text.color = Color.blue;
-        infoItem4Text.color = Color.blue;
+        moneyText.color = Color.white;
+        highScoreText.color = Color.white;
+        //infoItem1Text.color = Color.white;
+        //infoItem2Text.color = Color.white;
+        //infoItem3Text.color = Color.white;
+        //infoItem4Text.color = Color.white;
 
         if (buyItem1Bool == 0)
         {
-            priceItem1Text.color = Color.blue;
+            priceItem1Text.color = Color.white;
         }
 
         if (buyItem2Bool == 0)
         {
-            priceItem2Text.color = Color.blue;
+            priceItem2Text.color = Color.white;
         }
 
         if (buyItem3Bool == 0)
         {
-            priceItem3Text.color = Color.blue;
+            priceItem3Text.color = Color.white;
         }
 
         Debug.Log("Item 4 sélectionné");
