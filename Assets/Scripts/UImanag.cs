@@ -24,6 +24,9 @@ public class UImanag : MonoBehaviour {
 
 	public GameObject canvasMMIG;
 
+	public bool addVie = true;
+	private int countVieReset = 0;
+
 	private static UImanag instance ;
     public static UImanag Instance () 
     {
@@ -44,17 +47,22 @@ public class UImanag : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-		
+
 	}
 	
 	// Update is called once per frame
 	void Update () {
 		AffichageScore();
 		CoinsAffichage();
+
+
 		if (Input.GetKeyDown("e")){
 		Debug.Log(Input.GetKeyDown("e"));
 		addscore +=500;
-		}	
+		countVieReset +=500;
+		}
+
+		WinLife ();
 	}
 
 	void AffichageScore () {
@@ -83,13 +91,17 @@ public void LooseLife (){
 			cubeFin.SetActive(false);
 			gameOnOff = false;
 		}
-
 	}
 
-public void ReturnToMenu()
-    {
-	     SceneManager.LoadScene("MainMenu");
-    }
+	void WinLife ()
+	{
+			if (countVieReset == 2500)
+		{
+			vie ++;
+			lifeObjects[vie].SetActive(true);
+			countVieReset = 0;
+		}		
+	}
 
     void CoinsAffichage () {
 
@@ -111,7 +123,7 @@ public bool IsGameOn () {
 
 public	void Recommencer () {
 
-		SceneManager.LoadScene("SceneLucas");
+		SceneManager.LoadScene("SceneFinalIG");
 	}
 
 public void MainMenuIG () {
@@ -127,5 +139,10 @@ public void BackMenuOui () {
 public void BackMenuNon () {
 
 	canvasMMIG.SetActive(false);
+}
+
+public void CountVie (){
+
+	countVieReset += 100;
 }
 }
