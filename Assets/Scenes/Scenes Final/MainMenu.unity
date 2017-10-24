@@ -108,16 +108,18 @@ NavMeshSettings:
     tileSize: 256
     accuratePlacement: 0
   m_NavMeshData: {fileID: 0}
---- !u!1 &11483701 stripped
-GameObject:
-  m_PrefabParentObject: {fileID: 1550434787867566, guid: bf16395e9471bac449626f801b9eb9c5,
+--- !u!114 &11483703 stripped
+MonoBehaviour:
+  m_PrefabParentObject: {fileID: 114290325729549388, guid: bf16395e9471bac449626f801b9eb9c5,
     type: 2}
   m_PrefabInternal: {fileID: 1595485779}
---- !u!1 &73369253 stripped
-GameObject:
-  m_PrefabParentObject: {fileID: 1714586571316066, guid: bf16395e9471bac449626f801b9eb9c5,
+  m_Script: {fileID: 1392445389, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+--- !u!114 &73369255 stripped
+MonoBehaviour:
+  m_PrefabParentObject: {fileID: 114678542315948494, guid: bf16395e9471bac449626f801b9eb9c5,
     type: 2}
   m_PrefabInternal: {fileID: 1595485779}
+  m_Script: {fileID: 1392445389, guid: f70555f144d8491a825f0804e09c671c, type: 3}
 --- !u!1 &171703123
 GameObject:
   m_ObjectHideFlags: 0
@@ -203,11 +205,12 @@ MonoBehaviour:
     type: 2}
   m_PrefabInternal: {fileID: 1595485779}
   m_Script: {fileID: 1392445389, guid: f70555f144d8491a825f0804e09c671c, type: 3}
---- !u!1 &386078374 stripped
-GameObject:
-  m_PrefabParentObject: {fileID: 1948006635537704, guid: bf16395e9471bac449626f801b9eb9c5,
+--- !u!114 &386078376 stripped
+MonoBehaviour:
+  m_PrefabParentObject: {fileID: 114666859474708324, guid: bf16395e9471bac449626f801b9eb9c5,
     type: 2}
   m_PrefabInternal: {fileID: 1595485779}
+  m_Script: {fileID: 1392445389, guid: f70555f144d8491a825f0804e09c671c, type: 3}
 --- !u!1 &512835503 stripped
 GameObject:
   m_PrefabParentObject: {fileID: 1433861713514204, guid: bf16395e9471bac449626f801b9eb9c5,
@@ -305,6 +308,12 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 50, y: -30, z: 0}
+--- !u!114 &990633750 stripped
+MonoBehaviour:
+  m_PrefabParentObject: {fileID: 114094341615545236, guid: bf16395e9471bac449626f801b9eb9c5,
+    type: 2}
+  m_PrefabInternal: {fileID: 1595485779}
+  m_Script: {fileID: 1392445389, guid: f70555f144d8491a825f0804e09c671c, type: 3}
 --- !u!114 &1033480293 stripped
 MonoBehaviour:
   m_PrefabParentObject: {fileID: 114530256032835632, guid: bf16395e9471bac449626f801b9eb9c5,
@@ -323,16 +332,18 @@ MonoBehaviour:
     type: 2}
   m_PrefabInternal: {fileID: 1595485779}
   m_Script: {fileID: 708705254, guid: f70555f144d8491a825f0804e09c671c, type: 3}
---- !u!1 &1216549276 stripped
-GameObject:
-  m_PrefabParentObject: {fileID: 1334652430971166, guid: bf16395e9471bac449626f801b9eb9c5,
+--- !u!114 &1216549278 stripped
+MonoBehaviour:
+  m_PrefabParentObject: {fileID: 114663707124651708, guid: bf16395e9471bac449626f801b9eb9c5,
     type: 2}
   m_PrefabInternal: {fileID: 1595485779}
---- !u!1 &1295989658 stripped
-GameObject:
-  m_PrefabParentObject: {fileID: 1527121652200258, guid: bf16395e9471bac449626f801b9eb9c5,
+  m_Script: {fileID: 1392445389, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+--- !u!114 &1295989660 stripped
+MonoBehaviour:
+  m_PrefabParentObject: {fileID: 114065932313473712, guid: bf16395e9471bac449626f801b9eb9c5,
     type: 2}
   m_PrefabInternal: {fileID: 1595485779}
+  m_Script: {fileID: 1392445389, guid: f70555f144d8491a825f0804e09c671c, type: 3}
 --- !u!114 &1398121573 stripped
 MonoBehaviour:
   m_PrefabParentObject: {fileID: 114244199138725490, guid: bf16395e9471bac449626f801b9eb9c5,
@@ -459,6 +470,11 @@ Prefab:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 1935515924}
+    - target: {fileID: 114666859474708324, guid: bf16395e9471bac449626f801b9eb9c5,
+        type: 2}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1935515924}
     - target: {fileID: 114663707124651708, guid: bf16395e9471bac449626f801b9eb9c5,
         type: 2}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
@@ -474,6 +490,16 @@ Prefab:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 1935515922}
+    - target: {fileID: 114065932313473712, guid: bf16395e9471bac449626f801b9eb9c5,
+        type: 2}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1935515924}
+    - target: {fileID: 114194928635165160, guid: bf16395e9471bac449626f801b9eb9c5,
+        type: 2}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1935515924}
     - target: {fileID: 114290325729549388, guid: bf16395e9471bac449626f801b9eb9c5,
         type: 2}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
@@ -494,152 +520,13 @@ Prefab:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 1935515922}
-    - target: {fileID: 114194928635165160, guid: bf16395e9471bac449626f801b9eb9c5,
-        type: 2}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
-      value: 
-      objectReference: {fileID: 1935515924}
-    - target: {fileID: 114194928635165160, guid: bf16395e9471bac449626f801b9eb9c5,
-        type: 2}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: BuyItem2
-      objectReference: {fileID: 0}
-    - target: {fileID: 1286764034065366, guid: bf16395e9471bac449626f801b9eb9c5, type: 2}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 114549611789542740, guid: bf16395e9471bac449626f801b9eb9c5,
-        type: 2}
-      propertyPath: m_Enabled
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1938687872799226, guid: bf16395e9471bac449626f801b9eb9c5, type: 2}
+    - target: {fileID: 1911614833303288, guid: bf16395e9471bac449626f801b9eb9c5, type: 2}
       propertyPath: m_IsActive
       value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1320274055829202, guid: bf16395e9471bac449626f801b9eb9c5, type: 2}
-      propertyPath: m_Name
-      value: Skin1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1176465822128466, guid: bf16395e9471bac449626f801b9eb9c5, type: 2}
-      propertyPath: m_Name
-      value: Skin2
-      objectReference: {fileID: 0}
-    - target: {fileID: 1831905639574114, guid: bf16395e9471bac449626f801b9eb9c5, type: 2}
-      propertyPath: m_Name
-      value: Skin3
-      objectReference: {fileID: 0}
-    - target: {fileID: 1555801679336782, guid: bf16395e9471bac449626f801b9eb9c5, type: 2}
-      propertyPath: m_Name
-      value: Skin4
-      objectReference: {fileID: 0}
-    - target: {fileID: 1451923598223730, guid: bf16395e9471bac449626f801b9eb9c5, type: 2}
-      propertyPath: m_Name
-      value: NomSkin1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1505019879875738, guid: bf16395e9471bac449626f801b9eb9c5, type: 2}
-      propertyPath: m_Name
-      value: PrixSkin1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1505019879875738, guid: bf16395e9471bac449626f801b9eb9c5, type: 2}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1693098393701726, guid: bf16395e9471bac449626f801b9eb9c5, type: 2}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1693098393701726, guid: bf16395e9471bac449626f801b9eb9c5, type: 2}
-      propertyPath: m_Name
-      value: PrixText1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1714586571316066, guid: bf16395e9471bac449626f801b9eb9c5, type: 2}
-      propertyPath: m_Name
-      value: ButtonChoisirSkin1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1550434787867566, guid: bf16395e9471bac449626f801b9eb9c5, type: 2}
-      propertyPath: m_Name
-      value: ButtonAcheterSkin1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1105536956463976, guid: bf16395e9471bac449626f801b9eb9c5, type: 2}
-      propertyPath: m_Name
-      value: NomSkin2
-      objectReference: {fileID: 0}
-    - target: {fileID: 1706809708044948, guid: bf16395e9471bac449626f801b9eb9c5, type: 2}
-      propertyPath: m_Name
-      value: PrixSkin2
-      objectReference: {fileID: 0}
-    - target: {fileID: 1630164950658736, guid: bf16395e9471bac449626f801b9eb9c5, type: 2}
-      propertyPath: m_Name
-      value: PrixText2
-      objectReference: {fileID: 0}
-    - target: {fileID: 1308726211604706, guid: bf16395e9471bac449626f801b9eb9c5, type: 2}
-      propertyPath: m_Name
-      value: ButtonChoisirSkin2
-      objectReference: {fileID: 0}
-    - target: {fileID: 1099851103111852, guid: bf16395e9471bac449626f801b9eb9c5, type: 2}
-      propertyPath: m_Name
-      value: ButtonAcheterSkin2
-      objectReference: {fileID: 0}
-    - target: {fileID: 1125393200409788, guid: bf16395e9471bac449626f801b9eb9c5, type: 2}
-      propertyPath: m_Name
-      value: NomSkin3
-      objectReference: {fileID: 0}
-    - target: {fileID: 1469600742286464, guid: bf16395e9471bac449626f801b9eb9c5, type: 2}
-      propertyPath: m_Name
-      value: NomText2
-      objectReference: {fileID: 0}
-    - target: {fileID: 1573228100845608, guid: bf16395e9471bac449626f801b9eb9c5, type: 2}
-      propertyPath: m_Name
-      value: NomText1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1295588053558642, guid: bf16395e9471bac449626f801b9eb9c5, type: 2}
-      propertyPath: m_Name
-      value: NomText3
-      objectReference: {fileID: 0}
-    - target: {fileID: 1433861713514204, guid: bf16395e9471bac449626f801b9eb9c5, type: 2}
-      propertyPath: m_Name
-      value: PrixSkin3
-      objectReference: {fileID: 0}
-    - target: {fileID: 1270556172039276, guid: bf16395e9471bac449626f801b9eb9c5, type: 2}
-      propertyPath: m_Name
-      value: PrixText3
-      objectReference: {fileID: 0}
-    - target: {fileID: 1334652430971166, guid: bf16395e9471bac449626f801b9eb9c5, type: 2}
-      propertyPath: m_Name
-      value: ButtonChoisirSkin3
-      objectReference: {fileID: 0}
-    - target: {fileID: 1527121652200258, guid: bf16395e9471bac449626f801b9eb9c5, type: 2}
-      propertyPath: m_Name
-      value: ButtonAcheterSkin3
-      objectReference: {fileID: 0}
-    - target: {fileID: 1022920330057236, guid: bf16395e9471bac449626f801b9eb9c5, type: 2}
-      propertyPath: m_Name
-      value: NomSkin4
-      objectReference: {fileID: 0}
-    - target: {fileID: 1917326284811478, guid: bf16395e9471bac449626f801b9eb9c5, type: 2}
-      propertyPath: m_Name
-      value: NomText4
       objectReference: {fileID: 0}
     - target: {fileID: 1022706304647212, guid: bf16395e9471bac449626f801b9eb9c5, type: 2}
-      propertyPath: m_Name
-      value: PrixSkin4
-      objectReference: {fileID: 0}
-    - target: {fileID: 1911614833303288, guid: bf16395e9471bac449626f801b9eb9c5, type: 2}
-      propertyPath: m_Name
-      value: PrixText4
-      objectReference: {fileID: 0}
-    - target: {fileID: 1948006635537704, guid: bf16395e9471bac449626f801b9eb9c5, type: 2}
-      propertyPath: m_Name
-      value: ButtonChoisirSkin4
-      objectReference: {fileID: 0}
-    - target: {fileID: 1833843392845132, guid: bf16395e9471bac449626f801b9eb9c5, type: 2}
       propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1833843392845132, guid: bf16395e9471bac449626f801b9eb9c5, type: 2}
-      propertyPath: m_Name
-      value: MoneyImage
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: bf16395e9471bac449626f801b9eb9c5, type: 2}
@@ -733,11 +620,12 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &1865406328 stripped
-GameObject:
-  m_PrefabParentObject: {fileID: 1308726211604706, guid: bf16395e9471bac449626f801b9eb9c5,
+--- !u!114 &1865406330 stripped
+MonoBehaviour:
+  m_PrefabParentObject: {fileID: 114174635013105758, guid: bf16395e9471bac449626f801b9eb9c5,
     type: 2}
   m_PrefabInternal: {fileID: 1595485779}
+  m_Script: {fileID: 1392445389, guid: f70555f144d8491a825f0804e09c671c, type: 3}
 --- !u!1 &1935515921
 GameObject:
   m_ObjectHideFlags: 0
@@ -798,16 +686,17 @@ MonoBehaviour:
   quitButton: {fileID: 1398121573}
   playButton: {fileID: 368519342}
   shopButton: {fileID: 2086909260}
-  chooseItem1Button: {fileID: 73369253}
-  chooseItem2Button: {fileID: 1865406328}
-  chooseItem3Button: {fileID: 1216549276}
-  chooseItem4Button: {fileID: 386078374}
+  closeShopButton: {fileID: 990633750}
+  chooseItem1Button: {fileID: 73369255}
+  chooseItem2Button: {fileID: 1865406330}
+  chooseItem3Button: {fileID: 1216549278}
+  chooseItem4Button: {fileID: 386078376}
   moneyImage: {fileID: 623981227}
-  hightScoreText: {fileID: 1585560345}
+  highScoreText: {fileID: 1585560345}
   moneyText: {fileID: 1184876247}
-  buyItem1Button: {fileID: 11483701}
-  buyItem2Button: {fileID: 1959984042}
-  buyItem3Button: {fileID: 1295989658}
+  buyItem1Button: {fileID: 11483703}
+  buyItem2Button: {fileID: 1959984044}
+  buyItem3Button: {fileID: 1295989660}
   infoItem1Text: {fileID: 1524053569}
   infoItem2Text: {fileID: 368189647}
   infoItem3Text: {fileID: 709239822}
@@ -822,45 +711,44 @@ MonoBehaviour:
   priceItem4Panel: {fileID: 641616519}
   quitButtonSkin1: {fileID: 21300000, guid: d9ba32b0206786248bc4467ab33c8f36, type: 3}
   playButtonSkin1: {fileID: 21300000, guid: affe81e0ad7c8c941a1c0a8af8124c1b, type: 3}
-  shopButtonSkin1: {fileID: 0}
-  moneyImageSkin1: {fileID: 0}
-  skyboxSkin1: {fileID: 0}
-  buyItem2ButtonSkin1: {fileID: 0}
-  buyItem3ButtonSkin1: {fileID: 0}
-  chooseItem2ButtonSkin1: {fileID: 0}
-  chooseItem3ButtonSkin1: {fileID: 0}
-  chooseItem4ButtonSkin1: {fileID: 0}
-  quitButtonSkin2: {fileID: 0}
-  playButtonSkin2: {fileID: 0}
-  shopButtonSkin2: {fileID: 0}
-  moneImageSkin2: {fileID: 0}
-  skyboxSkin2: {fileID: 0}
-  buyItem1ButtonSkin2: {fileID: 0}
-  buyItem3ButtonSkin2: {fileID: 0}
-  chooseItem1ButtonSkin2: {fileID: 0}
-  chooseItem3ButtonSkin2: {fileID: 0}
-  chooseItem4ButtonSkin2: {fileID: 0}
-  quitButtonSkin3: {fileID: 0}
-  playButtonSkin3: {fileID: 0}
-  shopButtonSkin3: {fileID: 0}
-  moneyImageSkin3: {fileID: 0}
-  skyboxSkin3: {fileID: 0}
-  buyItem1ButtonSkin3: {fileID: 0}
-  buyItem2ButtonSkin3: {fileID: 0}
-  chooseItem1ButtonSkin3: {fileID: 0}
-  chooseItem2ButtonSkin3: {fileID: 0}
-  chooseItem4ButtonSkin3: {fileID: 0}
-  quitButtonSkin4: {fileID: 0}
-  playButtonSkin4: {fileID: 0}
-  shopButonSkin4: {fileID: 0}
-  moneyImageSkin4: {fileID: 0}
-  skyboxSkin4: {fileID: 0}
-  buyItem1ButtonSkin4: {fileID: 0}
-  buyItem2ButtonSkin4: {fileID: 0}
-  buyItem3ButtonSkin4: {fileID: 0}
-  chooseItem1ButtonSkin4: {fileID: 0}
-  chooseItem2ButtonSkin4: {fileID: 0}
-  chooseItem3ButtonSkin4: {fileID: 0}
+  shopButtonSkin1: {fileID: 21300000, guid: a2b92339206b61043b9ae6da93ca4675, type: 3}
+  closeShopButtonSkin1: {fileID: 21300000, guid: b3e52b871ab0fbd4799e17b9c9f468b2,
+    type: 3}
+  moneyImageSkin1: {fileID: 21300000, guid: 9f0a01bad7394d24591be6ec5ed11f4d, type: 3}
+  skyboxSkin1: {fileID: 2100000, guid: 5b21c6a8ce40f9641bd1204324b90b2c, type: 2}
+  buyItemButtonSkin1: {fileID: 21300000, guid: 92cecc4856959d84da58a20529f73b08, type: 3}
+  chooseItemButtonSkin1: {fileID: 21300000, guid: ca09295dbc97f704aa2d041d2a010b7a,
+    type: 3}
+  quitButtonSkin2: {fileID: 21300000, guid: f22abd0fada28a541b037f1c937d9935, type: 3}
+  playButtonSkin2: {fileID: 21300000, guid: 4aa1b964bea0d244c8c90f47c4d492a2, type: 3}
+  shopButtonSkin2: {fileID: 21300000, guid: f41bb82d07d4c1042aa61b733db2f953, type: 3}
+  closeShopButtonSkin2: {fileID: 21300000, guid: 21554d8573260df4a87c72f70cd6e9ff,
+    type: 3}
+  moneyImageSkin2: {fileID: 21300000, guid: f52297246aa676d46b917f55a7bb9c67, type: 3}
+  skyboxSkin2: {fileID: 2100000, guid: 19e2485c6f92d6944ad20466ac77b04c, type: 2}
+  buyItemButtonSkin2: {fileID: 21300000, guid: db797b4ca7b0d9a4eb5ee3d415633dd4, type: 3}
+  chooseItemButtonSkin2: {fileID: 21300000, guid: 6e0d09856adc6444b95ee4a7ac4995e9,
+    type: 3}
+  quitButtonSkin3: {fileID: 21300000, guid: 14b42a1da113004419749c055905817b, type: 3}
+  playButtonSkin3: {fileID: 21300000, guid: ab7708aa310483144b09a092adbb23b5, type: 3}
+  shopButtonSkin3: {fileID: 21300000, guid: 4a14c09d5ef22a946a739e4f22ac8a78, type: 3}
+  closeShopButtonSkin3: {fileID: 21300000, guid: 1d94072e10bcfd64a9c6c34188a9f595,
+    type: 3}
+  moneyImageSkin3: {fileID: 21300000, guid: 6c125cd1759120541827b59ec300fcb1, type: 3}
+  skyboxSkin3: {fileID: 2100000, guid: 0555ce5250847ed4d94c434de2fad0e9, type: 2}
+  buyItemButtonSkin3: {fileID: 21300000, guid: 07c59763cd3eb584f8ed12c955936934, type: 3}
+  chooseItemButtonSkin3: {fileID: 21300000, guid: 2203e67e61cea2c4aacadcbb2efbb959,
+    type: 3}
+  quitButtonSkin4: {fileID: 21300000, guid: 1c0ddfdb152771c4a867978d61413c87, type: 3}
+  playButtonSkin4: {fileID: 21300000, guid: 5b38eedf9287774428a2ac1f7ce38b66, type: 3}
+  shopButonSkin4: {fileID: 21300000, guid: 4d5c2c6d0df692f4e9022e21e8322fd9, type: 3}
+  closeShopButtonSkin4: {fileID: 21300000, guid: a12a80cd526fcbe4a984f0cd72df137e,
+    type: 3}
+  moneyImageSkin4: {fileID: 21300000, guid: aed48b7717bf936468a2a889f02f5fcf, type: 3}
+  skyboxSkin4: {fileID: 2100000, guid: b8f20d5ca50d16143afc11f5e4af6fc1, type: 2}
+  buyItemButtonSkin4: {fileID: 21300000, guid: f4b0b0a8a27117e43a592eab1c3284a4, type: 3}
+  chooseItemButtonSkin4: {fileID: 21300000, guid: c145ade34fb718f468a87bb4b6ff9e40,
+    type: 3}
 --- !u!114 &1935515925
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -872,11 +760,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 05071cb330f0df64582a8db24b5eb918, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!1 &1959984042 stripped
-GameObject:
-  m_PrefabParentObject: {fileID: 1099851103111852, guid: bf16395e9471bac449626f801b9eb9c5,
+--- !u!114 &1959984044 stripped
+MonoBehaviour:
+  m_PrefabParentObject: {fileID: 114194928635165160, guid: bf16395e9471bac449626f801b9eb9c5,
     type: 2}
   m_PrefabInternal: {fileID: 1595485779}
+  m_Script: {fileID: 1392445389, guid: f70555f144d8491a825f0804e09c671c, type: 3}
 --- !u!114 &1974738471 stripped
 MonoBehaviour:
   m_PrefabParentObject: {fileID: 114381838079146268, guid: bf16395e9471bac449626f801b9eb9c5,

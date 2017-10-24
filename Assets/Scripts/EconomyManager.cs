@@ -15,6 +15,7 @@ public class EconomyManager : MonoBehaviour {
     private int activateItem1Bool;
     private int activateItem2Bool;
     private int activateItem3Bool;
+    private int activateItem4Bool;
 
     
 
@@ -22,16 +23,17 @@ public class EconomyManager : MonoBehaviour {
     public Button quitButton;
     public Button playButton;
     public Button shopButton;
-    public GameObject chooseItem1Button;
-    public GameObject chooseItem2Button;
-    public GameObject chooseItem3Button;
-    public GameObject chooseItem4Button;
+    public Button closeShopButton;
+    public Button chooseItem1Button;
+    public Button chooseItem2Button;
+    public Button chooseItem3Button;
+    public Button chooseItem4Button;
     public Image moneyImage;
-    public Text hightScoreText;
+    public Text highScoreText;
     public Text moneyText;
-    public GameObject buyItem1Button;
-    public GameObject buyItem2Button;
-    public GameObject buyItem3Button;
+    public Button buyItem1Button;
+    public Button buyItem2Button;
+    public Button buyItem3Button;
     public Text infoItem1Text;
     public Text infoItem2Text;
     public Text infoItem3Text;
@@ -52,50 +54,41 @@ public class EconomyManager : MonoBehaviour {
     public Sprite quitButtonSkin1;
     public Sprite playButtonSkin1;
     public Sprite shopButtonSkin1;
+    public Sprite closeShopButtonSkin1;
     public Sprite moneyImageSkin1;
     public Material skyboxSkin1;
-    public Sprite buyItem2ButtonSkin1;
-    public Sprite buyItem3ButtonSkin1;   
-    public Sprite chooseItem2ButtonSkin1;
-    public Sprite chooseItem3ButtonSkin1;
-    public Sprite chooseItem4ButtonSkin1;
+    public Sprite buyItemButtonSkin1;  
+    public Sprite chooseItemButtonSkin1;
 
     // SKIN 2 : ESPACE ROUGE
     public Sprite quitButtonSkin2;
     public Sprite playButtonSkin2;
     public Sprite shopButtonSkin2;
-    public Sprite moneImageSkin2;
+    public Sprite closeShopButtonSkin2;
+    public Sprite moneyImageSkin2;
     public Material skyboxSkin2;
-    public Sprite buyItem1ButtonSkin2;
-    public Sprite buyItem3ButtonSkin2;
-    public Sprite chooseItem1ButtonSkin2;
-    public Sprite chooseItem3ButtonSkin2;
-    public Sprite chooseItem4ButtonSkin2;
+    public Sprite buyItemButtonSkin2;
+    public Sprite chooseItemButtonSkin2;
 
     // SKIN 3 : ARCADE NOIR ET BLANC
     public Sprite quitButtonSkin3;
     public Sprite playButtonSkin3;
     public Sprite shopButtonSkin3;
+    public Sprite closeShopButtonSkin3;
     public Sprite moneyImageSkin3;
     public Material skyboxSkin3;
-    public Sprite buyItem1ButtonSkin3;
-    public Sprite buyItem2ButtonSkin3;
-    public Sprite chooseItem1ButtonSkin3;
-    public Sprite chooseItem2ButtonSkin3;
-    public Sprite chooseItem4ButtonSkin3;
+    public Sprite buyItemButtonSkin3;
+    public Sprite chooseItemButtonSkin3;
 
     // SKIN 4 : PAR DEFAUT
     public Sprite quitButtonSkin4;
     public Sprite playButtonSkin4;
     public Sprite shopButonSkin4;
+    public Sprite closeShopButtonSkin4;
     public Sprite moneyImageSkin4;
     public Material skyboxSkin4;
-    public Sprite buyItem1ButtonSkin4;
-    public Sprite buyItem2ButtonSkin4;
-    public Sprite buyItem3ButtonSkin4;
-    public Sprite chooseItem1ButtonSkin4;
-    public Sprite chooseItem2ButtonSkin4;
-    public Sprite chooseItem3ButtonSkin4;
+    public Sprite buyItemButtonSkin4;
+    public Sprite chooseItemButtonSkin4;
 
 
     private static EconomyManager instance;
@@ -121,75 +114,50 @@ public class EconomyManager : MonoBehaviour {
     void Start ()
     {
 
-        buyItem1Button.SetActive(true);
         currentMoney = PlayerPrefs.GetInt("currentMoney");
         activateItem1Bool = PlayerPrefs.GetInt("boolean1");
         activateItem2Bool = PlayerPrefs.GetInt("boolean2");
         activateItem3Bool = PlayerPrefs.GetInt("boolean3");
+        activateItem4Bool = PlayerPrefs.GetInt("boolean4");
         buyItem1Bool = PlayerPrefs.GetInt("EspaceVert");
         buyItem2Bool = PlayerPrefs.GetInt("EspaceRouge");
+        buyItem3Bool = PlayerPrefs.GetInt("EspacePixel");
+
+        ChooseItemButtonFunction();
 
         if (buyItem1Bool == 1) // SI LE SKIN 1 EST ACHETE
         {
-            activateItem1Bool = 1;
-            PlayerPrefs.SetInt("boolean1", activateItem1Bool);
-            Destroy(buyItem1Button);
-            chooseItem1Button.SetActive(true);
-            
+            buyItem1Button.gameObject.SetActive(false);           
         }
 
         if (buyItem2Bool == 1) // SI LE SKIN 2 EST ACHETE
         {
-            activateItem2Bool = 1;
-            PlayerPrefs.SetInt("boolean2", activateItem2Bool);
-            Destroy(buyItem2Button);
-            chooseItem2Button.SetActive(true);
-            
+            buyItem2Button.gameObject.SetActive(false);            
         }
 
         if (buyItem3Bool == 1) // SI LE SKIN 3 EST ACHETE
         {
-            activateItem3Bool = 1;
-            PlayerPrefs.SetInt("boolean2", activateItem3Bool);
-            Destroy(buyItem3Button);
-            chooseItem3Button.SetActive(true);
+            buyItem3Button.gameObject.SetActive(false);
         }
+
         if (activateItem1Bool == 1) // SI LE SKIN 1 EST ACTIF
         {
-            activateItem1Bool = 0;
-            activateItem2Bool = 0;
-            activateItem3Bool = 0;            
-            PlayerPrefs.SetInt("boolean1", activateItem1Bool);
-            RenderSettings.skybox = skyboxSkin1;
-            quitButton.image.overrideSprite = quitButtonSkin1;
-            playButton.image.overrideSprite = playButtonSkin1;
-            shopButton.image.overrideSprite = shopButtonSkin1;
-            moneyText.color = Color.green;
-            hightScoreText.color = Color.green;
-            moneyImage.sprite = moneyImageSkin1;
-            chooseItem1Button.SetActive(false);
-
+            ChooseItem1();
         }
 
         if (activateItem2Bool == 1) // SI LE SKIN 2 EST ACTIF
         {
-            activateItem1Bool = 0;
-            activateItem2Bool = 0;
-            activateItem3Bool = 0;
-            PlayerPrefs.SetInt("boolean2", activateItem2Bool);
-            RenderSettings.skybox = skyboxSkin2;
-            quitButton.image.overrideSprite = quitButtonSkin2;
-            playButton.image.overrideSprite = playButtonSkin2;
-            shopButton.image.overrideSprite = shopButtonSkin2;
-            moneyText.color = Color.red;
-            hightScoreText.color = Color.red;
-            moneyImage.sprite = moneImageSkin2;
-            chooseItem2Button.SetActive(false);
+            ChooseItem2();
         }
 
         if (activateItem3Bool == 1) // SI LE SKIN 3 EST ACTIF
         {
-            
+            ChooseItem3();
+        }
+
+        if (activateItem4Bool == 1) // SI LE SKIN 4 EST ACTIF
+        {
+            ChooseItem4();
         }
     }
 	
@@ -210,14 +178,18 @@ public class EconomyManager : MonoBehaviour {
             activateItem1Bool = 0;
             activateItem2Bool = 0;
             activateItem3Bool = 0;
+            activateItem4Bool = 0;
             buyItem1Bool = 0;
             buyItem2Bool = 0;
+            buyItem3Bool = 0;
             PlayerPrefs.SetInt("currentMoney", currentMoney);
             PlayerPrefs.SetInt("boolean1", activateItem1Bool);
             PlayerPrefs.SetInt("boolean2", activateItem2Bool);
             PlayerPrefs.SetInt("boolean3", activateItem3Bool);
+            PlayerPrefs.SetInt("boolean4", activateItem4Bool);
             PlayerPrefs.SetInt("EspaceVert", buyItem1Bool);
             PlayerPrefs.SetInt("EspaceRouge", buyItem2Bool);
+            PlayerPrefs.SetInt("EspacePixel", buyItem3Bool);
             Debug.Log("jeu reinitialise");
         }
 
@@ -228,16 +200,22 @@ public class EconomyManager : MonoBehaviour {
 
 
 
-    public void BuyItem1() // ACHETER OBJET ESPACE VERT
+    public void BuyItem1() // ACHETER SKIN 1
     {
         if (currentMoney >= 500)
         {
+            currentMoney = currentMoney - 500;
+            PlayerPrefs.SetInt("currentMoney", currentMoney);
+
             buyItem1Bool = 1;
             PlayerPrefs.SetInt("EspaceVert", buyItem1Bool);
-            Destroy(buyItem1Button);
-            chooseItem1Button.SetActive(true);
-            currentMoney = currentMoney - 500;        
-            PlayerPrefs.SetInt("currentMoney", currentMoney);           
+
+            Destroy(priceItem1Panel);
+            Destroy(priceItem1Text);
+
+            buyItem1Button.gameObject.SetActive(false);
+            chooseItem1Button.gameObject.SetActive(true); 
+            
             Debug.Log("Item 1 acheté");
         }
        
@@ -247,87 +225,258 @@ public class EconomyManager : MonoBehaviour {
         }
     }
 
-    public void ChooseItem1() // CHOISIR OBJET ESPACE VERT
+    public void ChooseItem1() // CHOISIR SKIN 1
     {
-            activateItem1Bool = 1;
-            activateItem2Bool = 0;
-            activateItem3Bool = 0;
-            chooseItem1Button.SetActive(false);
-            PlayerPrefs.SetInt("boolean1", activateItem1Bool);
-            RenderSettings.skybox = skyboxSkin1;
-            quitButton.image.overrideSprite = quitButtonSkin1;
-            playButton.image.overrideSprite = playButtonSkin1;
-            shopButton.image.overrideSprite = shopButtonSkin1;
-            moneyText.color = Color.green;
-            hightScoreText.color = Color.green;
-            moneyImage.sprite = moneyImageSkin1;
+        activateItem1Bool = 1;
+        activateItem2Bool = 0;
+        activateItem3Bool = 0;
+        activateItem4Bool = 0;
+        PlayerPrefs.SetInt("boolean1", activateItem1Bool);
 
-        if (buyItem2Bool == 1)
-        {
-            chooseItem2Button.SetActive(true);
-        }
-            Debug.Log("Item 1 sélectionné");
+        ChooseItemButtonFunction();
+
+        RenderSettings.skybox = skyboxSkin1;
+        quitButton.image.overrideSprite = quitButtonSkin1;
+        playButton.image.overrideSprite = playButtonSkin1;
+        shopButton.image.overrideSprite = shopButtonSkin1;
+        closeShopButton.image.overrideSprite = closeShopButtonSkin1;
+
+        buyItem2Button.image.overrideSprite = buyItemButtonSkin1;
+        buyItem3Button.image.overrideSprite = buyItemButtonSkin1;
+
+        chooseItem2Button.image.overrideSprite = chooseItemButtonSkin1;
+        chooseItem3Button.image.overrideSprite = chooseItemButtonSkin1;
+        chooseItem4Button.image.overrideSprite = chooseItemButtonSkin1;
+
+        moneyImage.overrideSprite = moneyImageSkin1;
+
+        moneyText.color = Color.green;
+        highScoreText.color = Color.green;
+        infoItem1Text.color = Color.green;
+        infoItem2Text.color = Color.green;
+        infoItem3Text.color = Color.green;
+        infoItem4Text.color = Color.green;
+        priceItem2Text.color = Color.green;
+        priceItem3Text.color = Color.green;
+
+        Debug.Log("Item 1 sélectionné");
+
+
     }
 
-    public void BuyItem2() // ACHETER OBJET ESPACE ROUGE
+    public void BuyItem2() // ACHETER SKIN 2
     {
         if (currentMoney >= 1000)
-        {            
-            buyItem2Bool = 1;            
-            PlayerPrefs.SetInt("EspaceRouge", buyItem2Bool);
-            Destroy(buyItem2Button);
-            chooseItem2Button.SetActive(true);
+        {
             currentMoney = currentMoney - 1000;
             PlayerPrefs.SetInt("currentMoney", currentMoney);
+
+            buyItem2Bool = 1;            
+            PlayerPrefs.SetInt("EspaceRouge", buyItem2Bool);
+
+            Destroy(priceItem2Text);
+            Destroy(priceItem2Panel);
+
+            buyItem2Button.gameObject.SetActive(false);
+            chooseItem2Button.gameObject.SetActive(true);
+
             Debug.Log("Item 2 acheté");
         }
+
         else
         {
         Debug.Log("Item 2 ne peut etre acheté");
         }
     }
 
-    public void ChooseItem2() // CHOISIR OBJET ESPACE ROUGE
+    public void ChooseItem2() // CHOISIR SKIN 2
     {
         activateItem1Bool = 0;
         activateItem2Bool = 1;
         activateItem3Bool = 0;
-        chooseItem2Button.SetActive(false);
+        activateItem4Bool = 0;
         PlayerPrefs.SetInt("boolean2", activateItem2Bool);
+
+        ChooseItemButtonFunction();
+        
         RenderSettings.skybox = skyboxSkin2;
         quitButton.image.overrideSprite = quitButtonSkin2;
         playButton.image.overrideSprite = playButtonSkin2;
         shopButton.image.overrideSprite = shopButtonSkin2;
-        moneyText.color = Color.red;
-        hightScoreText.color = Color.red;
-        moneyImage.sprite = moneImageSkin2;
+        closeShopButton.image.overrideSprite = closeShopButtonSkin2;
 
-        if (buyItem1Bool == 1)
-        {
-            chooseItem1Button.SetActive(true);
-        }
+        buyItem1Button.image.overrideSprite = buyItemButtonSkin2;
+        buyItem3Button.image.overrideSprite = buyItemButtonSkin2;
+
+        chooseItem1Button.image.overrideSprite = chooseItemButtonSkin2;
+        chooseItem3Button.image.overrideSprite = chooseItemButtonSkin2;
+        chooseItem4Button.image.overrideSprite = chooseItemButtonSkin2;
+
+        moneyImage.overrideSprite = moneyImageSkin2;
+
+        moneyText.color = Color.red;
+        highScoreText.color = Color.red;
+        infoItem1Text.color = Color.red;
+        infoItem2Text.color = Color.red;
+        infoItem3Text.color = Color.red;
+        infoItem4Text.color = Color.red;
+        priceItem1Text.color = Color.red;
+        priceItem4Text.color = Color.red;
 
         Debug.Log("Item 2 sélectionné");
     }
 
-    public void BuyItem3()
+    public void BuyItem3() // ACHETER SKIN 3
     {
-        if (currentMoney >= 1500 && activateItem3Bool == 0)
+        if (currentMoney >= 1500)
         {
             currentMoney = currentMoney - 1500;
-            activateItem3Bool = 1;
             PlayerPrefs.SetInt("currentMoney", currentMoney);
-            PlayerPrefs.SetInt("boolean3", activateItem3Bool);
-            Destroy(buyItem3Button);
+
+            buyItem3Bool = 1;
+            PlayerPrefs.SetInt("EspacePixel", buyItem3Bool);
+
+            Destroy(priceItem3Text);
+            Destroy(priceItem3Panel);
+
+            buyItem3Button.gameObject.SetActive(false);
+            chooseItem3Button.gameObject.SetActive(true);
+
             Debug.Log("Item 3 acheté");
         }
+
         else
         {
         Debug.Log("Item 3 ne peut etre acheté");
         }
+
+
     }
 
+    public void ChooseItem3() // CHOISIR SKIN 3
+    {
 
+        activateItem1Bool = 0;
+        activateItem2Bool = 0;
+        activateItem3Bool = 1;
+        activateItem4Bool = 0;
+        PlayerPrefs.SetInt("boolean3", activateItem3Bool);
+
+        ChooseItemButtonFunction();
+
+        RenderSettings.skybox = skyboxSkin3;
+        quitButton.image.overrideSprite = quitButtonSkin3;
+        playButton.image.overrideSprite = playButtonSkin3;
+        shopButton.image.overrideSprite = shopButtonSkin3;
+        closeShopButton.image.overrideSprite = closeShopButtonSkin3;
+
+        buyItem1Button.image.overrideSprite = buyItemButtonSkin3;
+        buyItem2Button.image.overrideSprite = buyItemButtonSkin3;
+
+        chooseItem1Button.image.overrideSprite = chooseItemButtonSkin3;
+        chooseItem2Button.image.overrideSprite = chooseItemButtonSkin3;
+        chooseItem4Button.image.overrideSprite = chooseItemButtonSkin3;
+
+        moneyImage.overrideSprite = moneyImageSkin3;
+
+        moneyText.color = Color.white;
+        highScoreText.color = Color.white;
+        infoItem1Text.color = Color.white;
+        infoItem2Text.color = Color.white;
+        infoItem3Text.color = Color.white;
+        infoItem4Text.color = Color.white;
+        priceItem1Text.color = Color.white;
+        priceItem2Text.color = Color.white;        
+
+        Debug.Log("Item 3 sélectionné");
+
+    }
+
+    public void ChooseItem4() // CHOISIR SKIN 4
+    {
+
+        activateItem1Bool = 0;
+        activateItem2Bool = 0;
+        activateItem3Bool = 0;
+        activateItem4Bool = 1;
+        PlayerPrefs.SetInt("boolean4", activateItem4Bool);
+
+        ChooseItemButtonFunction();
+
+        RenderSettings.skybox = skyboxSkin4;
+        quitButton.image.overrideSprite = quitButtonSkin4;
+        playButton.image.overrideSprite = playButtonSkin4;
+        shopButton.image.overrideSprite = shopButonSkin4;
+        closeShopButton.image.overrideSprite = closeShopButtonSkin4;
+
+        buyItem1Button.image.overrideSprite = buyItemButtonSkin4;
+        buyItem2Button.image.overrideSprite = buyItemButtonSkin4;
+        buyItem3Button.image.overrideSprite = buyItemButtonSkin4;
+
+        chooseItem1Button.image.overrideSprite = chooseItemButtonSkin4;
+        chooseItem2Button.image.overrideSprite = chooseItemButtonSkin4;
+        chooseItem3Button.image.overrideSprite = chooseItemButtonSkin4;
+
+        moneyImage.overrideSprite = moneyImageSkin4;
+
+        moneyText.color = Color.blue;
+        highScoreText.color = Color.blue;
+        infoItem1Text.color = Color.blue;
+        infoItem2Text.color = Color.blue;
+        infoItem3Text.color = Color.blue;
+        infoItem4Text.color = Color.blue;
+        priceItem1Text.color = Color.blue;
+        priceItem2Text.color = Color.blue;
+        priceItem3Text.color = Color.blue;        
+
+        Debug.Log("Item 4 sélectionné");
+
+    }
+
+    public void ChooseItemButtonFunction()
+    {
+
+        if (buyItem1Bool == 1 && activateItem1Bool == 0) // SI ITEM 1 ACHETE MAIS PAS ACTIF : ACTIVER BOUTON
+        {
+            chooseItem1Button.gameObject.SetActive(true);
+        }
+
+        else if (buyItem1Bool == 0 || activateItem1Bool == 1) // SI ITEM 1 PAS ACHETE OU ACTIF : DESACTIVER BOUTON
+        {
+            chooseItem1Button.gameObject.SetActive(false);
+        }
+
+        if (buyItem2Bool == 1 && activateItem2Bool == 0) // SI ITEM 2 ACHETE MAIS PAS ACTIF : ACTIVER BOUTON
+        {
+            chooseItem2Button.gameObject.SetActive(true);
+        }
+
+        else if (buyItem2Bool == 0 || activateItem2Bool == 1) // SI ITEM 2 PAS ACHETE OU ACTIF : DESACTIVER BOUTON
+        {
+            chooseItem2Button.gameObject.SetActive(false);
+        }
+
+        if (buyItem3Bool == 1 && activateItem3Bool == 0) // SI ITEM 3 ACHETE MAIS PAS ACTIF : ACTIVER BOUTON
+        {
+            chooseItem3Button.gameObject.SetActive(true);
+        }
+
+        else if (buyItem3Bool == 0 || activateItem3Bool == 1) // SI ITEM 3 PAS ACHETE OU ACTIF : DESACTIVER BOUTON
+        {
+            chooseItem3Button.gameObject.SetActive(false);
+        }
+
+        if (activateItem4Bool == 1) // SI ITEM 4 ACTIF : DESACTIVER BOUTON
+        {
+            chooseItem4Button.gameObject.SetActive(false);
+        }
+
+        if (activateItem4Bool == 0) // SI ITEM 4 PAS ACTIF : ACTIVER BOUTON
+        {
+            chooseItem4Button.gameObject.SetActive(true);
+        }
+
+    }
 
     public void AddMoney () {
 

@@ -22,7 +22,7 @@ GameObject:
   - component: {fileID: 222081291572624700}
   - component: {fileID: 114250120229525868}
   m_Layer: 5
-  m_Name: PrixObjet4
+  m_Name: PrixSkin4
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -39,7 +39,7 @@ GameObject:
   - component: {fileID: 222804929026347420}
   - component: {fileID: 114959242158746832}
   m_Layer: 5
-  m_Name: NomObjet4
+  m_Name: NomSkin4
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -74,7 +74,7 @@ GameObject:
   - component: {fileID: 114329090553264748}
   - component: {fileID: 114194928635165160}
   m_Layer: 5
-  m_Name: ButtonAcheter
+  m_Name: ButtonAcheterSkin2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -91,7 +91,7 @@ GameObject:
   - component: {fileID: 222428395156281462}
   - component: {fileID: 114002267397202260}
   m_Layer: 5
-  m_Name: NomObjet2
+  m_Name: NomSkin2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -108,7 +108,7 @@ GameObject:
   - component: {fileID: 222694889720965484}
   - component: {fileID: 114183952129118290}
   m_Layer: 5
-  m_Name: NomObjet3
+  m_Name: NomSkin3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -141,7 +141,7 @@ GameObject:
   m_Component:
   - component: {fileID: 224071638933439220}
   m_Layer: 5
-  m_Name: Objet2
+  m_Name: Skin2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -158,7 +158,7 @@ GameObject:
   - component: {fileID: 222128966405678026}
   - component: {fileID: 114433585491717894}
   m_Layer: 5
-  m_Name: Text
+  m_Name: PrixText3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -192,7 +192,7 @@ GameObject:
   - component: {fileID: 222898786317128458}
   - component: {fileID: 114345279635022106}
   m_Layer: 5
-  m_Name: Text
+  m_Name: NomText3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -210,7 +210,7 @@ GameObject:
   - component: {fileID: 114547240200068228}
   - component: {fileID: 114174635013105758}
   m_Layer: 5
-  m_Name: ButtonChoisir
+  m_Name: ButtonChoisirSkin2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -225,7 +225,7 @@ GameObject:
   m_Component:
   - component: {fileID: 224583785008836068}
   m_Layer: 5
-  m_Name: Objet1
+  m_Name: Skin1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -243,7 +243,7 @@ GameObject:
   - component: {fileID: 114701394185145058}
   - component: {fileID: 114663707124651708}
   m_Layer: 5
-  m_Name: ButtonChoisir
+  m_Name: ButtonChoisirSkin3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -260,7 +260,7 @@ GameObject:
   - component: {fileID: 222170434594648708}
   - component: {fileID: 114072445829042368}
   m_Layer: 5
-  m_Name: PrixObjet3
+  m_Name: PrixSkin3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -277,7 +277,7 @@ GameObject:
   - component: {fileID: 222200956241796490}
   - component: {fileID: 114549611789542740}
   m_Layer: 5
-  m_Name: NomObjet1
+  m_Name: NomSkin1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -294,7 +294,7 @@ GameObject:
   - component: {fileID: 222260331672624662}
   - component: {fileID: 114856092941800140}
   m_Layer: 5
-  m_Name: Text
+  m_Name: NomText2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -311,7 +311,7 @@ GameObject:
   - component: {fileID: 222628940568639104}
   - component: {fileID: 114454141683219942}
   m_Layer: 5
-  m_Name: PrixObjet1
+  m_Name: PrixSkin1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -329,7 +329,7 @@ GameObject:
   - component: {fileID: 114547592005535364}
   - component: {fileID: 114065932313473712}
   m_Layer: 5
-  m_Name: ButtonAcheter
+  m_Name: ButtonAcheterSkin3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -347,7 +347,7 @@ GameObject:
   - component: {fileID: 114174817721734190}
   - component: {fileID: 114290325729549388}
   m_Layer: 5
-  m_Name: ButtonAcheter
+  m_Name: ButtonAcheterSkin1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -362,7 +362,7 @@ GameObject:
   m_Component:
   - component: {fileID: 224588438332988856}
   m_Layer: 5
-  m_Name: Objet4
+  m_Name: Skin4
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -397,7 +397,7 @@ GameObject:
   - component: {fileID: 222712737408503690}
   - component: {fileID: 114303033962381756}
   m_Layer: 5
-  m_Name: Text
+  m_Name: NomText1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -414,7 +414,7 @@ GameObject:
   - component: {fileID: 222945471737599196}
   - component: {fileID: 114982974003478082}
   m_Layer: 5
-  m_Name: Text
+  m_Name: PrixText2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -431,7 +431,7 @@ GameObject:
   - component: {fileID: 222581570517123422}
   - component: {fileID: 114530256032835632}
   m_Layer: 5
-  m_Name: Text
+  m_Name: PrixText1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -448,7 +448,7 @@ GameObject:
   - component: {fileID: 222304210705634010}
   - component: {fileID: 114300655288111350}
   m_Layer: 5
-  m_Name: PrixObjet2
+  m_Name: PrixSkin2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -466,7 +466,7 @@ GameObject:
   - component: {fileID: 114398470048531896}
   - component: {fileID: 114678542315948494}
   m_Layer: 5
-  m_Name: ButtonChoisir
+  m_Name: ButtonChoisirSkin1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -481,7 +481,7 @@ GameObject:
   m_Component:
   - component: {fileID: 224109909207067826}
   m_Layer: 5
-  m_Name: Objet3
+  m_Name: Skin3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -498,7 +498,7 @@ GameObject:
   - component: {fileID: 222582850850802094}
   - component: {fileID: 114723724059793066}
   m_Layer: 5
-  m_Name: Image
+  m_Name: MoneyImage
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -533,7 +533,7 @@ GameObject:
   - component: {fileID: 222299442089478442}
   - component: {fileID: 114381838079146268}
   m_Layer: 5
-  m_Name: Text
+  m_Name: PrixText4
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -568,7 +568,7 @@ GameObject:
   - component: {fileID: 222827661047273368}
   - component: {fileID: 114812413460901314}
   m_Layer: 5
-  m_Name: Text
+  m_Name: NomText4
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -604,7 +604,7 @@ GameObject:
   - component: {fileID: 114794945361550374}
   - component: {fileID: 114666859474708324}
   m_Layer: 5
-  m_Name: ButtonChoisir
+  m_Name: ButtonChoisirSkin4
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -746,7 +746,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 0}
-        m_MethodName: 
+        m_MethodName: BuyItem3
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1076,7 +1076,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 0}
-        m_MethodName: 
+        m_MethodName: BuyItem2
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1729,7 +1729,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 0}
-        m_MethodName: BuyItem3
+        m_MethodName: ChooseItem3
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1779,7 +1779,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 114794945361550374}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 0}
+        m_MethodName: ChooseItem4
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
 --- !u!114 &114678542315948494
