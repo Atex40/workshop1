@@ -21,7 +21,7 @@ public class MenuManager : MonoBehaviour {
 
     public void GoToGame()
     {
-        SceneManager.LoadScene("SceneLucas");
+        SceneManager.LoadScene("InGame");
     }
 
     public void OpenShop()
