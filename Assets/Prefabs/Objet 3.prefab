@@ -122,5 +122,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 50
-  destroyFX: {fileID: 198209467195320748, guid: 5d592101a71c6744995a3b553f7f516d,
-    type: 2}
+  earnedScore: 100
