@@ -51,6 +51,9 @@ public class AttractObject : MonoBehaviour {
         {
      	  SpawnerManag.Instance().RandoPop();
         }
+        
+         AudioSource audio = GetComponent<AudioSource>();
+         audio.Play();
      }
 
      public void SetTarget (Transform leCube) {
