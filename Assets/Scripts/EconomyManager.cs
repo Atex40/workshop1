@@ -117,32 +117,39 @@ public class EconomyManager : MonoBehaviour {
     // Use this for initialization
     void Start ()
     {
-
-        ChooseItem4();
+        
         currentMoney = PlayerPrefs.GetInt("currentMoney");
         activateItem1Bool = PlayerPrefs.GetInt("boolean1");
         activateItem2Bool = PlayerPrefs.GetInt("boolean2");
         activateItem3Bool = PlayerPrefs.GetInt("boolean3");
-      //  activateItem4Bool = PlayerPrefs.GetInt("boolean4");
+        activateItem4Bool = PlayerPrefs.GetInt("boolean4");
         buyItem1Bool = PlayerPrefs.GetInt("EspaceVert");
         buyItem2Bool = PlayerPrefs.GetInt("EspaceRouge");
         buyItem3Bool = PlayerPrefs.GetInt("EspacePixel");
 
         ChooseItemButtonFunction();
 
+      
+
         if (buyItem1Bool == 1) // SI LE SKIN 1 EST ACHETE
         {
-            buyItem1Button.gameObject.SetActive(false);           
+            buyItem1Button.gameObject.SetActive(false);
+            priceItem1Panel.gameObject.SetActive(false);
+            priceItem1Text.gameObject.SetActive(false);
         }
 
         if (buyItem2Bool == 1) // SI LE SKIN 2 EST ACHETE
         {
-            buyItem2Button.gameObject.SetActive(false);            
+            buyItem2Button.gameObject.SetActive(false);
+            priceItem2Panel.gameObject.SetActive(false);
+            priceItem2Text.gameObject.SetActive(false);
         }
 
         if (buyItem3Bool == 1) // SI LE SKIN 3 EST ACHETE
         {
             buyItem3Button.gameObject.SetActive(false);
+            priceItem3Panel.gameObject.SetActive(false);
+            priceItem3Text.gameObject.SetActive(false);
         }
 
         if (activateItem1Bool == 1) // SI LE SKIN 1 EST ACTIF
@@ -159,14 +166,18 @@ public class EconomyManager : MonoBehaviour {
         {
             ChooseItem3();
         }
+        
 
         if (activateItem4Bool == 1) // SI LE SKIN 4 EST ACTIF
         {
             ChooseItem4();
         }
 
-
-        chooseItem4Button.gameObject.SetActive(false);
+        if (activateItem4Bool == 0 && activateItem1Bool == 0 && activateItem2Bool == 0 && activateItem3Bool == 0)
+        {
+            ChooseItem4();
+            chooseItem4Button.gameObject.SetActive(false);
+        }
 
     }
 	
