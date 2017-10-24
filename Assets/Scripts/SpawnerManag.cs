@@ -44,8 +44,11 @@ public class SpawnerManag : MonoBehaviour {
     		int tempory = UnityEngine.Random.Range(0,spawnItems.Count);
     		int spwn = UnityEngine.Random.Range(0, spawnPoints.Length);
     		iGo = Instantiate(spawnItems[tempory], spawnPoints[spwn].position, Quaternion.identity);
+    		Debug.Log("youhou");
         	nbmaxprefab += 1f;
+        	Debug.Log("youhou2");
         	iGo.GetComponent<AttractObject>().SetTarget(mainCube);
+        	Debug.Log("youhou3");
   		}
 	}
 

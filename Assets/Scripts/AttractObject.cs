@@ -6,13 +6,16 @@ public class AttractObject : MonoBehaviour {
 
  	private Transform attractedTo;
     public float speed = 50.0f;
+    public int earnedScore;
 
      void Start () {
-     	if(!UImanag.Instance().IsGameOn())
-     	{
-     		gameObject.SetActive(false);
-     	}
+        
+     	// if(!UImanag.Instance().IsGameOn())
+     	// {
+     	// 	gameObject.SetActive(false);
+     	// }
      }
+
      void FixedUpdate ()
 
      {
@@ -24,13 +27,13 @@ public class AttractObject : MonoBehaviour {
 
     void OnCollisionEnter(Collision collision){
 
-    	Debug.Log(collision.gameObject.tag);	
+    	// Debug.Log(collision.gameObject.tag);	
 
      	if (collision.gameObject.tag == gameObject.tag)
      	{
-     		UImanag.Instance().AddScore();
+     		UImanag.Instance().AddScore(earnedScore);
      		EconomyManager.Instance().AddMoney();
-            UImanag.Instance().CountVie();
+            UImanag.Instance().CountVie(earnedScore);
      	}
 
     	else if (collision.gameObject.tag != gameObject.tag)
@@ -44,7 +47,10 @@ public class AttractObject : MonoBehaviour {
 
      void OnDestroy () 
      {
-     	SpawnerManag.Instance().RandoPop();
+        if(UImanag.Instance().IsGameOn())
+        {
+     	  SpawnerManag.Instance().RandoPop();
+        }
      }
 
      public void SetTarget (Transform leCube) {
@@ -97,4 +103,10 @@ public class AttractObject : MonoBehaviour {
 
 
      }
- }
+
+public GameObject LesObjets () {
+
+return gameObject;
+
+}
+}

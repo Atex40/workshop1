@@ -46,24 +46,23 @@ public class UImanag : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-
+		Debug.Log("yop");
 	}
 	
 	// Update is called once per frame
 	void Update () {
-		AffichageScore();
-		CoinsAffichage();
+		// AffichageScore();
+		// CoinsAffichage();
 
 
 		if (Input.GetKeyDown("e")){
-		Debug.Log(Input.GetKeyDown("e"));
-		addscore +=500;
-		countVieReset +=500;
+			AddScore(500);
+			CountVie(500);
 		}
 
-		WinLife ();
+		// WinLife ();
 
-		PlayerPrefs.SetInt("currentMoney", EconomyManager.Instance().GetMoney());
+		// PlayerPrefs.SetInt("currentMoney", EconomyManager.Instance().GetMoney());
 	}
 
 	void AffichageScore () {
@@ -73,9 +72,10 @@ public class UImanag : MonoBehaviour {
 
     }
 
-public void AddScore (){
+public void AddScore (int value){
 
-    	addscore += 100;
+    	addscore += value;
+    	AffichageScore();
 
     }
 
@@ -91,12 +91,17 @@ public void LooseLife (){
 			canvasFin.SetActive(true);
 			cubeFin.SetActive(false);
 			gameOnOff = false;
+			CoinsAffichage();
+			PlayerPrefs.SetInt("currentMoney", EconomyManager.Instance().GetMoney());
+			Destroy (GameObject.FindGameObjectWithTag("Vert"));
+			Destroy (GameObject.FindGameObjectWithTag("Bleu"));
+			Destroy (GameObject.FindGameObjectWithTag("Rouge"));
 		}
 	}
 
 	void WinLife ()
 	{
-			if (countVieReset == 2500)
+		if (countVieReset == 2500)
 		{
 			vie ++;
 			lifeObjects[vie].SetActive(true);
@@ -106,7 +111,7 @@ public void LooseLife (){
 
     void CoinsAffichage () {
 
-    picesGagnees.text = "Pieces gagnees : " + EconomyManager.Instance().GetMoney().ToString();
+    picesGagnees.text = "Pieces Totales : " + EconomyManager.Instance().GetMoney().ToString();
     	
     }
 
@@ -114,18 +119,18 @@ public int ScoreSpeed () {
 
 	return addscore;
 
-	}
+}
 
 public bool IsGameOn () {
 
 	return gameOnOff;
 
-	}
+}
 
 public	void Recommencer () {
 
-		SceneManager.LoadScene("SceneFinalIG");
-	}
+	SceneManager.LoadScene("SceneFinalIG");
+}
 
 public void MainMenuIG () {
 
@@ -142,8 +147,9 @@ public void BackMenuNon () {
 	canvasMMIG.SetActive(false);
 }
 
-public void CountVie (){
+public void CountVie (int value){
 
-	countVieReset += 100;
+	countVieReset += value;
+	WinLife ();
 }
 }
