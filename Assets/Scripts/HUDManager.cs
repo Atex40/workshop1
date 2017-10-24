@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class HUDManager : MonoBehaviour {
 
@@ -13,6 +14,9 @@ public class HUDManager : MonoBehaviour {
     public Text quitConfirmationText;
     public Button quitYesButton;
     public Button quitNoButton;
+
+    public Button tryAgainButton;
+    public Button goToMenuButton;
 
     public Text scoreText;
 
@@ -27,7 +31,12 @@ public class HUDManager : MonoBehaviour {
     public Sprite quitYesButtonSkin1;
     public Sprite quitNoButtonSkin1;
 
+    public Sprite tryAgainButtonSkin1;
+    public Sprite goToMenuButtonSkin1;
+
     public Sprite moneyImageSkin1;
+
+    public Material skyboxSkin1;
 
     // SKIN 2 : ESPACE ROUGE
 
@@ -35,7 +44,12 @@ public class HUDManager : MonoBehaviour {
     public Sprite quitYesButtonSkin2;
     public Sprite quitNoButtonSkin2;
 
+    public Sprite tryAgainButtonSkin2;
+    public Sprite goToMenuButtonSkin2;
+
     public Sprite moneyImageSkin2;
+
+    public Material skyboxSkin2;
 
     // SKIN 3 : ESPACE PIXEL
 
@@ -43,7 +57,12 @@ public class HUDManager : MonoBehaviour {
     public Sprite quitYesButtonSkin3;
     public Sprite quitNoButtonSkin3;
 
+    public Sprite tryAgainButtonSkin3;
+    public Sprite goToMenuButtonSkin3;
+
     public Sprite moneyImageSkin3;
+
+    public Material skyboxSkin3;
 
     // SKIN 4 : DEFAULT
 
@@ -51,7 +70,12 @@ public class HUDManager : MonoBehaviour {
     public Sprite quitYesButtonSkin4;
     public Sprite quitNoButtonSkin4;
 
+    public Sprite tryAgainButtonSkin4;
+    public Sprite goToMenuButtonSkin4;
+
     public Sprite moneyImageSkin4;
+
+    public Material skyboxSkin4;
 
     // Use this for initialization
     void Start () {
@@ -78,12 +102,17 @@ public class HUDManager : MonoBehaviour {
        
 	}
 
-    public void Skin1()
+    public void Skin1() // SKIN 1 ACTIF
     {
         quitButton.image.overrideSprite = quitButtonSkin1;
         quitYesButton.image.overrideSprite = quitYesButtonSkin1;
         quitNoButton.image.overrideSprite = quitNoButtonSkin1;
         quitConfirmationText.color = Color.green;
+
+        tryAgainButton.image.overrideSprite = tryAgainButtonSkin1;
+        goToMenuButton.image.overrideSprite = goToMenuButtonSkin1;
+
+        RenderSettings.skybox = skyboxSkin1;
 
         scoreText.color = Color.green;
 
@@ -94,12 +123,17 @@ public class HUDManager : MonoBehaviour {
 
     }
 
-    public void Skin2()
+    public void Skin2() // SKIN 2 ACTIF
     {
         quitButton.image.overrideSprite = quitButtonSkin2;
         quitYesButton.image.overrideSprite = quitYesButtonSkin2;
         quitNoButton.image.overrideSprite = quitNoButtonSkin2;
         quitConfirmationText.color = Color.red;
+
+        tryAgainButton.image.overrideSprite = tryAgainButtonSkin2;
+        goToMenuButton.image.overrideSprite = goToMenuButtonSkin2;
+
+        RenderSettings.skybox = skyboxSkin2;
 
         scoreText.color = Color.red;
 
@@ -109,12 +143,17 @@ public class HUDManager : MonoBehaviour {
         youLooseText.color = Color.red;
     }
 
-    public void Skin3()
+    public void Skin3() // SKIN 3 ACTIF
     {
         quitButton.image.overrideSprite = quitButtonSkin3;
         quitYesButton.image.overrideSprite = quitYesButtonSkin3;
         quitNoButton.image.overrideSprite = quitNoButtonSkin3;
         quitConfirmationText.color = Color.white;
+
+        tryAgainButton.image.overrideSprite = tryAgainButtonSkin3;
+        goToMenuButton.image.overrideSprite = goToMenuButtonSkin3;
+
+        RenderSettings.skybox = skyboxSkin3;
 
         scoreText.color = Color.white;
 
@@ -124,12 +163,17 @@ public class HUDManager : MonoBehaviour {
         youLooseText.color = Color.white;
     }
 
-    public void Skin4()
+    public void Skin4() // SKIN 4 ACTIF
     {
         quitButton.image.overrideSprite = quitButtonSkin4;
         quitYesButton.image.overrideSprite = quitYesButtonSkin4;
         quitNoButton.image.overrideSprite = quitNoButtonSkin4;
         quitConfirmationText.color = Color.blue;
+
+        tryAgainButton.image.overrideSprite = tryAgainButtonSkin4;
+        goToMenuButton.image.overrideSprite = goToMenuButtonSkin4;
+
+        RenderSettings.skybox = skyboxSkin4;
 
         scoreText.color = Color.blue;
 
@@ -137,6 +181,16 @@ public class HUDManager : MonoBehaviour {
         finalScoreText.color = Color.blue;
         moneyWinText.color = Color.blue;
         youLooseText.color = Color.blue;
+    }
+
+    public void GoBackToMenu()
+    {
+        SceneManager.LoadScene("MainMenu");
+    }
+
+    public void TryAgain()
+    {
+        SceneManager.LoadScene("InGame");
     }
 	
 	// Update is called once per frame

@@ -118,11 +118,12 @@ public class EconomyManager : MonoBehaviour {
     void Start ()
     {
 
+        ChooseItem4();
         currentMoney = PlayerPrefs.GetInt("currentMoney");
         activateItem1Bool = PlayerPrefs.GetInt("boolean1");
         activateItem2Bool = PlayerPrefs.GetInt("boolean2");
         activateItem3Bool = PlayerPrefs.GetInt("boolean3");
-        activateItem4Bool = PlayerPrefs.GetInt("boolean4");
+      //  activateItem4Bool = PlayerPrefs.GetInt("boolean4");
         buyItem1Bool = PlayerPrefs.GetInt("EspaceVert");
         buyItem2Bool = PlayerPrefs.GetInt("EspaceRouge");
         buyItem3Bool = PlayerPrefs.GetInt("EspacePixel");
@@ -164,6 +165,7 @@ public class EconomyManager : MonoBehaviour {
             ChooseItem4();
         }
 
+
         chooseItem4Button.gameObject.SetActive(false);
 
     }
@@ -199,6 +201,11 @@ public class EconomyManager : MonoBehaviour {
             PlayerPrefs.SetInt("EspacePixel", buyItem3Bool);
             Debug.Log("jeu reinitialise");
         }
+
+        activateItem1Bool = PlayerPrefs.GetInt("boolean1");
+        activateItem2Bool = PlayerPrefs.GetInt("boolean2");
+        activateItem3Bool = PlayerPrefs.GetInt("boolean3");
+        activateItem4Bool = PlayerPrefs.GetInt("boolean4");
 
         AffichagePieces();
 

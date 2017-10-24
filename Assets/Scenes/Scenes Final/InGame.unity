@@ -205,6 +205,16 @@ Prefab:
       propertyPath: m_Pivot.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 114257833845354304, guid: c87769eba34fce544be9067b8ce34289,
+        type: 2}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1176746407}
+    - target: {fileID: 114914793109148652, guid: c87769eba34fce544be9067b8ce34289,
+        type: 2}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1176746407}
     - target: {fileID: 1827848371486820, guid: c87769eba34fce544be9067b8ce34289, type: 2}
       propertyPath: m_IsActive
       value: 1
@@ -236,6 +246,18 @@ MonoBehaviour:
     type: 2}
   m_PrefabInternal: {fileID: 101107048}
   m_Script: {fileID: 708705254, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+--- !u!114 &101107053 stripped
+MonoBehaviour:
+  m_PrefabParentObject: {fileID: 114257833845354304, guid: c87769eba34fce544be9067b8ce34289,
+    type: 2}
+  m_PrefabInternal: {fileID: 101107048}
+  m_Script: {fileID: 1392445389, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+--- !u!114 &101107054 stripped
+MonoBehaviour:
+  m_PrefabParentObject: {fileID: 114914793109148652, guid: c87769eba34fce544be9067b8ce34289,
+    type: 2}
+  m_PrefabInternal: {fileID: 101107048}
+  m_Script: {fileID: 1392445389, guid: f70555f144d8491a825f0804e09c671c, type: 3}
 --- !u!1001 &155100099
 Prefab:
   m_ObjectHideFlags: 0
@@ -566,6 +588,8 @@ MonoBehaviour:
   quitConfirmationText: {fileID: 155100103}
   quitYesButton: {fileID: 155100102}
   quitNoButton: {fileID: 155100101}
+  tryAgainButton: {fileID: 101107054}
+  goToMenuButton: {fileID: 101107053}
   scoreText: {fileID: 155100100}
   youLooseText: {fileID: 101107052}
   finalScoreText: {fileID: 101107050}
@@ -574,19 +598,39 @@ MonoBehaviour:
   quitButtonSkin1: {fileID: 21300000, guid: 155e22e11b5783543b260ad72b062a5c, type: 3}
   quitYesButtonSkin1: {fileID: 21300000, guid: 4c74fdc0ed1651344a937d751daee4d2, type: 3}
   quitNoButtonSkin1: {fileID: 21300000, guid: f61d3bb1e93da4f4fad752f974d7aaaf, type: 3}
+  tryAgainButtonSkin1: {fileID: 21300000, guid: 6634b55fa19f39642be331e583db74a1,
+    type: 3}
+  goToMenuButtonSkin1: {fileID: 21300000, guid: 9557a966cf57c9a448700993d6c6c7b5,
+    type: 3}
   moneyImageSkin1: {fileID: 21300000, guid: 9f0a01bad7394d24591be6ec5ed11f4d, type: 3}
+  skyboxSkin1: {fileID: 2100000, guid: 5b21c6a8ce40f9641bd1204324b90b2c, type: 2}
   quitButtonSkin2: {fileID: 21300000, guid: 7d7ac864925547b4ba1802ed153f0e6b, type: 3}
   quitYesButtonSkin2: {fileID: 21300000, guid: 69cdef9239fc8354398242fc39059a54, type: 3}
   quitNoButtonSkin2: {fileID: 21300000, guid: bd97ecaac4feec2498048f2b137dd834, type: 3}
+  tryAgainButtonSkin2: {fileID: 21300000, guid: 48cb5cc591495674fb73b7127bc007c1,
+    type: 3}
+  goToMenuButtonSkin2: {fileID: 21300000, guid: 87bf166f5b8aa01448fff104628cecad,
+    type: 3}
   moneyImageSkin2: {fileID: 21300000, guid: f52297246aa676d46b917f55a7bb9c67, type: 3}
-  quitButtonSkin3: {fileID: 0}
-  quitYesButtonSkin3: {fileID: 0}
-  quitNoButtonSkin3: {fileID: 0}
-  moneyImageSkin3: {fileID: 0}
-  quitButtonSkin4: {fileID: 0}
-  quitYesButtonSkin4: {fileID: 0}
-  quitNoButtonSkin4: {fileID: 0}
-  moneyImageSkin4: {fileID: 0}
+  skyboxSkin2: {fileID: 2100000, guid: 19e2485c6f92d6944ad20466ac77b04c, type: 2}
+  quitButtonSkin3: {fileID: 21300000, guid: a846c3976656edf49bf0179b2c7ed1ff, type: 3}
+  quitYesButtonSkin3: {fileID: 21300000, guid: 5b9cd15e5cde0e04b922d552f9258a41, type: 3}
+  quitNoButtonSkin3: {fileID: 21300000, guid: 95dadcf5bb14a2c498ede197690ed1b4, type: 3}
+  tryAgainButtonSkin3: {fileID: 21300000, guid: 8858d0593a8f0014cb0889c002e90fc8,
+    type: 3}
+  goToMenuButtonSkin3: {fileID: 21300000, guid: 70a422dde0ebd1343adaa28678d35ae2,
+    type: 3}
+  moneyImageSkin3: {fileID: 21300000, guid: 6c125cd1759120541827b59ec300fcb1, type: 3}
+  skyboxSkin3: {fileID: 2100000, guid: 0555ce5250847ed4d94c434de2fad0e9, type: 2}
+  quitButtonSkin4: {fileID: 21300000, guid: cd037329287bd754cb9d7894650d1aa0, type: 3}
+  quitYesButtonSkin4: {fileID: 21300000, guid: d1a79802942431049817daf6615a35f0, type: 3}
+  quitNoButtonSkin4: {fileID: 21300000, guid: beee306d389a80149a02f4a9e1bf1886, type: 3}
+  tryAgainButtonSkin4: {fileID: 21300000, guid: 211d60e3ac9f54549a2ebb5839524f24,
+    type: 3}
+  goToMenuButtonSkin4: {fileID: 21300000, guid: efdb9a4bd18d20d4f89786285f1ffd88,
+    type: 3}
+  moneyImageSkin4: {fileID: 21300000, guid: aed48b7717bf936468a2a889f02f5fcf, type: 3}
+  skyboxSkin4: {fileID: 2100000, guid: 64c14bbfcd588e94285018c6eea8a701, type: 2}
 --- !u!4 &1176746408
 Transform:
   m_ObjectHideFlags: 0

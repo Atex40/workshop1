@@ -745,7 +745,7 @@ MonoBehaviour:
   closeShopButtonSkin4: {fileID: 21300000, guid: a12a80cd526fcbe4a984f0cd72df137e,
     type: 3}
   moneyImageSkin4: {fileID: 21300000, guid: aed48b7717bf936468a2a889f02f5fcf, type: 3}
-  skyboxSkin4: {fileID: 2100000, guid: b8f20d5ca50d16143afc11f5e4af6fc1, type: 2}
+  skyboxSkin4: {fileID: 2100000, guid: 64c14bbfcd588e94285018c6eea8a701, type: 2}
   buyItemButtonSkin4: {fileID: 21300000, guid: f4b0b0a8a27117e43a592eab1c3284a4, type: 3}
   chooseItemButtonSkin4: {fileID: 21300000, guid: c145ade34fb718f468a87bb4b6ff9e40,
     type: 3}
