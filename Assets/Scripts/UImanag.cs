@@ -24,8 +24,7 @@ public class UImanag : MonoBehaviour {
 
 	public GameObject canvasMMIG;
 
-	public bool addVie = true;
-	private int countVieReset = 0;
+	private int countVieReset;
 
 	private static UImanag instance ;
     public static UImanag Instance () 
@@ -63,6 +62,8 @@ public class UImanag : MonoBehaviour {
 		}
 
 		WinLife ();
+
+		PlayerPrefs.SetInt("currentMoney", EconomyManager.Instance().GetMoney());
 	}
 
 	void AffichageScore () {

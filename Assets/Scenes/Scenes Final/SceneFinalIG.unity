@@ -210,7 +210,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0fe54d28fc556234287eae04461e18f6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  turnSpeed: 1
+  turnSpeed: 90
 --- !u!1 &345675334 stripped
 GameObject:
   m_PrefabParentObject: {fileID: 1670460882754954, guid: 35a743c1b27d892488ba73c9c8810356,
@@ -357,7 +357,6 @@ MonoBehaviour:
   cubeFin: {fileID: 336887306}
   picesGagnees: {fileID: 916545732}
   canvasMMIG: {fileID: 15479935}
-  addVie: 1
 --- !u!4 &451611210
 Transform:
   m_ObjectHideFlags: 0
