@@ -5,6 +5,7 @@ using UnityEngine;
 public class AudioScript : MonoBehaviour {
 
 	public AudioSource pow;
+	public ParticleSystem psystem;
 
 	// Use this for initialization
 	void Start () {
@@ -23,11 +24,13 @@ public class AudioScript : MonoBehaviour {
      	if (collision.gameObject.tag == gameObject.tag)
      	{
      		pow.Play();
+     		psystem.Play();
      	}
 
     	else if (collision.gameObject.tag != gameObject.tag)
      	{
      		pow.Play();
+     		psystem.Play();
      	}
     }
 }
