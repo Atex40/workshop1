@@ -5,7 +5,7 @@ using UnityEngine;
 public class AttractObject : MonoBehaviour {
 
  	private Transform attractedTo;
-    public float speed = 50.0f;
+    private float speed = 20f;
     public int earnedScore;
 
      void Start () {
@@ -19,10 +19,9 @@ public class AttractObject : MonoBehaviour {
      void FixedUpdate ()
 
      {
+        UpSpeed ();         
         Vector3 direction = attractedTo.position - transform.position;
         gameObject.GetComponent<Rigidbody>().AddForce((0.01f * speed) * direction);
-        UpSpeed ();
- 
      }
 
     void OnCollisionEnter(Collision collision){
@@ -66,42 +65,42 @@ public class AttractObject : MonoBehaviour {
 
      	if (UImanag.Instance().ScoreSpeed() >= 1000)
      	{
-     		speed = 80;
+     		speed = 20f;
      	}
 
      	if (UImanag.Instance().ScoreSpeed() >= 2000)
      	{
-     		speed = 110;
+     		speed = 30f;
      	}
 
      	if (UImanag.Instance().ScoreSpeed() >= 3000)
      	{
-     		speed = 175;
+     		speed = 45f;
      	}
 
      	if (UImanag.Instance().ScoreSpeed() >= 5000)
      	{
-     		speed = 230;
+     		speed = 60f;
      	}
 
      	if (UImanag.Instance().ScoreSpeed() >= 6000)
      	{
-     		speed = 300;
+     		speed = 75f;
      	}
 
      	if (UImanag.Instance().ScoreSpeed() >= 8000)
      	{
-     		speed = 380;
+     		speed = 100f;
      	}
 
      	if (UImanag.Instance().ScoreSpeed() >= 9000)
      	{
-     		speed = 450;
+     		speed = 125f;
      	}
 
      	if (UImanag.Instance().ScoreSpeed() >= 10000)
      	{
-     		speed = 600;
+     		speed = 150f;
      	}
 
 

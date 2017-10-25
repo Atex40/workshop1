@@ -210,7 +210,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0fe54d28fc556234287eae04461e18f6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  turnSpeed: 90
+  turnSpeed: 300
+  rotationAngle: 90
 --- !u!1 &345675334 stripped
 GameObject:
   m_PrefabParentObject: {fileID: 1670460882754954, guid: 35a743c1b27d892488ba73c9c8810356,
@@ -305,6 +306,15 @@ MonoBehaviour:
   checkItemChoice2: {fileID: 0}
   checkItemChoice3: {fileID: 0}
   checkItemChoice4: {fileID: 0}
+  tutorialButton: {fileID: 0}
+  closeTutorialButton: {fileID: 0}
+  tutorialTextUp: {fileID: 0}
+  tutorialTextDown: {fileID: 0}
+  pixelFont: {fileID: 0}
+  basicFont: {fileID: 0}
+  cadenas1: {fileID: 0}
+  cadenas2: {fileID: 0}
+  cadenas3: {fileID: 0}
   quitButtonSkin1: {fileID: 0}
   playButtonSkin1: {fileID: 0}
   shopButtonSkin1: {fileID: 0}
@@ -313,6 +323,9 @@ MonoBehaviour:
   skyboxSkin1: {fileID: 0}
   buyItemButtonSkin1: {fileID: 0}
   chooseItemButtonSkin1: {fileID: 0}
+  tutorialButtonSkin1: {fileID: 0}
+  closeTutorialButtonSkin1: {fileID: 0}
+  cadenasOpened1: {fileID: 0}
   quitButtonSkin2: {fileID: 0}
   playButtonSkin2: {fileID: 0}
   shopButtonSkin2: {fileID: 0}
@@ -321,6 +334,9 @@ MonoBehaviour:
   skyboxSkin2: {fileID: 0}
   buyItemButtonSkin2: {fileID: 0}
   chooseItemButtonSkin2: {fileID: 0}
+  tutorialButtonSkin2: {fileID: 0}
+  closeTutorialButtonSkin2: {fileID: 0}
+  cadenasOpened2: {fileID: 0}
   quitButtonSkin3: {fileID: 0}
   playButtonSkin3: {fileID: 0}
   shopButtonSkin3: {fileID: 0}
@@ -329,6 +345,9 @@ MonoBehaviour:
   skyboxSkin3: {fileID: 0}
   buyItemButtonSkin3: {fileID: 0}
   chooseItemButtonSkin3: {fileID: 0}
+  tutorialButtonSkin3: {fileID: 0}
+  closeTutorialButtonSkin3: {fileID: 0}
+  cadenasOpened3: {fileID: 0}
   quitButtonSkin4: {fileID: 0}
   playButtonSkin4: {fileID: 0}
   shopButonSkin4: {fileID: 0}
@@ -337,6 +356,8 @@ MonoBehaviour:
   skyboxSkin4: {fileID: 0}
   buyItemButtonSkin4: {fileID: 0}
   chooseItemButtonSkin4: {fileID: 0}
+  tutorialButtonSkin4: {fileID: 0}
+  closeTutorialButtonSkin4: {fileID: 0}
 --- !u!114 &451611209
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -976,6 +997,7 @@ Prefab:
     m_RemovedComponents:
     - {fileID: 65044646773472840, guid: de399d78af44df74a95663e4ecae6e54, type: 2}
     - {fileID: 54251022720842864, guid: de399d78af44df74a95663e4ecae6e54, type: 2}
+    - {fileID: 114817258755505410, guid: de399d78af44df74a95663e4ecae6e54, type: 2}
   m_ParentPrefab: {fileID: 100100000, guid: de399d78af44df74a95663e4ecae6e54, type: 2}
   m_IsPrefabParent: 0
 --- !u!1 &1798882496
@@ -1061,7 +1083,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1798882496}
   m_LocalRotation: {x: 0.11546949, y: -0.39935523, z: 0.05078133, w: 0.9080768}
-  m_LocalPosition: {x: 6.46, y: 7.42, z: -23.57}
+  m_LocalPosition: {x: 3.78, y: 6.48, z: -21.12}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
