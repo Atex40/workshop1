@@ -3334,8 +3334,8 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Pour faire pivoter le cube faite glisser votre doigt dans la direction des
-    fleches indiquees.
+  m_Text: "Pour faire pivoter le cube faite glisser votre doigt dans la direction
+    des fl\xE8ches indiqu\xE9es."
 --- !u!114 &114530256032835632
 MonoBehaviour:
   m_ObjectHideFlags: 1
