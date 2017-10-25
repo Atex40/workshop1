@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class MouvementCube : MonoBehaviour {
 
-	public float turnSpeed = 1.0f;
+	public float turnSpeed = 1.0f; 
 	public float rotationAngle = 90f;
 	private float startAngleY;
 	private float startAngleX;

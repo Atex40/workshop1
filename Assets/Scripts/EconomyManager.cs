@@ -63,6 +63,10 @@ public class EconomyManager : MonoBehaviour {
     public Image cadenas2;
     public Image cadenas3;
 
+    public Text achatBronze;
+    public Text achatArgent;
+    public Text achatOr;
+
 
 
     // SKIN 1 : ESPACE VERT
@@ -338,6 +342,15 @@ public class EconomyManager : MonoBehaviour {
         chooseItem3Button.image.overrideSprite = chooseItemButtonSkin1;
         chooseItem4Button.image.overrideSprite = chooseItemButtonSkin1;
 
+        achatBronze.color = Color.green;
+        achatBronze.font = basicFont;
+
+        achatArgent.color = Color.green;
+        achatArgent.font = basicFont;
+
+        achatOr.color = Color.green;
+        achatOr.font = basicFont;
+
         checkItemChoice1.gameObject.SetActive(true);
         checkItemChoice2.gameObject.SetActive(false);
         checkItemChoice3.gameObject.SetActive(false);
@@ -431,6 +444,15 @@ public class EconomyManager : MonoBehaviour {
         chooseItem1Button.image.overrideSprite = chooseItemButtonSkin2;
         chooseItem3Button.image.overrideSprite = chooseItemButtonSkin2;
         chooseItem4Button.image.overrideSprite = chooseItemButtonSkin2;
+
+        achatBronze.color = Color.red;
+        achatBronze.font = basicFont;
+
+        achatArgent.color = Color.red;
+        achatArgent.font = basicFont;
+
+        achatOr.color = Color.red;
+        achatOr.font = basicFont;
 
         checkItemChoice1.gameObject.SetActive(false);
         checkItemChoice2.gameObject.SetActive(true);
@@ -533,6 +555,15 @@ public class EconomyManager : MonoBehaviour {
         chooseItem2Button.image.overrideSprite = chooseItemButtonSkin3;
         chooseItem4Button.image.overrideSprite = chooseItemButtonSkin3;
 
+        achatBronze.color = Color.white;
+        achatBronze.font = pixelFont;
+
+        achatArgent.color = Color.white;
+        achatArgent.font = pixelFont;
+
+        achatOr.color = Color.white;
+        achatOr.font = pixelFont;
+
         checkItemChoice1.gameObject.SetActive(false);
         checkItemChoice2.gameObject.SetActive(false);
         checkItemChoice3.gameObject.SetActive(true);
@@ -601,6 +632,15 @@ public class EconomyManager : MonoBehaviour {
         chooseItem1Button.image.overrideSprite = chooseItemButtonSkin4;
         chooseItem2Button.image.overrideSprite = chooseItemButtonSkin4;
         chooseItem3Button.image.overrideSprite = chooseItemButtonSkin4;
+
+        achatBronze.color = Color.white;
+        achatBronze.font = basicFont;
+
+        achatArgent.color = Color.white;
+        achatArgent.font = basicFont;
+
+        achatOr.color = Color.white;
+        achatOr.font = basicFont;
 
         checkItemChoice1.gameObject.SetActive(false);
         checkItemChoice2.gameObject.SetActive(false);
