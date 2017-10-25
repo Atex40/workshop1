@@ -37,7 +37,8 @@ public class MouvementCube : MonoBehaviour {
 	
 	}
 	
-	void Update () {
+	void Update () 
+	{
 		//Turn();
 		//Turn2();
 		//Turn3();
@@ -223,6 +224,7 @@ public class MouvementCube : MonoBehaviour {
 						transform.eulerAngles = tmpDirXLD;
 						startAngleX = transform.eulerAngles.x;
 						turnLeftDown = false;
+						Debug.Log("coucou toi");
 					}
 					if (transform.eulerAngles.x < 30) 
 					{
