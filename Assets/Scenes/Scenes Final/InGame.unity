@@ -633,6 +633,8 @@ MonoBehaviour:
   tryAgainButton: {fileID: 101107054}
   goToMenuButton: {fileID: 101107053}
   scoreText: {fileID: 155100100}
+  basicFont: {fileID: 12800000, guid: 89238dd7ae96bf64e8460815388166ea, type: 3}
+  pixelFont: {fileID: 12800000, guid: 030e91de6e6b6534ea3313854026776b, type: 3}
   youLooseText: {fileID: 101107052}
   finalScoreText: {fileID: 101107050}
   moneyWinText: {fileID: 101107051}

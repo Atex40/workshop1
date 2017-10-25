@@ -25,6 +25,8 @@ public class HUDManager : MonoBehaviour {
     public Button goToMenuButton;
 
     public Text scoreText;
+    public Font basicFont;
+    public Font pixelFont;
 
     public Text youLooseText;
     public Text finalScoreText;
@@ -147,6 +149,7 @@ public class HUDManager : MonoBehaviour {
         RenderSettings.skybox = skyboxSkin1;
 
         scoreText.color = Color.green;
+        scoreText.font = basicFont;
 
         moneyImage.overrideSprite = moneyImageSkin1;
         finalScoreText.color = Color.green;
@@ -174,6 +177,7 @@ public class HUDManager : MonoBehaviour {
         RenderSettings.skybox = skyboxSkin2;
 
         scoreText.color = Color.red;
+        scoreText.font = basicFont;
 
         moneyImage.overrideSprite = moneyImageSkin2;
         finalScoreText.color = Color.red;
@@ -200,6 +204,7 @@ public class HUDManager : MonoBehaviour {
         RenderSettings.skybox = skyboxSkin3;
 
         scoreText.color = Color.white;
+        scoreText.font = pixelFont;
 
         moneyImage.overrideSprite = moneyImageSkin3;
         finalScoreText.color = Color.white;
@@ -226,6 +231,7 @@ public class HUDManager : MonoBehaviour {
         RenderSettings.skybox = skyboxSkin4;
 
         scoreText.color = Color.white;
+        scoreText.font = basicFont;
 
         moneyImage.overrideSprite = moneyImageSkin4;
         finalScoreText.color = Color.white;
