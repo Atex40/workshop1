@@ -26,6 +26,8 @@ public class UImanag : MonoBehaviour {
 
 	private int countVieReset;
 
+	public AudioSource defaiteSound;
+
 	private static UImanag instance ;
     public static UImanag Instance () 
     {
@@ -86,6 +88,7 @@ public void LooseLife (){
 
 		if (vie == -1)
 		{
+			defaiteSound.Play();
 			//Time.timeScale = 0;
 			canvasHUD.SetActive(false);
 			canvasFin.SetActive(true);
@@ -111,7 +114,7 @@ public void LooseLife (){
 
     void CoinsAffichage () {
 
-    picesGagnees.text = "Pieces Totales : " + EconomyManager.Instance().GetMoney().ToString();
+    picesGagnees.text = "Pieces Totales	 : " + EconomyManager.Instance().GetMoney().ToString();
     	
     }
 

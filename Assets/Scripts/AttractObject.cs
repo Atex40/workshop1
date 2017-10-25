@@ -9,11 +9,6 @@ public class AttractObject : MonoBehaviour {
     public int earnedScore;
 
      void Start () {
-        
-     	// if(!UImanag.Instance().IsGameOn())
-     	// {
-     	// 	gameObject.SetActive(false);
-     	// }
      }
 
      void FixedUpdate ()
@@ -40,19 +35,19 @@ public class AttractObject : MonoBehaviour {
      		UImanag.Instance().LooseLife();
      	}
 
+
      	Destroy(gameObject);
 
      }
 
      void OnDestroy () 
      {
+
         if(UImanag.Instance().IsGameOn())
         {
      	  SpawnerManag.Instance().RandoPop();
-        }
-        
-         AudioSource audio = GetComponent<AudioSource>();
-         audio.Play();
+        }       
+
      }
 
      public void SetTarget (Transform leCube) {
