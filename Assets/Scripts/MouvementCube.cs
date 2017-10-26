@@ -211,7 +211,7 @@ public class MouvementCube : MonoBehaviour {
 			 			tourZRD = false;
 			 			turnRightDown = false;
 			 		}
-			// }
+			 }
 			// if (turnLeftDown)
 			// {
 			// 		transform.Rotate(-Vector3.right * turnSpeed * Time.deltaTime, Space.World);
