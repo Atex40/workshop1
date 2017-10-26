@@ -96,7 +96,7 @@ public void LooseLife (){
 			cubeFin.SetActive(false);
 			gameOnOff = false;
 			CoinsAffichage();
-			PlayerPrefs.SetInt("currentMoney", EconomyManager.Instance().GetMoney());
+	//		PlayerPrefs.SetInt("currentMoney", EconomyManager.Instance().GetMoney());
 			Destroy (GameObject.FindGameObjectWithTag("Vert"));
 			Destroy (GameObject.FindGameObjectWithTag("Bleu"));
 			Destroy (GameObject.FindGameObjectWithTag("Rouge"));
