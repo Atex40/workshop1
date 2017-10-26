@@ -85,6 +85,9 @@ public class EconomyManager : MonoBehaviour {
     public GameObject notifArgentPanel;
     public GameObject notifOrPanel;
 
+    private AudioSource selectSound;
+    public AudioClip selectSoundClip;
+
 
     // SKIN 1 : ESPACE VERT
     public Sprite quitButtonSkin1;
@@ -175,6 +178,8 @@ public class EconomyManager : MonoBehaviour {
         buyItem2Bool = PlayerPrefs.GetInt("EspaceRouge");
         buyItem3Bool = PlayerPrefs.GetInt("EspacePixel");
 
+        selectSound = GetComponent<AudioSource>();
+
         ChooseItemButtonFunction();
 
       
@@ -231,9 +236,14 @@ public class EconomyManager : MonoBehaviour {
         }
 
     }
-	
-	// Update is called once per frame
-	void Update () {
+
+    public void PlaySelectSound()
+    {
+        selectSound.PlayOneShot(selectSoundClip, 1F);
+    }
+
+    // Update is called once per frame
+    void Update () {
         
         moneyText.text = currentMoney.ToString();
         if (Input.GetKeyDown("c")) // Ajoute monnaie au joueur

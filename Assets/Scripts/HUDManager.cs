@@ -35,6 +35,10 @@ public class HUDManager : MonoBehaviour {
 
     public GameObject confirmPanel;
 
+    private AudioSource selectSound;
+    public AudioClip selectSoundClip;
+
+
     // SKIN 1 : ESPACE VERT
 
     public Sprite quitButtonSkin1;
@@ -117,8 +121,15 @@ public class HUDManager : MonoBehaviour {
         {
             Skin4();
         }
+
+        selectSound = GetComponent<AudioSource>();
        
 	}
+
+    public void PlaySelectSound()
+    {
+        selectSound.PlayOneShot(selectSoundClip, 1);
+    }
 
     public void OpenConfirmPanel()
     {
