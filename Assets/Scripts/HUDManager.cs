@@ -128,7 +128,7 @@ public class HUDManager : MonoBehaviour {
 
     public void PlaySelectSound()
     {
-        selectSound.PlayOneShot(selectSoundClip, 1);
+        selectSound.PlayOneShot(selectSoundClip, 1F);
     }
 
     public void OpenConfirmPanel()
