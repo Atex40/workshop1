@@ -16,9 +16,9 @@ public class LanguageManager : MonoBehaviour {
     // Boutons choisir
 
     // Nombre de pièces par packs
-    public Text montantBronzeText;
-    public Text montantArgentText;
-    public Text montantOrText;
+    public Text quantiteBronzeText;
+    public Text quantiteArgentText;
+    public Text quantiteOrText;
 
     // Cout des packs
     public Text prixBronzeText;

@@ -123,6 +123,8 @@ public class MouvementCube : MonoBehaviour {
 						turnLeft = false;
 					}
 			}
+                                                      //DEBUT COMMENTAIRE
+
 			if (turnRightUp)
 			{
 				if (isWaza)
@@ -157,55 +159,58 @@ public class MouvementCube : MonoBehaviour {
 					turnRightUp = false;
 				} 
 			}
-			// if (turnLeftUp)
-			// {
-			// 		transform.Rotate(Vector3.right * turnSpeed * Time.deltaTime, Space.World);
-			// 		if ((transform.eulerAngles.x - startAngleX) >= rotationAngle)
-			// 		{
-			// 			Vector3 tmpDirXLU = new Vector3(startAngleX + rotationAngle,transform.eulerAngles.y,transform.eulerAngles.z);
-			// 			transform.eulerAngles = tmpDirXLU;
-			// 			startAngleX = transform.eulerAngles.x;
-			// 			turnLeftUp = false;
-			// 		}
-			// 		if (transform.eulerAngles.x > 300) 
-			// 		{
-			// 			tourXLU = true;
-			// 		}
-			// 		if (tourXLU && transform.eulerAngles.x > 0 && transform.eulerAngles.x < 20)
-			// 		{
-			// 			Vector3 tmpTourXLU = new Vector3(0,transform.eulerAngles.y,transform.eulerAngles.z);
-			// 			transform.eulerAngles = tmpTourXLU;
-			// 			startAngleX = transform.eulerAngles.x;
-			// 			tourXLU = false;
-			// 			turnLeftUp = false;
-			// 		}
-			// }
-			//if (turnRightDown)
-			// {
-			// 		transform.Rotate(-Vector3.forward * turnSpeed * Time.deltaTime, Space.World);
-			// 		if (startAngleZ == 0)
-			// 		{
-			// 			startAngleZ = 360f;
-			// 		}
-			// 		if ((startAngleZ - transform.eulerAngles.z) >= rotationAngle)
-			// 		{
-			// 			Vector3 tmpDirZRD = new Vector3(transform.eulerAngles.x,transform.eulerAngles.y,startAngleZ - rotationAngle);
-			// 			transform.eulerAngles = tmpDirZRD;
-			// 			startAngleZ = transform.eulerAngles.z;
-			// 			turnRightDown = false;
-			// 		}
-			// 		if (transform.eulerAngles.z < 30) 
-			// 		{
-			// 			tourZRD = true;
-			// 		}
-			// 		if (tourZRD && transform.eulerAngles.z < 360 && transform.eulerAngles.z > 340)
-			// 		{
-			// 			Vector3 tmpTourZRD = new Vector3(transform.eulerAngles.x,transform.eulerAngles.y,0);
-			// 			transform.eulerAngles = tmpTourZRD;
-			// 			startAngleZ = transform.eulerAngles.z;
-			// 			tourZRD = false;
-			// 			turnRightDown = false;
-			// 		}
+
+                                            // FIN COMMENTAIRE
+
+			 if (turnLeftUp)
+			 {
+			 		transform.Rotate(Vector3.right * turnSpeed * Time.deltaTime, Space.World);
+			 		if ((transform.eulerAngles.x - startAngleX) >= rotationAngle)
+			 		{
+			 			Vector3 tmpDirXLU = new Vector3(startAngleX + rotationAngle,transform.eulerAngles.y,transform.eulerAngles.z);
+			 			transform.eulerAngles = tmpDirXLU;
+			 			startAngleX = transform.eulerAngles.x;
+			 			turnLeftUp = false;
+			 		}
+			 		if (transform.eulerAngles.x > 300) 
+			 		{
+			 			tourXLU = true;
+					}
+			 		if (tourXLU && transform.eulerAngles.x > 0 && transform.eulerAngles.x < 20)
+			 		{
+			 			Vector3 tmpTourXLU = new Vector3(0,transform.eulerAngles.y,transform.eulerAngles.z);
+			 			transform.eulerAngles = tmpTourXLU;
+			 			startAngleX = transform.eulerAngles.x;
+			 			tourXLU = false;
+			 			turnLeftUp = false;
+			 		}
+			 }
+			if (turnRightDown)
+			 {
+					transform.Rotate(-Vector3.forward * turnSpeed * Time.deltaTime, Space.World);
+					if (startAngleZ == 0)
+				{
+						startAngleZ = 360f;
+			 		}
+			 		if ((startAngleZ - transform.eulerAngles.z) >= rotationAngle)
+			 		{
+						Vector3 tmpDirZRD = new Vector3(transform.eulerAngles.x,transform.eulerAngles.y,startAngleZ - rotationAngle);
+			 			transform.eulerAngles = tmpDirZRD;
+						startAngleZ = transform.eulerAngles.z;
+			 			turnRightDown = false;
+					}
+					if (transform.eulerAngles.z < 30) 
+					{
+			 			tourZRD = true;
+				}
+					if (tourZRD && transform.eulerAngles.z < 360 && transform.eulerAngles.z > 340)
+			 		{
+					Vector3 tmpTourZRD = new Vector3(transform.eulerAngles.x,transform.eulerAngles.y,0);
+						transform.eulerAngles = tmpTourZRD;
+			 			startAngleZ = transform.eulerAngles.z;
+			 			tourZRD = false;
+			 			turnRightDown = false;
+			 		}
 			// }
 			// if (turnLeftDown)
 			// {
