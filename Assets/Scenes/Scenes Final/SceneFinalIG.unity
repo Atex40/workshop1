@@ -467,15 +467,20 @@ MonoBehaviour:
   thanksArgentPanel: {fileID: 0}
   thanksOrPanel: {fileID: 0}
   selectSoundClip: {fileID: 0}
-  quitButtonSkin1: {fileID: 0}
-  playButtonSkin1: {fileID: 0}
+  quitButtonSkin1FR: {fileID: 0}
+  quitButtonSkin1ENG: {fileID: 0}
+  playButtonSkin1FR: {fileID: 0}
+  playButtonSkin1ENG: {fileID: 0}
   shopButtonSkin1: {fileID: 0}
   closeShopButtonSkin1: {fileID: 0}
   moneyImageSkin1: {fileID: 0}
   skyboxSkin1: {fileID: 0}
-  buyItemButtonSkin1: {fileID: 0}
-  chooseItemButtonSkin1: {fileID: 0}
-  tutorialButtonSkin1: {fileID: 0}
+  buyItemButtonSkin1FR: {fileID: 0}
+  buyItemButtonSkin1ENG: {fileID: 0}
+  chooseItemButtonSkin1FR: {fileID: 0}
+  chooseItemButtonSkin1ENG: {fileID: 0}
+  tutorialButtonSkin1FR: {fileID: 0}
+  tutorialButtonSkin1ENG: {fileID: 0}
   closeTutorialButtonSkin1: {fileID: 0}
   cadenasOpened1: {fileID: 0}
   quitButtonSkin2: {fileID: 0}

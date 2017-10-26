@@ -453,7 +453,7 @@ Prefab:
     - target: {fileID: 224100983325426726, guid: 35a743c1b27d892488ba73c9c8810356,
         type: 2}
       propertyPath: m_LocalPosition.z
-      value: 2.78
+      value: 13.1
       objectReference: {fileID: 0}
     - target: {fileID: 224100983325426726, guid: 35a743c1b27d892488ba73c9c8810356,
         type: 2}
@@ -483,12 +483,12 @@ Prefab:
     - target: {fileID: 224100983325426726, guid: 35a743c1b27d892488ba73c9c8810356,
         type: 2}
       propertyPath: m_AnchoredPosition.x
-      value: -2.75
+      value: -12.87
       objectReference: {fileID: 0}
     - target: {fileID: 224100983325426726, guid: 35a743c1b27d892488ba73c9c8810356,
         type: 2}
       propertyPath: m_AnchoredPosition.y
-      value: -0.03
+      value: -3.66
       objectReference: {fileID: 0}
     - target: {fileID: 224100983325426726, guid: 35a743c1b27d892488ba73c9c8810356,
         type: 2}
@@ -560,6 +560,21 @@ Prefab:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Target
       value: 
       objectReference: {fileID: 1176746407}
+    - target: {fileID: 224100983325426726, guid: 35a743c1b27d892488ba73c9c8810356,
+        type: 2}
+      propertyPath: m_LocalScale.x
+      value: 0.01498762
+      objectReference: {fileID: 0}
+    - target: {fileID: 224100983325426726, guid: 35a743c1b27d892488ba73c9c8810356,
+        type: 2}
+      propertyPath: m_LocalScale.y
+      value: 0.01498762
+      objectReference: {fileID: 0}
+    - target: {fileID: 224100983325426726, guid: 35a743c1b27d892488ba73c9c8810356,
+        type: 2}
+      propertyPath: m_LocalScale.z
+      value: 0.01498762
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 35a743c1b27d892488ba73c9c8810356, type: 2}
   m_IsPrefabParent: 0
@@ -985,7 +1000,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 894225791}
   m_LocalRotation: {x: 0.1154657, y: -0.39935547, z: 0.05077966, w: 0.9080773}
-  m_LocalPosition: {x: 0, y: 1, z: 0}
+  m_LocalPosition: {x: -0.03, y: 1.13, z: 0.02}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -1321,15 +1336,20 @@ MonoBehaviour:
   thanksArgentPanel: {fileID: 0}
   thanksOrPanel: {fileID: 0}
   selectSoundClip: {fileID: 0}
-  quitButtonSkin1: {fileID: 0}
-  playButtonSkin1: {fileID: 0}
+  quitButtonSkin1FR: {fileID: 0}
+  quitButtonSkin1ENG: {fileID: 0}
+  playButtonSkin1FR: {fileID: 0}
+  playButtonSkin1ENG: {fileID: 0}
   shopButtonSkin1: {fileID: 0}
   closeShopButtonSkin1: {fileID: 0}
   moneyImageSkin1: {fileID: 0}
   skyboxSkin1: {fileID: 0}
-  buyItemButtonSkin1: {fileID: 0}
-  chooseItemButtonSkin1: {fileID: 0}
-  tutorialButtonSkin1: {fileID: 0}
+  buyItemButtonSkin1FR: {fileID: 0}
+  buyItemButtonSkin1ENG: {fileID: 0}
+  chooseItemButtonSkin1FR: {fileID: 0}
+  chooseItemButtonSkin1ENG: {fileID: 0}
+  tutorialButtonSkin1FR: {fileID: 0}
+  tutorialButtonSkin1ENG: {fileID: 0}
   closeTutorialButtonSkin1: {fileID: 0}
   cadenasOpened1: {fileID: 0}
   quitButtonSkin2: {fileID: 0}
