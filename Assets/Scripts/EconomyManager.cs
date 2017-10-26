@@ -81,9 +81,13 @@ public class EconomyManager : MonoBehaviour {
     public Text recompenseArgent;
     public Text recompenseOr;
 
-    public GameObject notifBronzePanel;
-    public GameObject notifArgentPanel;
-    public GameObject notifOrPanel;
+    public GameObject confirmerAchatBronzePanel;
+    public GameObject ConfirmerAchatArgentPanel;
+    public GameObject ConfirmerAchatOrPanel;
+
+    public GameObject thanksBronzePanel;
+    public GameObject thanksArgentPanel;
+    public GameObject thanksOrPanel;
 
     private AudioSource selectSound;
     public AudioClip selectSoundClip;
@@ -789,42 +793,94 @@ public class EconomyManager : MonoBehaviour {
 
     }
 
-    public void AcheterBronze()
+    // BRONZE
+
+    public void ValidationAchatBronze()
+    {
+        confirmerAchatBronzePanel.SetActive(true);
+        shopPanel.SetActive(false);
+    }
+
+    public void AccepterAcheterBronze()
     {
         currentMoney = currentMoney + 500;
-        notifBronzePanel.SetActive(true);
+        confirmerAchatBronzePanel.SetActive(false);
+        thanksBronzePanel.SetActive(true);
+    }
+
+    public void RefuserAcheterBronze()
+    {
+        confirmerAchatBronzePanel.SetActive(false);
+        shopPanel.SetActive(true);
+    }
+
+    public void RetourBoutique()
+    {
+        shopPanel.SetActive(true);
+        thanksBronzePanel.SetActive(false);
+        thanksArgentPanel.SetActive(false);
+        thanksOrPanel.SetActive(false);
+    }
+
+    // ARGENT
+
+    public void ValidationAchatArgent()
+    {
+        
+        ConfirmerAchatArgentPanel.SetActive(true);
         shopPanel.SetActive(false);
     }
 
-    public void AcheterArgent()
+    public void AccepterAcheterArgent()
     {
         currentMoney = currentMoney + 1700;
-        notifArgentPanel.SetActive(true);
+        ConfirmerAchatArgentPanel.SetActive(false);
+        thanksArgentPanel.SetActive(true);
+    }
+
+    public void RefuserAcheterArgent()
+    {
+        ConfirmerAchatArgentPanel.SetActive(false);
+        shopPanel.SetActive(true);
+    }
+
+    // OR
+
+    public void ValidationAchatOr()
+    {     
+        ConfirmerAchatOrPanel.SetActive(true);
         shopPanel.SetActive(false);
     }
 
-    public void AcheterOr()
+    public void AccepterAcheterOr()
     {
         currentMoney = currentMoney + 4800;
-        notifOrPanel.SetActive(true);
-        shopPanel.SetActive(false);
+        ConfirmerAchatOrPanel.SetActive(false);
+        thanksOrPanel.SetActive(true);
     }
 
-    public void FermerPanelBronze()
+    public void RefuserAcheterOr()
     {
-        notifBronzePanel.SetActive(false);
+        ConfirmerAchatOrPanel.SetActive(false);
         shopPanel.SetActive(true);
     }
 
-    public void FermerPanelArgent()
+
+    public void FermerThanksPanelBronze()
     {
-        notifArgentPanel.SetActive(false);
+        confirmerAchatBronzePanel.SetActive(false);
         shopPanel.SetActive(true);
     }
 
-    public void FermerPanelOr()
+    public void FermerThanksPanelArgent()
     {
-        notifOrPanel.SetActive(false);
+        ConfirmerAchatArgentPanel.SetActive(false);
+        shopPanel.SetActive(true);
+    }
+
+    public void FermerThanksPanelOr()
+    {
+        ConfirmerAchatOrPanel.SetActive(false);
         shopPanel.SetActive(true);
     }
 
