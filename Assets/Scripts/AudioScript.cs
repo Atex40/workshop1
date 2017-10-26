@@ -5,6 +5,9 @@ using UnityEngine;
 public class AudioScript : MonoBehaviour {
 
 	public AudioSource pow;
+	public AudioSource atry;
+
+
 	// public ParticleSystem psystem;
 
 	// Use this for initialization
@@ -29,7 +32,7 @@ public class AudioScript : MonoBehaviour {
 
     	else if (collision.gameObject.tag != gameObject.tag)
      	{
-     		pow.Play();
+     		atry.Play();
      		// psystem.Play();
      	}
     }
