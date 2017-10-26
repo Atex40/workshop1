@@ -203,4 +203,5 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   earnedScore: 100
-  psystem: {fileID: 0}
+  particles:
+  - {fileID: 198785147522175580, guid: a0708dd9d9ca82143a2d36a3964a5af0, type: 2}

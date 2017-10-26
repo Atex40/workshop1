@@ -49,7 +49,6 @@ public class UImanag : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
 		Debug.Log("yop");
-		StartCoroutine(Example());
 	}
 	
 	// Update is called once per frame
@@ -86,11 +85,10 @@ public void LooseLife (){
 
 		lifeObjects[vie].SetActive(false);
 		vie --;
+		Camera.main.GetComponent<PerlinShake>().PlayShake();
 
 		if (vie == -1)
 		{
-
-			Example();
 			defaiteSound.Play();
 			//Time.timeScale = 0;
 			canvasHUD.SetActive(false);
@@ -158,10 +156,4 @@ public void CountVie (int value){
 	countVieReset += value;
 	WinLife ();
 }
-
-
-    IEnumerator Example()
-    {
-        yield return new WaitForSecondsRealtime(5);
-    }
 }
