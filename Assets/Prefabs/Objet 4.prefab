@@ -204,4 +204,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   earnedScore: 100
   particles:
-  - {fileID: 198017878706198240, guid: d3af5552d1110dd4d9b98c1055cef9c7, type: 2}
+  - {fileID: 198133665336123548, guid: a17959a04c4dbdd4081c6e9ab6f4ef7f, type: 2}

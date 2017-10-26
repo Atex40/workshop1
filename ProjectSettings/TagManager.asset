@@ -8,6 +8,8 @@ TagManager:
   - Rouge
   - Bleu
   - WholeCube
+  - Rose
+  - Jaune
   layers:
   - Default
   - TransparentFX
