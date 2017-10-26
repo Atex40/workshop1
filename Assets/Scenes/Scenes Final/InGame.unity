@@ -563,21 +563,21 @@ Prefab:
     - target: {fileID: 224100983325426726, guid: 35a743c1b27d892488ba73c9c8810356,
         type: 2}
       propertyPath: m_LocalScale.x
-      value: 0.01498762
+      value: 0.013036099
       objectReference: {fileID: 0}
     - target: {fileID: 224100983325426726, guid: 35a743c1b27d892488ba73c9c8810356,
         type: 2}
       propertyPath: m_LocalScale.y
-      value: 0.01498762
+      value: 0.013036099
       objectReference: {fileID: 0}
     - target: {fileID: 224100983325426726, guid: 35a743c1b27d892488ba73c9c8810356,
         type: 2}
       propertyPath: m_LocalScale.z
-      value: 0.01498762
+      value: 0.013036099
       objectReference: {fileID: 0}
     - target: {fileID: 1788984907523160, guid: 35a743c1b27d892488ba73c9c8810356, type: 2}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 224598685269215732, guid: 35a743c1b27d892488ba73c9c8810356,
         type: 2}
