@@ -101,6 +101,7 @@ public class HUDManager : MonoBehaviour {
 
     // Use this for initialization
     void Start () {
+        choixUI = PlayerPrefs.GetInt("choixHUD", choixUI);
 
         if (choixUI == 1)
         {

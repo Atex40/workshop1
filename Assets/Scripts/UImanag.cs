@@ -28,6 +28,10 @@ public class UImanag : MonoBehaviour {
 
 	public AudioSource defaiteSound;
 
+    private int currentMoney;
+
+    private int totalMoney;
+
 	private static UImanag instance ;
     public static UImanag Instance () 
     {
@@ -49,15 +53,17 @@ public class UImanag : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
 		Debug.Log("yop");
-	}
+
+
+    }
 	
 	// Update is called once per frame
 	void Update () {
-		// AffichageScore();
-		// CoinsAffichage();
+        // AffichageScore();
+        // CoinsAffichage();
+        currentMoney = PlayerPrefs.GetInt("currentMoney");
 
-
-		if (Input.GetKeyDown("e")){
+        if (Input.GetKeyDown("e")){
 			AddScore(500);
 			CountVie(500);
 		}
@@ -115,7 +121,9 @@ public void LooseLife (){
 
     void CoinsAffichage () {
 
+    
     picesGagnees.text = "Pieces Totales	 : " + EconomyManager.Instance().GetMoney().ToString();
+        
     	
     }
 

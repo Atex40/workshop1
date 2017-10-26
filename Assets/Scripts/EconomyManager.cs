@@ -163,22 +163,8 @@ public class EconomyManager : MonoBehaviour {
     {
         if (langage != 1)
         {
-            langage = 1;
             PlayerPrefs.SetInt("choixLangage", langage);
-        }
 
-        if (langage == 1)
-        {
-            langage = 0;
-            PlayerPrefs.SetInt("choixLangage", langage);
-        }
-    }
-
-    public void DeterminerLangage()
-    {
-        if (langage == 0)
-        {
-            PlayerPrefs.SetInt("choixLangage", langage);
             tutorialTextUp.text = "Pour faire pivoter le cube, faites glisser votre doigt dans la direction des flèches indiquées.";
             tutorialTextDown.text = "Faites correspondre les couleurs des faces du cube avec celles des objets arrivants pour gagner des points.";
             highScoreText.text = "MEILLEUR SCORE : ";
@@ -186,11 +172,14 @@ public class EconomyManager : MonoBehaviour {
             recompenseBronze.text = "500 pièces";
             recompenseArgent.text = "1700 pièces";
             recompenseOr.text = "4800 pièces";
+
+            langage = 1;
         }
 
-        if (langage == 1)
+       else if (langage == 1)
         {
             PlayerPrefs.SetInt("choixLangage", langage);
+
             tutorialTextUp.text = "To rotate the cube, swipe your finger in direction of indicated arrows.";
             tutorialTextDown.text = "Make your cube's faces colors match with incoming items.";
             highScoreText.text = "HIGHSCORE : ";
@@ -198,8 +187,11 @@ public class EconomyManager : MonoBehaviour {
             recompenseBronze.text = "500 coins";
             recompenseArgent.text = "1700 coins";
             recompenseOr.text = "4800 coins";
+
+            langage = 0;
         }
     }
+
 
     void Awake()
     {
@@ -219,7 +211,7 @@ public class EconomyManager : MonoBehaviour {
         langage = PlayerPrefs.GetInt("choixLangage");
 
         ChangerLangage();
-        DeterminerLangage();
+        
         
 
         infoItem1Text.color = Color.green;
@@ -302,7 +294,9 @@ public class EconomyManager : MonoBehaviour {
     // Update is called once per frame
     void Update ()
     {
-        
+
+
+        currentMoney = PlayerPrefs.GetInt("currentMoney");
         moneyText.text = currentMoney.ToString();
         if (Input.GetKeyDown("c")) // Ajoute monnaie au joueur
         {
@@ -916,7 +910,9 @@ public void BuyItem1() // ACHETER SKIN 1
 
     public void AccepterAcheterArgent()
     {
+        currentMoney = PlayerPrefs.GetInt("currentMoney");
         currentMoney = currentMoney + 1700;
+        PlayerPrefs.SetInt("currentMoney", currentMoney);
         thanksArgentPanel.SetActive(true);
         ConfirmerAchatArgentPanel.SetActive(false);
     }

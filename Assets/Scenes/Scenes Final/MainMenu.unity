@@ -545,6 +545,12 @@ Prefab:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 114236738714024954, guid: bf16395e9471bac449626f801b9eb9c5,
+        type: 2}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 7517ba7d559bd4c45a2e98e4c34deec8,
+        type: 3}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: bf16395e9471bac449626f801b9eb9c5, type: 2}
   m_IsPrefabParent: 0
@@ -1068,21 +1074,27 @@ MonoBehaviour:
   thanksArgentPanel: {fileID: 1595485787}
   thanksOrPanel: {fileID: 1595485786}
   selectSoundClip: {fileID: 8300000, guid: b65b8e8846d50ab4ca0b8b6b1d8e9f29, type: 3}
-  quitButtonSkin1FR: {fileID: 0}
-  quitButtonSkin1ENG: {fileID: 0}
-  playButtonSkin1FR: {fileID: 0}
-  playButtonSkin1ENG: {fileID: 0}
+  quitButtonSkin1FR: {fileID: 21300000, guid: f61d3bb1e93da4f4fad752f974d7aaaf, type: 3}
+  quitButtonSkin1ENG: {fileID: 21300000, guid: 79fa508464b75cb4f9f2661889bb4c08, type: 3}
+  playButtonSkin1FR: {fileID: 21300000, guid: affe81e0ad7c8c941a1c0a8af8124c1b, type: 3}
+  playButtonSkin1ENG: {fileID: 21300000, guid: 9a0c312dd5b454e4fa348e15b99bed1f, type: 3}
   shopButtonSkin1: {fileID: 21300000, guid: a2b92339206b61043b9ae6da93ca4675, type: 3}
   closeShopButtonSkin1: {fileID: 21300000, guid: b3e52b871ab0fbd4799e17b9c9f468b2,
     type: 3}
   moneyImageSkin1: {fileID: 21300000, guid: 9f0a01bad7394d24591be6ec5ed11f4d, type: 3}
   skyboxSkin1: {fileID: 2100000, guid: 5b21c6a8ce40f9641bd1204324b90b2c, type: 2}
-  buyItemButtonSkin1FR: {fileID: 0}
-  buyItemButtonSkin1ENG: {fileID: 0}
-  chooseItemButtonSkin1FR: {fileID: 0}
-  chooseItemButtonSkin1ENG: {fileID: 0}
-  tutorialButtonSkin1FR: {fileID: 0}
-  tutorialButtonSkin1ENG: {fileID: 0}
+  buyItemButtonSkin1FR: {fileID: 21300000, guid: 92cecc4856959d84da58a20529f73b08,
+    type: 3}
+  buyItemButtonSkin1ENG: {fileID: 21300000, guid: 6208fd77f33d47044a3ad07e034952e2,
+    type: 3}
+  chooseItemButtonSkin1FR: {fileID: 21300000, guid: ca09295dbc97f704aa2d041d2a010b7a,
+    type: 3}
+  chooseItemButtonSkin1ENG: {fileID: 21300000, guid: ec96693c549dd0440afc05226039d69d,
+    type: 3}
+  tutorialButtonSkin1FR: {fileID: 21300000, guid: f941c04326d40b74692be0357968887b,
+    type: 3}
+  tutorialButtonSkin1ENG: {fileID: 21300000, guid: de666a0f5b4577d42b821fd2f49081b0,
+    type: 3}
   closeTutorialButtonSkin1: {fileID: 21300000, guid: b3e52b871ab0fbd4799e17b9c9f468b2,
     type: 3}
   cadenasOpened1: {fileID: 21300000, guid: b95c7d27521999749b9f11fc825ace11, type: 3}
@@ -1096,7 +1108,7 @@ MonoBehaviour:
   buyItemButtonSkin2: {fileID: 21300000, guid: db797b4ca7b0d9a4eb5ee3d415633dd4, type: 3}
   chooseItemButtonSkin2: {fileID: 21300000, guid: 6e0d09856adc6444b95ee4a7ac4995e9,
     type: 3}
-  tutorialButtonSkin2: {fileID: 21300000, guid: 46a3bd6abab4b044b878c94a9f9c7791,
+  tutorialButtonSkin2: {fileID: 21300000, guid: 757bc4e414b3241429810beeae8f6b69,
     type: 3}
   closeTutorialButtonSkin2: {fileID: 21300000, guid: 21554d8573260df4a87c72f70cd6e9ff,
     type: 3}
@@ -1126,7 +1138,7 @@ MonoBehaviour:
   buyItemButtonSkin4: {fileID: 21300000, guid: f4b0b0a8a27117e43a592eab1c3284a4, type: 3}
   chooseItemButtonSkin4: {fileID: 21300000, guid: c145ade34fb718f468a87bb4b6ff9e40,
     type: 3}
-  tutorialButtonSkin4: {fileID: 21300000, guid: 6a5374b3aff0c8b4683a817e7eff5bde,
+  tutorialButtonSkin4: {fileID: 21300000, guid: 7517ba7d559bd4c45a2e98e4c34deec8,
     type: 3}
   closeTutorialButtonSkin4: {fileID: 21300000, guid: a12a80cd526fcbe4a984f0cd72df137e,
     type: 3}
