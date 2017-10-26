@@ -8,6 +8,9 @@ public class AttractObject : MonoBehaviour {
     private float speed = 20f;
     public int earnedScore;
 
+    private ParticleSystem psystem;
+    public List<ParticleSystem> particles;
+
      void Start () {
      }
 
@@ -45,7 +48,11 @@ public class AttractObject : MonoBehaviour {
 
         if(UImanag.Instance().IsGameOn())
         {
-     	  SpawnerManag.Instance().RandoPop();
+            int tryhard = UnityEngine.Random.Range(0,particles.Count);
+            psystem = Instantiate(particles[tryhard], gameObject.transform.position, Quaternion.identity);
+            psystem.Play();
+            //Destroy(psystem);
+            SpawnerManag.Instance().RandoPop();
         }       
 
      }
