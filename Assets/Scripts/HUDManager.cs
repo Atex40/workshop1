@@ -151,10 +151,13 @@ public class HUDManager : MonoBehaviour {
         scoreText.color = Color.green;
         scoreText.font = basicFont;
 
-        moneyImage.overrideSprite = moneyImageSkin1;
+        //moneyImage.overrideSprite = moneyImageSkin1;
         finalScoreText.color = Color.green;
+        finalScoreText.font = basicFont;
         moneyWinText.color = Color.green;
+        moneyWinText.font = basicFont;
         youLooseText.color = Color.green;
+        youLooseText.font = basicFont;
 
     }
 
@@ -179,10 +182,13 @@ public class HUDManager : MonoBehaviour {
         scoreText.color = Color.red;
         scoreText.font = basicFont;
 
-        moneyImage.overrideSprite = moneyImageSkin2;
+        //moneyImage.overrideSprite = moneyImageSkin2;
         finalScoreText.color = Color.red;
+        finalScoreText.font = basicFont;
         moneyWinText.color = Color.red;
+        moneyWinText.font = basicFont;
         youLooseText.color = Color.red;
+        youLooseText.font = basicFont;
     }
 
     public void Skin3() // SKIN 3 ACTIF
@@ -206,10 +212,13 @@ public class HUDManager : MonoBehaviour {
         scoreText.color = Color.white;
         scoreText.font = pixelFont;
 
-        moneyImage.overrideSprite = moneyImageSkin3;
+        //moneyImage.overrideSprite = moneyImageSkin3;
         finalScoreText.color = Color.white;
+        finalScoreText.font = pixelFont;
         moneyWinText.color = Color.white;
+        moneyWinText.font = pixelFont;
         youLooseText.color = Color.white;
+        youLooseText.font = pixelFont;
     }
 
     public void Skin4() // SKIN 4 ACTIF
@@ -233,10 +242,13 @@ public class HUDManager : MonoBehaviour {
         scoreText.color = Color.white;
         scoreText.font = basicFont;
 
-        moneyImage.overrideSprite = moneyImageSkin4;
+        //moneyImage.overrideSprite = moneyImageSkin4;
         finalScoreText.color = Color.white;
+        finalScoreText.font = basicFont;
         moneyWinText.color = Color.white;
+        moneyWinText.font = basicFont;
         youLooseText.color = Color.white;
+        youLooseText.font = basicFont;
     }
 
     public void GoBackToMenu()
