@@ -8,6 +8,12 @@ public class LanguageManager : MonoBehaviour {
     // MainMenu
     public Text highScoreText;
 
+    // Nom des skins
+    public Text nomSkin1;
+    public Text nomSkin2;
+    public Text nomSkin3;
+    public Text nomSkin4;
+
     // Prix skins
     public Text prixSkin1;
     public Text prixSkin2;
@@ -24,7 +30,6 @@ public class LanguageManager : MonoBehaviour {
     public Text prixBronzeText;
     public Text prixArgentText;
     public Text prixOrText;
-
 
 	// Use this for initialization
 	void Start () {

@@ -92,17 +92,24 @@ public class EconomyManager : MonoBehaviour {
     private AudioSource selectSound;
     public AudioClip selectSoundClip;
 
+    private int langage = 0;
+
 
     // SKIN 1 : ESPACE VERT
-    public Sprite quitButtonSkin1;
-    public Sprite playButtonSkin1;
+    public Sprite quitButtonSkin1FR;
+    public Sprite quitButtonSkin1ENG;
+    public Sprite playButtonSkin1FR;
+    public Sprite playButtonSkin1ENG;
     public Sprite shopButtonSkin1;
     public Sprite closeShopButtonSkin1;
     public Sprite moneyImageSkin1;
     public Material skyboxSkin1;
-    public Sprite buyItemButtonSkin1;  
-    public Sprite chooseItemButtonSkin1;
-    public Sprite tutorialButtonSkin1;
+    public Sprite buyItemButtonSkin1FR;
+    public Sprite buyItemButtonSkin1ENG;
+    public Sprite chooseItemButtonSkin1FR;
+    public Sprite chooseItemButtonSkin1ENG;
+    public Sprite tutorialButtonSkin1FR;
+    public Sprite tutorialButtonSkin1ENG;
     public Sprite closeTutorialButtonSkin1;
     public Sprite cadenasOpened1;
 
@@ -152,7 +159,47 @@ public class EconomyManager : MonoBehaviour {
         return instance;
     }
 
+    public void ChangerLangage()
+    {
+        if (langage != 1)
+        {
+            langage = 1;
+            PlayerPrefs.SetInt("choixLangage", langage);
+        }
 
+        if (langage == 1)
+        {
+            langage = 0;
+            PlayerPrefs.SetInt("choixLangage", langage);
+        }
+    }
+
+    public void DeterminerLangage()
+    {
+        if (langage == 0)
+        {
+            PlayerPrefs.SetInt("choixLangage", langage);
+            tutorialTextUp.text = "Pour faire pivoter le cube, faites glisser votre doigt dans la direction des flèches indiquées.";
+            tutorialTextDown.text = "Faites correspondre les couleurs des faces du cube avec celles des objets arrivants pour gagner des points.";
+            highScoreText.text = "MEILLEUR SCORE : ";
+            infoItem4Text.text = "DEFAUT";
+            recompenseBronze.text = "500 pièces";
+            recompenseArgent.text = "1700 pièces";
+            recompenseOr.text = "4800 pièces";
+        }
+
+        if (langage == 1)
+        {
+            PlayerPrefs.SetInt("choixLangage", langage);
+            tutorialTextUp.text = "To rotate the cube, swipe your finger in direction of indicated arrows.";
+            tutorialTextDown.text = "Make your cube's faces colors match with incoming items.";
+            highScoreText.text = "HIGHSCORE : ";
+            infoItem4Text.text = "DEFAULT";
+            recompenseBronze.text = "500 coins";
+            recompenseArgent.text = "1700 coins";
+            recompenseOr.text = "4800 coins";
+        }
+    }
 
     void Awake()
     {
@@ -169,6 +216,12 @@ public class EconomyManager : MonoBehaviour {
     // Use this for initialization
     void Start ()
     {
+        langage = PlayerPrefs.GetInt("choixLangage");
+
+        ChangerLangage();
+        DeterminerLangage();
+        
+
         infoItem1Text.color = Color.green;
         infoItem2Text.color = Color.red;
         infoItem3Text.color = Color.white;
@@ -247,7 +300,8 @@ public class EconomyManager : MonoBehaviour {
     }
 
     // Update is called once per frame
-    void Update () {
+    void Update ()
+    {
         
         moneyText.text = currentMoney.ToString();
         if (Input.GetKeyDown("c")) // Ajoute monnaie au joueur
@@ -307,11 +361,14 @@ public class EconomyManager : MonoBehaviour {
 
         PlayerPrefs.SetInt("choixHUD", choixHUD);
 
+
     }
 
+    
+       
 
 
-    public void BuyItem1() // ACHETER SKIN 1
+public void BuyItem1() // ACHETER SKIN 1
     {
         if (currentMoney >= 500)
         {
@@ -350,14 +407,47 @@ public class EconomyManager : MonoBehaviour {
         PlayerPrefs.SetInt("boolean4", activateItem4Bool);
 
         ChooseItemButtonFunction();
+        langage = PlayerPrefs.GetInt("choixLangage");
 
-        RenderSettings.skybox = skyboxSkin1;
-        quitButton.image.overrideSprite = quitButtonSkin1;
-        playButton.image.overrideSprite = playButtonSkin1;
+        if (langage == 0)
+        {
+            quitButton.image.overrideSprite = quitButtonSkin1FR;
+            playButton.image.overrideSprite = playButtonSkin1FR;
+
+
+            tutorialButton.image.overrideSprite = tutorialButtonSkin1FR;
+
+            buyItem2Button.image.overrideSprite = buyItemButtonSkin1FR;
+            buyItem3Button.image.overrideSprite = buyItemButtonSkin1FR;
+
+            chooseItem2Button.image.overrideSprite = chooseItemButtonSkin1FR;
+            chooseItem3Button.image.overrideSprite = chooseItemButtonSkin1FR;
+            chooseItem4Button.image.overrideSprite = chooseItemButtonSkin1FR;
+          
+        }
+
+        if (langage == 1)
+        {
+            quitButton.image.overrideSprite = quitButtonSkin1ENG;
+            playButton.image.overrideSprite = playButtonSkin1ENG;
+
+            tutorialButton.image.overrideSprite = tutorialButtonSkin1ENG;
+
+            buyItem2Button.image.overrideSprite = buyItemButtonSkin1ENG;
+            buyItem3Button.image.overrideSprite = buyItemButtonSkin1ENG;
+
+            chooseItem2Button.image.overrideSprite = chooseItemButtonSkin1ENG;
+            chooseItem3Button.image.overrideSprite = chooseItemButtonSkin1ENG;
+            chooseItem4Button.image.overrideSprite = chooseItemButtonSkin1ENG;
+        }
+
         shopButton.image.overrideSprite = shopButtonSkin1;
+
+        closeTutorialButton.image.overrideSprite = closeTutorialButtonSkin1;
         closeShopButton.image.overrideSprite = closeShopButtonSkin1;
 
-        tutorialButton.image.overrideSprite = tutorialButtonSkin1;
+        RenderSettings.skybox = skyboxSkin1;
+        
         tutorialTextUp.color = Color.green;
         tutorialTextDown.color = Color.green;
 
@@ -366,12 +456,6 @@ public class EconomyManager : MonoBehaviour {
         moneyText.font = basicFont;
         highScoreText.font = basicFont;
 
-        buyItem2Button.image.overrideSprite = buyItemButtonSkin1;
-        buyItem3Button.image.overrideSprite = buyItemButtonSkin1;
-
-        chooseItem2Button.image.overrideSprite = chooseItemButtonSkin1;
-        chooseItem3Button.image.overrideSprite = chooseItemButtonSkin1;
-        chooseItem4Button.image.overrideSprite = chooseItemButtonSkin1;
 
         //achatBronze.color = Color.green;
         //achatBronze.font = basicFont;
@@ -398,8 +482,6 @@ public class EconomyManager : MonoBehaviour {
 
         moneyImage.overrideSprite = moneyImageSkin4;
 
-        closeTutorialButton.image.overrideSprite = closeTutorialButtonSkin1;
-
         moneyText.color = Color.green;
         highScoreText.color = Color.green;
         //infoItem1Text.color = Color.green;
@@ -417,6 +499,7 @@ public class EconomyManager : MonoBehaviour {
         {
             priceItem3Text.color = Color.green;
         }
+
 
         Debug.Log("Item 1 sélectionné");
 
