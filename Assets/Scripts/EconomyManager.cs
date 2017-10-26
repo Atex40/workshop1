@@ -804,8 +804,8 @@ public class EconomyManager : MonoBehaviour {
     public void AccepterAcheterBronze()
     {
         currentMoney = currentMoney + 500;
-        confirmerAchatBronzePanel.SetActive(false);
         thanksBronzePanel.SetActive(true);
+        confirmerAchatBronzePanel.SetActive(false);
     }
 
     public void RefuserAcheterBronze()
@@ -834,8 +834,8 @@ public class EconomyManager : MonoBehaviour {
     public void AccepterAcheterArgent()
     {
         currentMoney = currentMoney + 1700;
-        ConfirmerAchatArgentPanel.SetActive(false);
         thanksArgentPanel.SetActive(true);
+        ConfirmerAchatArgentPanel.SetActive(false);
     }
 
     public void RefuserAcheterArgent()
@@ -855,8 +855,8 @@ public class EconomyManager : MonoBehaviour {
     public void AccepterAcheterOr()
     {
         currentMoney = currentMoney + 4800;
-        ConfirmerAchatOrPanel.SetActive(false);
         thanksOrPanel.SetActive(true);
+        ConfirmerAchatOrPanel.SetActive(false);
     }
 
     public void RefuserAcheterOr()
