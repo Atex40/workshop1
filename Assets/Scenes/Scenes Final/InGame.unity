@@ -468,7 +468,7 @@ Prefab:
     - target: {fileID: 224100983325426726, guid: 35a743c1b27d892488ba73c9c8810356,
         type: 2}
       propertyPath: m_LocalPosition.z
-      value: 13.05
+      value: 2.78
       objectReference: {fileID: 0}
     - target: {fileID: 224100983325426726, guid: 35a743c1b27d892488ba73c9c8810356,
         type: 2}
@@ -498,12 +498,12 @@ Prefab:
     - target: {fileID: 224100983325426726, guid: 35a743c1b27d892488ba73c9c8810356,
         type: 2}
       propertyPath: m_AnchoredPosition.x
-      value: -12.86
+      value: -2.75
       objectReference: {fileID: 0}
     - target: {fileID: 224100983325426726, guid: 35a743c1b27d892488ba73c9c8810356,
         type: 2}
       propertyPath: m_AnchoredPosition.y
-      value: -3.83
+      value: -0.03
       objectReference: {fileID: 0}
     - target: {fileID: 224100983325426726, guid: 35a743c1b27d892488ba73c9c8810356,
         type: 2}
@@ -647,17 +647,17 @@ Prefab:
     - target: {fileID: 224100983325426726, guid: 35a743c1b27d892488ba73c9c8810356,
         type: 2}
       propertyPath: m_LocalScale.x
-      value: 0.01498762
+      value: 0.0033387933
       objectReference: {fileID: 0}
     - target: {fileID: 224100983325426726, guid: 35a743c1b27d892488ba73c9c8810356,
         type: 2}
       propertyPath: m_LocalScale.y
-      value: 0.01498762
+      value: 0.0033387903
       objectReference: {fileID: 0}
     - target: {fileID: 224100983325426726, guid: 35a743c1b27d892488ba73c9c8810356,
         type: 2}
       propertyPath: m_LocalScale.z
-      value: 0.01498762
+      value: 0.0033387903
       objectReference: {fileID: 0}
     - target: {fileID: 224100983325426726, guid: 35a743c1b27d892488ba73c9c8810356,
         type: 2}
@@ -668,6 +668,14 @@ Prefab:
         type: 2}
       propertyPath: m_LocalEulerAnglesHint.y
       value: -47.324
+      objectReference: {fileID: 0}
+    - target: {fileID: 1788984907523160, guid: 35a743c1b27d892488ba73c9c8810356, type: 2}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1140602324197058, guid: 35a743c1b27d892488ba73c9c8810356, type: 2}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 35a743c1b27d892488ba73c9c8810356, type: 2}
@@ -1362,7 +1370,7 @@ MonoBehaviour:
   canvasFin: {fileID: 2080345791}
   cubeFin: {fileID: 1084796475}
   picesGagnees: {fileID: 101107051}
-  canvasMMIG: {fileID: 0}
+  canvasMMIG: {fileID: 155100110}
   defaiteSound: {fileID: 749821386}
 --- !u!114 &1176746413
 MonoBehaviour:
