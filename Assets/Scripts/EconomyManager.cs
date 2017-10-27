@@ -175,7 +175,7 @@ public class EconomyManager : MonoBehaviour {
 
         langage = PlayerPrefs.GetInt("choixLangage");
 
-        if (langage == 0)
+        if (langage == 1)
         {
             tutorialTextUp.text = "Pour faire pivoter le cube, faites glisser votre doigt dans la direction des flèches indiquées.";
             tutorialTextDown.text = "Faites correspondre les couleurs des faces du cube avec celles des objets arrivants pour gagner des points.";
@@ -199,7 +199,7 @@ public class EconomyManager : MonoBehaviour {
                 chooseItem3Button.image.overrideSprite = chooseItemButtonSkin1FR;
                 chooseItem4Button.image.overrideSprite = chooseItemButtonSkin1FR;
 
-                langage = 1;
+                langage = 0;
                 PlayerPrefs.SetInt("choixLangage", langage);
             }
 
@@ -218,7 +218,7 @@ public class EconomyManager : MonoBehaviour {
                 chooseItem3Button.image.overrideSprite = chooseItemButtonSkin2FR;
                 chooseItem4Button.image.overrideSprite = chooseItemButtonSkin2FR;
 
-                langage = 1;
+                langage = 0;
 
                 PlayerPrefs.SetInt("choixLangage", langage);
             }
@@ -238,7 +238,7 @@ public class EconomyManager : MonoBehaviour {
                 chooseItem2Button.image.overrideSprite = chooseItemButtonSkin3FR;
                 chooseItem4Button.image.overrideSprite = chooseItemButtonSkin3FR;
 
-                langage = 1;
+                langage = 0;
 
                 PlayerPrefs.SetInt("choixLangage", langage);
             }
@@ -257,14 +257,14 @@ public class EconomyManager : MonoBehaviour {
                 chooseItem2Button.image.overrideSprite = chooseItemButtonSkin4FR;
                 chooseItem3Button.image.overrideSprite = chooseItemButtonSkin4FR;
 
-                langage = 1;
+                langage = 0;
 
                 PlayerPrefs.SetInt("choixLangage", langage);
             }
 
         }
 
-        else if (langage == 1)
+        else if (langage == 0)
         {
             tutorialTextUp.text = "To rotate the cube, swipe your finger in direction of indicated arrows.";
             tutorialTextDown.text = "Make your cube's faces colors match with incoming items.";
@@ -289,7 +289,7 @@ public class EconomyManager : MonoBehaviour {
                 chooseItem3Button.image.overrideSprite = chooseItemButtonSkin1ENG;
                 chooseItem4Button.image.overrideSprite = chooseItemButtonSkin1ENG;
 
-                langage = 0;
+                langage = 1;
 
                 PlayerPrefs.SetInt("choixLangage", langage);
             }
@@ -311,7 +311,7 @@ public class EconomyManager : MonoBehaviour {
                 chooseItem3Button.image.overrideSprite = chooseItemButtonSkin2ENG;
                 chooseItem4Button.image.overrideSprite = chooseItemButtonSkin2ENG;
 
-                langage = 0;
+                langage = 1;
 
                 PlayerPrefs.SetInt("choixLangage", langage);
 
@@ -332,7 +332,7 @@ public class EconomyManager : MonoBehaviour {
                 chooseItem2Button.image.overrideSprite = chooseItemButtonSkin3ENG;
                 chooseItem4Button.image.overrideSprite = chooseItemButtonSkin3ENG;
 
-                langage = 0;
+                langage = 1;
 
                 PlayerPrefs.SetInt("choixLangage", langage);
             }
@@ -353,7 +353,7 @@ public class EconomyManager : MonoBehaviour {
                 chooseItem2Button.image.overrideSprite = chooseItemButtonSkin4ENG;
                 chooseItem3Button.image.overrideSprite = chooseItemButtonSkin4ENG;
 
-                langage = 0;
+                langage = 1;
 
                 PlayerPrefs.SetInt("choixLangage", langage);
             }
@@ -482,6 +482,7 @@ public class EconomyManager : MonoBehaviour {
 
         currentMoney = PlayerPrefs.GetInt("currentMoney");
         moneyText.text = currentMoney.ToString();
+
 
         if (Input.GetKeyDown("c")) // Ajoute monnaie au joueur
         {
