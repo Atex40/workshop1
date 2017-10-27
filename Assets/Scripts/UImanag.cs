@@ -122,7 +122,7 @@ public void LooseLife (){
     void CoinsAffichage () {
 
         //currentMoney = currentMoney + EconomyManager.Instance().GetMoney();
-        currentMoney += 1;
+       // currentMoney += 1;
         PlayerPrefs.SetInt("currentMoney", currentMoney);
     	picesGagnees.text = "Pieces Totales	 : " + currentMoney.ToString();
         
@@ -165,5 +165,13 @@ public void CountVie (int value){
 
 	countVieReset += value;
 	WinLife ();
+}
+
+
+public int GetMoney () {
+    currentMoney = PlayerPrefs.GetInt("currentMoney");
+    currentMoney +=1;
+    PlayerPrefs.SetInt("currentMoney", currentMoney);
+    return currentMoney;
 }
 }

@@ -29,7 +29,7 @@ public class AttractObject : MonoBehaviour {
      	if (collision.gameObject.tag == gameObject.tag)
      	{
      		UImanag.Instance().AddScore(earnedScore);
-     		EconomyManager.Instance().GetMoney();
+     		UImanag.Instance().GetMoney();
             UImanag.Instance().CountVie(earnedScore);
      	}
 
