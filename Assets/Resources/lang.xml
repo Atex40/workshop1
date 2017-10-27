@@ -1,9 +1,20 @@
 <?xml version="1.0" encoding="utf-8"?>
 <languages>
-	<English>
+	<French>
 
 		<!-- Main menu -->
-		<string name="mainmenu_touchtostart">Touch screen to start</string>
+		<string name="intro_welcome">bienvenue tout le monde</string>
+    <string name="intro_autre">je ne sais pas</string>
+    <string name="langage">francais</string>
 	
-	</English>
+	</French>
+
+  <English>
+
+    <!-- Main menu -->
+    <string name="intro_welcome">welcome everyone</string>
+    <string name="intro_autre">i don't know</string>
+    <string name="langage">english</string>
+
+  </English>
 </languages>

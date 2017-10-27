@@ -203,7 +203,7 @@ public class EconomyManager : MonoBehaviour {
                 PlayerPrefs.SetInt("choixLangage", langage);
             }
 
-            else if (activateItem2Bool == 1) // SI SKIN 2 ET LANGUE FR
+            if (activateItem2Bool == 1) // SI SKIN 2 ET LANGUE FR
             {
                 //PlayerPrefs.SetInt("choixLangage", langage);
 
@@ -223,7 +223,7 @@ public class EconomyManager : MonoBehaviour {
                 PlayerPrefs.SetInt("choixLangage", langage);
             }
 
-            else if (activateItem3Bool == 1) // SI SKIN 3 ET LANGUE FR
+            if (activateItem3Bool == 1) // SI SKIN 3 ET LANGUE FR
             {
                 //   PlayerPrefs.SetInt("choixLangage", langage);
 
@@ -243,7 +243,7 @@ public class EconomyManager : MonoBehaviour {
                 PlayerPrefs.SetInt("choixLangage", langage);
             }
 
-            else if (activateItem4Bool == 1) // SI SKIN 4 ET LANGUE FR
+            if (activateItem4Bool == 1) // SI SKIN 4 ET LANGUE FR
             {
                 playButton.image.overrideSprite = playButtonSkin4FR;
 
@@ -296,7 +296,7 @@ public class EconomyManager : MonoBehaviour {
 
 
 
-            else if (activateItem2Bool == 1) // SI SKIN 2 ET LANGUE ENG
+            if (activateItem2Bool == 1) // SI SKIN 2 ET LANGUE ENG
             {
                 // PlayerPrefs.SetInt("choixLangage", langage);
 
@@ -319,7 +319,7 @@ public class EconomyManager : MonoBehaviour {
 
 
 
-            else if (activateItem3Bool == 1) // SI SKIN 3 ET LANGUE ENG
+             if (activateItem3Bool == 1) // SI SKIN 3 ET LANGUE ENG
             {
                 playButton.image.overrideSprite = playButtonSkin3ENG;
 
@@ -339,7 +339,7 @@ public class EconomyManager : MonoBehaviour {
 
 
 
-            else if (activateItem4Bool == 1) // SI SKIN 3 ET LANGUE ENG
+             if (activateItem4Bool == 1) // SI SKIN 4 ET LANGUE ENG
             {
                 playButton.image.overrideSprite = playButtonSkin4ENG;
 
@@ -590,9 +590,19 @@ public void BuyItem1() // ACHETER SKIN 1
 
         ChooseItemButtonFunction();
 
+        playButton.image.overrideSprite = playButtonSkin1FR;
         quitButton.image.overrideSprite = quitButtonSkin1;
 
+        tutorialButton.image.overrideSprite = tutorialButtonSkin1FR;
+
         shopButton.image.overrideSprite = shopButtonSkin1;
+
+        buyItem2Button.image.overrideSprite = buyItemButtonSkin1FR;
+        buyItem3Button.image.overrideSprite = buyItemButtonSkin1FR;
+
+        chooseItem2Button.image.overrideSprite = chooseItemButtonSkin1FR;
+        chooseItem3Button.image.overrideSprite = chooseItemButtonSkin1FR;
+        chooseItem4Button.image.overrideSprite = chooseItemButtonSkin1FR;
 
         closeTutorialButton.image.overrideSprite = closeTutorialButtonSkin1;
         closeShopButton.image.overrideSprite = closeShopButtonSkin1;

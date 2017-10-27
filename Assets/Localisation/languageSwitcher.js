@@ -1,6 +1,6 @@
 ﻿#pragma strict
 
-function switchLanguage(language : String)
+function switchLanguage()
 {
-	Lang.GetInstance().ToggleLanguages();
+//	Lang.GetInstance().ToggleLanguages();
 }

@@ -40,9 +40,7 @@ function SwitchLanguage(languageToSet : String)
 	SetLanguage (path, language);
 }
 
-function ToggleLanguages (){
-	if(language == "English") language = "French";
-	else if(language == "French") language = "English";
+function ToggleLanguages (lang : String){
 	SetLanguage (path, language);
 }
 
