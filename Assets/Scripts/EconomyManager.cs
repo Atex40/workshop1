@@ -562,7 +562,28 @@ public class EconomyManager : MonoBehaviour {
 
     }
 
-    
+public void resetButton()
+{
+currentMoney = 0;
+            activateItem1Bool = 0;
+            activateItem2Bool = 0;
+            activateItem3Bool = 0;
+            activateItem4Bool = 0;
+            buyItem1Bool = 0;
+            buyItem2Bool = 0;
+            buyItem3Bool = 0;
+            langage = 0;
+            PlayerPrefs.SetInt("currentMoney", currentMoney);
+            PlayerPrefs.SetInt("boolean1", activateItem1Bool);
+            PlayerPrefs.SetInt("boolean2", activateItem2Bool);
+            PlayerPrefs.SetInt("boolean3", activateItem3Bool);
+            PlayerPrefs.SetInt("boolean4", activateItem4Bool);
+            PlayerPrefs.SetInt("EspaceVert", buyItem1Bool);
+            PlayerPrefs.SetInt("EspaceRouge", buyItem2Bool);
+            PlayerPrefs.SetInt("EspacePixel", buyItem3Bool);
+            PlayerPrefs.SetInt("choixLangage", langage);
+            Debug.Log("jeu reinitialise");
+    }
        
 
 
