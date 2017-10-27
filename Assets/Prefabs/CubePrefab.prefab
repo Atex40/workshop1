@@ -45,7 +45,7 @@ GameObject:
   - component: {fileID: 54177709540224938}
   - component: {fileID: 114723259985603514}
   m_Layer: 0
-  m_Name: RougeGauche
+  m_Name: Noir
   m_TagString: Rouge
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -85,7 +85,7 @@ GameObject:
   - component: {fileID: 54740165767835344}
   - component: {fileID: 114640353869181980}
   m_Layer: 0
-  m_Name: RougeDroit
+  m_Name: Noir
   m_TagString: Rouge
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -154,7 +154,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1939337289160524}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -4.3, y: -0.76, z: 4.19}
+  m_LocalPosition: {x: 142.95105, y: -28.326231, z: -3.3355064}
   m_LocalScale: {x: 0.09814901, y: 0.09814901, z: 0.09814901}
   m_Children:
   - {fileID: 4945096582628260}
@@ -353,7 +353,7 @@ MeshRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_Materials:
-  - {fileID: 2100000, guid: 18d9cbebce49aa343b13588190b710a6, type: 2}
+  - {fileID: 2100000, guid: f262fd26d56af434ea945ff5df3f5cf6, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -385,7 +385,7 @@ MeshRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_Materials:
-  - {fileID: 2100000, guid: 18d9cbebce49aa343b13588190b710a6, type: 2}
+  - {fileID: 2100000, guid: f262fd26d56af434ea945ff5df3f5cf6, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
