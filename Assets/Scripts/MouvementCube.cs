@@ -1,4 +1,3 @@
-using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -24,21 +23,32 @@ public class MouvementCube : MonoBehaviour {
 	private bool tourXLU = false;
 	private bool tourXLD = false;
 
-	private bool isWaza = true;
-	private Vector3 tmpDirWaza;
+	private bool isWaza = false;
+	private bool isWesh = false;
+	private Vector3 tmpDirRight;
+	private Vector3 tmpDirRightUp;
+	private Vector3 tmpDirLeftUp;
+	private int rotYIdx = 1;
+	private int rotXIdx = 1;
+	private int rotZIdx = 1;
+	private bool okMoveR = true;
+	private bool okMoveL = true;
 
 	void Start () 
 	{
 		startAngleY = transform.eulerAngles.y;
 		startAngleZ = transform.eulerAngles.z;
 		startAngleX = transform.eulerAngles.x;
+		tmpDirRight = transform.InverseTransformDirection(Vector3.up) * rotationAngle;
+		tmpDirRightUp = transform.InverseTransformDirection(Vector3.forward) * rotationAngle;
+		tmpDirLeftUp = transform.InverseTransformDirection(Vector3.right) * rotationAngle;
+
 	}
 	
 	void Update () 
 	{
 		if (UImanag.Instance().IsGameOn())
 		{
-			Debug.Log(transform.rotation.z);
 			if (Input.GetMouseButtonDown(0))
 			{
 				startPos = Input.mousePosition;
@@ -48,31 +58,114 @@ public class MouvementCube : MonoBehaviour {
 			}
 			if (Input.GetMouseButtonUp(0)){
 				direction.Normalize();
-				if (direction.x > 0.2 && direction.y < 0.2 && direction.y > -0.2)
+				if (direction.x > 0.2 && direction.y < 0.2 && direction.y > -0.2 && okMoveR == true)
 				{
 					turnLeft = true;
+					okMoveL = false;
 				}
-				else if (direction.x < -0.2 && direction.y < 0.2 && direction.y > -0.2)
+				else if (direction.x < -0.2 && direction.y < 0.2 && direction.y > -0.2 && okMoveL == true)
 				{
 					turnRight = true;
+					okMoveR = false;
 				}
-				else if (direction.y < -0.2 && direction.x > 0.2)
-				{
-					turnRightDown = true;
-				}
-				else if (direction.y > 0.2 && direction.x > 0.2)
-				{
-					turnLeftUp = true;
-				}
-				else if (direction.y < -0.2 && direction.x < -0.2)
-				{
-					turnLeftDown = true;
-				}
-				else if (direction.y > 0.2 && direction.x < -0.2)
-				{
-					turnRightUp = true;
-				}
+				// else if (direction.y < -0.2 && direction.x > 0.2)
+				// {
+				// 	turnRightDown = true;
+				// }
+				// else if (direction.y > 0.2 && direction.x > 0.2)
+				// {
+				// 	turnLeftUp = true;
+				// }
+				// else if (direction.y < -0.2 && direction.x < -0.2)
+				// {
+				// 	turnLeftDown = true;
+				// }
+				// else if (direction.y > 0.2 && direction.x < -0.2)
+				// {
+				// 	turnRightUp = true;
+				// }
 			}
+
+			// if (turnLeft)
+			// {
+			// 	iTween.RotateBy(gameObject, iTween.Hash("y", -0.25, "easeType", "easeInOutBack","delay", .4));
+			// 	turnLeft = false;
+			// 	okMoveL = true;
+			// }
+
+			// if (turnRight)
+			// {
+			// 	iTween.RotateBy(gameObject, iTween.Hash("y", 0.25, "easeType", "easeInOutBack","delay", .4));
+			// 	turnRight = false;
+			// 	okMoveR = true;
+			// }
+
+			// else if (Input.GetKeyDown("p"))
+			// {
+			// 	iTween.RotateBy(gameObject, iTween.Hash("z", 0.25));
+			// }
+
+			// else if (Input.GetKeyDown("t"))
+			// {
+			// 	iTween.RotateBy(gameObject, iTween.Hash("x", 0.25));
+			// }
+				
+
+			// if (turnRight)
+			// {
+			// 	transform.rotation = Quaternion.RotateTowards (transform.rotation, Quaternion.FromToRotation(Vector3.right, Vector3.forward), turnSpeed * Time.deltaTime);
+				// if (transform.rotation == Quaternion.Euler(-tmpDirRight))
+				// {
+					// rotYIdx ++;
+					// tmpDirRight = (transform.InverseTransformDirection(Vector3.up) * rotYIdx) * rotationAngle;
+					// tmpDirRightUp = transform.InverseTransformDirection(Vector3.forward) * rotationAngle;
+					// tmpDirLeftUp = transform.InverseTransformDirection(Vector3.right) * rotationAngle;
+				// 	turnRight = false;
+				// }
+		//	}
+
+			// if (Input.GetKeyDown("p"))
+			// {
+			// 	turnRight = false;
+			// 	turnRightUp = true;
+			// 	turnLeftUp = false;
+			// }
+
+			// if (turnRightUp)
+			// {
+			// 	transform.rotation = Quaternion.RotateTowards (transform.rotation, Quaternion.Euler(transform.InverseTransformDirection(Vector3.up) * rotationAngle), turnSpeed * Time.deltaTime);
+			// 	if (transform.rotation == Quaternion.Euler(transform.InverseTransformDirection(Vector3.up)))
+			// 	{
+			// 		// rotXIdx ++;
+			// 		// tmpDirRight = transform.InverseTransformDirection(Vector3.up) * rotationAngle;
+			// 		// tmpDirRightUp = (transform.InverseTransformDirection(Vector3.forward) * rotXIdx) * rotationAngle;
+			// 		// tmpDirLeftUp = transform.InverseTransformDirection(Vector3.right) * rotationAngle;
+			// 		turnRightUp = false;
+			// 	}
+			// }
+
+			// if (Input.GetKeyDown("t"))
+			// {
+			// 	turnRight = false;
+			// 	turnRightUp = false;
+			// 	turnLeftUp = true;
+			// }
+
+			// if (turnLeftUp)
+			// {
+			// 	transform.rotation = Quaternion.RotateTowards (transform.rotation, Quaternion.Euler(tmpDirLeftUp), turnSpeed * Time.deltaTime);
+			// 	if (transform.rotation == Quaternion.Euler(tmpDirLeftUp))
+			// 	{
+			// 		rotZIdx ++;
+			// 		// tmpDirRight = transform.InverseTransformDirection(Vector3.up) * rotationAngle;
+			// 		// tmpDirRightUp = transform.InverseTransformDirection(Vector3.forward) * rotationAngle;
+			// 		tmpDirLeftUp = (transform.InverseTransformDirection(Vector3.right) * rotZIdx) * rotationAngle;
+			// 		turnLeftUp = false;
+			// 	}
+			// }
+
+			//OLD
+
 			if (turnRight)
 			{
 					transform.Rotate(Vector3.up * turnSpeed * Time.deltaTime, Space.World);
@@ -82,6 +175,7 @@ public class MouvementCube : MonoBehaviour {
 						transform.eulerAngles = tmpDirYL;
 						startAngleY = transform.eulerAngles.y;
 						turnRight = false;
+						okMoveR = true;
 					}
 					if (transform.eulerAngles.y > 300) 
 					{
@@ -94,6 +188,7 @@ public class MouvementCube : MonoBehaviour {
 						startAngleY = transform.eulerAngles.y;
 						tourYL = false;
 						turnRight = false;
+						okMoveR = true;
 					}
 			}
 			if (turnLeft)
@@ -109,6 +204,7 @@ public class MouvementCube : MonoBehaviour {
 						transform.eulerAngles = tmpDirYR;
 						startAngleY = transform.eulerAngles.y;
 						turnLeft = false;
+						okMoveL = true;
 					}
 					if (transform.eulerAngles.y < 30) 
 					{
@@ -121,125 +217,9 @@ public class MouvementCube : MonoBehaviour {
 						startAngleY = transform.eulerAngles.y;
 						tourYR = false;
 						turnLeft = false;
+						okMoveL = true;
 					}
 			}
-                                                      //DEBUT COMMENTAIRE
-
-			if (turnRightUp)
-			{
-				if (isWaza)
-				{
-					tmpDirWaza = new Vector3(transform.eulerAngles.x,transform.eulerAngles.y,transform.eulerAngles.z);
-					startAngleZ = tmpDirWaza.z;
-					isWaza = false;
-				}
-				transform.Rotate(Vector3.forward * turnSpeed * Time.deltaTime, Space.World);
-				Debug.Log(transform.localRotation.eulerAngles.z);
-				if ((transform.eulerAngles.z - startAngleZ) >= rotationAngle)
-				{
-					isWaza = true;
-					Vector3 tmpDirZRU = new Vector3(tmpDirWaza.x,tmpDirWaza.y,tmpDirWaza.z + rotationAngle);
-					// Debug.Log(transform.eulerAngles);
-					// Debug.Log("ert" + tmpDirZRU);
-					// transform.eulerAngles = tmpDirZRU;
-					startAngleZ = transform.eulerAngles.z;
-					turnRightUp = false;
-				}
-				if (transform.eulerAngles.z > 300) 
-				{
-					tourZRU = true;
-					Debug.Log("Et non !");
-				}
-				if (tourZRU && transform.eulerAngles.z > 0 && transform.eulerAngles.z < 20)
-				{
-					Vector3 tmpTourZRU = new Vector3(transform.eulerAngles.x,transform.eulerAngles.y,0);
-					transform.eulerAngles = tmpTourZRU;
-					startAngleZ = transform.eulerAngles.z;
-					tourZRU = false;
-					turnRightUp = false;
-				} 
-			}
-
-                                            // FIN COMMENTAIRE
-
-			 if (turnLeftUp)
-			 {
-			 		transform.Rotate(Vector3.right * turnSpeed * Time.deltaTime, Space.World);
-			 		if ((transform.eulerAngles.x - startAngleX) >= rotationAngle)
-			 		{
-			 			Vector3 tmpDirXLU = new Vector3(startAngleX + rotationAngle,transform.eulerAngles.y,transform.eulerAngles.z);
-			 			transform.eulerAngles = tmpDirXLU;
-			 			startAngleX = transform.eulerAngles.x;
-			 			turnLeftUp = false;
-			 		}
-			 		if (transform.eulerAngles.x > 300) 
-			 		{
-			 			tourXLU = true;
-					}
-			 		if (tourXLU && transform.eulerAngles.x > 0 && transform.eulerAngles.x < 20)
-			 		{
-			 			Vector3 tmpTourXLU = new Vector3(0,transform.eulerAngles.y,transform.eulerAngles.z);
-			 			transform.eulerAngles = tmpTourXLU;
-			 			startAngleX = transform.eulerAngles.x;
-			 			tourXLU = false;
-			 			turnLeftUp = false;
-			 		}
-			 }
-			if (turnRightDown)
-			 {
-					transform.Rotate(-Vector3.forward * turnSpeed * Time.deltaTime, Space.World);
-					if (startAngleZ == 0)
-				{
-						startAngleZ = 360f;
-			 		}
-			 		if ((startAngleZ - transform.eulerAngles.z) >= rotationAngle)
-			 		{
-						Vector3 tmpDirZRD = new Vector3(transform.eulerAngles.x,transform.eulerAngles.y,startAngleZ - rotationAngle);
-			 			transform.eulerAngles = tmpDirZRD;
-						startAngleZ = transform.eulerAngles.z;
-			 			turnRightDown = false;
-					}
-					if (transform.eulerAngles.z < 30) 
-					{
-			 			tourZRD = true;
-				}
-					if (tourZRD && transform.eulerAngles.z < 360 && transform.eulerAngles.z > 340)
-			 		{
-					Vector3 tmpTourZRD = new Vector3(transform.eulerAngles.x,transform.eulerAngles.y,0);
-						transform.eulerAngles = tmpTourZRD;
-			 			startAngleZ = transform.eulerAngles.z;
-			 			tourZRD = false;
-			 			turnRightDown = false;
-			 		}
-			 }
-			// if (turnLeftDown)
-			// {
-			// 		transform.Rotate(-Vector3.right * turnSpeed * Time.deltaTime, Space.World);
-			// 		if (startAngleX == 0)
-			// 		{
-			// 			startAngleX = 360f;
-			// 		}
-			// 		if ((startAngleX - transform.eulerAngles.x) >= rotationAngle)
-			// 		{
-			// 			Vector3 tmpDirXLD = new Vector3(startAngleX - rotationAngle, transform.eulerAngles.y,transform.eulerAngles.z );
-			// 			transform.eulerAngles = tmpDirXLD;
-			// 			startAngleX = transform.eulerAngles.x;
-			// 			turnLeftDown = false;
-			// 			Debug.Log("coucou toi");
-			// 		}
-			// 		if (transform.eulerAngles.x < 30) 
-			// 		{
-			// 			tourXLD = true;
-			// 		}
-			// 		if (tourXLD && transform.eulerAngles.x < 360 && transform.eulerAngles.x > 340)
-			// 		{
-			// 			Vector3 tmpTourXLD = new Vector3(0,transform.eulerAngles.y,transform.eulerAngles.z);
-			// 			transform.eulerAngles = tmpTourXLD;
-			// 			startAngleX = transform.eulerAngles.x;
-			// 			tourXLD = false;
-			// 			turnLeftDown = false;
-			// 		}
-			// }
 		}
 	}
 }
