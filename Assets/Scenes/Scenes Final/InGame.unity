@@ -1231,6 +1231,9 @@ MonoBehaviour:
   thanksArgentPanel: {fileID: 0}
   thanksOrPanel: {fileID: 0}
   selectSoundClip: {fileID: 0}
+  langageButton: {fileID: 0}
+  langageButtonFR: {fileID: 0}
+  langageButtonENG: {fileID: 0}
   quitButtonSkin1: {fileID: 0}
   playButtonSkin1FR: {fileID: 0}
   playButtonSkin1ENG: {fileID: 0}
