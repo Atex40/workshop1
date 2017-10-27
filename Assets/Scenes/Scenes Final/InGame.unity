@@ -631,13 +631,13 @@ Transform:
     type: 2}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 656420915}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -3.77, y: -0.76, z: -2.38}
+  m_LocalRotation: {x: -0, y: 0.38268343, z: -0, w: 0.92387956}
+  m_LocalPosition: {x: -8.85, y: -0.76, z: -3.05}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 7
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 45, z: 0}
 --- !u!1 &657979244
 GameObject:
   m_ObjectHideFlags: 0
@@ -1231,8 +1231,7 @@ MonoBehaviour:
   thanksArgentPanel: {fileID: 0}
   thanksOrPanel: {fileID: 0}
   selectSoundClip: {fileID: 0}
-  quitButtonSkin1FR: {fileID: 0}
-  quitButtonSkin1ENG: {fileID: 0}
+  quitButtonSkin1: {fileID: 0}
   playButtonSkin1FR: {fileID: 0}
   playButtonSkin1ENG: {fileID: 0}
   shopButtonSkin1: {fileID: 0}
@@ -1248,36 +1247,48 @@ MonoBehaviour:
   closeTutorialButtonSkin1: {fileID: 0}
   cadenasOpened1: {fileID: 0}
   quitButtonSkin2: {fileID: 0}
-  playButtonSkin2: {fileID: 0}
+  playButtonSkin2FR: {fileID: 0}
+  playButtonSkin2ENG: {fileID: 0}
   shopButtonSkin2: {fileID: 0}
   closeShopButtonSkin2: {fileID: 0}
   moneyImageSkin2: {fileID: 0}
   skyboxSkin2: {fileID: 0}
-  buyItemButtonSkin2: {fileID: 0}
-  chooseItemButtonSkin2: {fileID: 0}
-  tutorialButtonSkin2: {fileID: 0}
+  buyItemButtonSkin2FR: {fileID: 0}
+  buyItemButtonSkin2ENG: {fileID: 0}
+  chooseItemButtonSkin2FR: {fileID: 0}
+  chooseItemButtonSkin2ENG: {fileID: 0}
+  tutorialButtonSkin2FR: {fileID: 0}
+  tutorialButtonSkin2ENG: {fileID: 0}
   closeTutorialButtonSkin2: {fileID: 0}
   cadenasOpened2: {fileID: 0}
   quitButtonSkin3: {fileID: 0}
-  playButtonSkin3: {fileID: 0}
+  playButtonSkin3FR: {fileID: 0}
+  playButtonSkin3ENG: {fileID: 0}
   shopButtonSkin3: {fileID: 0}
   closeShopButtonSkin3: {fileID: 0}
   moneyImageSkin3: {fileID: 0}
   skyboxSkin3: {fileID: 0}
-  buyItemButtonSkin3: {fileID: 0}
-  chooseItemButtonSkin3: {fileID: 0}
-  tutorialButtonSkin3: {fileID: 0}
+  buyItemButtonSkin3FR: {fileID: 0}
+  buyItemButtonSkin3ENG: {fileID: 0}
+  chooseItemButtonSkin3FR: {fileID: 0}
+  chooseItemButtonSkin3ENG: {fileID: 0}
+  tutorialButtonSkin3FR: {fileID: 0}
+  tutorialButtonSkin3ENG: {fileID: 0}
   closeTutorialButtonSkin3: {fileID: 0}
   cadenasOpened3: {fileID: 0}
   quitButtonSkin4: {fileID: 0}
-  playButtonSkin4: {fileID: 0}
+  playButtonSkin4FR: {fileID: 0}
+  playButtonSkin4ENG: {fileID: 0}
   shopButonSkin4: {fileID: 0}
   closeShopButtonSkin4: {fileID: 0}
   moneyImageSkin4: {fileID: 0}
   skyboxSkin4: {fileID: 0}
-  buyItemButtonSkin4: {fileID: 0}
-  chooseItemButtonSkin4: {fileID: 0}
-  tutorialButtonSkin4: {fileID: 0}
+  buyItemButtonSkin4FR: {fileID: 0}
+  buyItemButtonSkin4ENG: {fileID: 0}
+  chooseItemButtonSkin4FR: {fileID: 0}
+  chooseItemButtonSkin4ENG: {fileID: 0}
+  tutorialButtonSkin4FR: {fileID: 0}
+  tutorialButtonSkin4ENG: {fileID: 0}
   closeTutorialButtonSkin4: {fileID: 0}
 --- !u!1 &1253882813
 GameObject:
@@ -1411,13 +1422,13 @@ Transform:
     type: 2}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1315201565}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 2.6, y: -0.76, z: 4.21}
+  m_LocalRotation: {x: -0, y: 0.38268343, z: -0, w: 0.92387956}
+  m_LocalPosition: {x: 1.99, y: -0.76, z: 8.59}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 8
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 45, z: 0}
 --- !u!1001 &1343665062
 Prefab:
   m_ObjectHideFlags: 0
