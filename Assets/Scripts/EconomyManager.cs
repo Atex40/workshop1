@@ -92,12 +92,11 @@ public class EconomyManager : MonoBehaviour {
     private AudioSource selectSound;
     public AudioClip selectSoundClip;
 
-    private int langage = 0;
+    private int langage;
 
 
     // SKIN 1 : ESPACE VERT
-    public Sprite quitButtonSkin1FR;
-    public Sprite quitButtonSkin1ENG;
+    public Sprite quitButtonSkin1;
     public Sprite playButtonSkin1FR;
     public Sprite playButtonSkin1ENG;
     public Sprite shopButtonSkin1;
@@ -115,40 +114,52 @@ public class EconomyManager : MonoBehaviour {
 
     // SKIN 2 : ESPACE ROUGE
     public Sprite quitButtonSkin2;
-    public Sprite playButtonSkin2;
+    public Sprite playButtonSkin2FR;
+    public Sprite playButtonSkin2ENG;
     public Sprite shopButtonSkin2;
     public Sprite closeShopButtonSkin2;
     public Sprite moneyImageSkin2;
     public Material skyboxSkin2;
-    public Sprite buyItemButtonSkin2;
-    public Sprite chooseItemButtonSkin2;
-    public Sprite tutorialButtonSkin2;
+    public Sprite buyItemButtonSkin2FR;
+    public Sprite buyItemButtonSkin2ENG;
+    public Sprite chooseItemButtonSkin2FR;
+    public Sprite chooseItemButtonSkin2ENG;
+    public Sprite tutorialButtonSkin2FR;
+    public Sprite tutorialButtonSkin2ENG;
     public Sprite closeTutorialButtonSkin2;
     public Sprite cadenasOpened2;
 
     // SKIN 3 : ARCADE NOIR ET BLANC
     public Sprite quitButtonSkin3;
-    public Sprite playButtonSkin3;
+    public Sprite playButtonSkin3FR;
+    public Sprite playButtonSkin3ENG;
     public Sprite shopButtonSkin3;
     public Sprite closeShopButtonSkin3;
     public Sprite moneyImageSkin3;
     public Material skyboxSkin3;
-    public Sprite buyItemButtonSkin3;
-    public Sprite chooseItemButtonSkin3;
-    public Sprite tutorialButtonSkin3;
+    public Sprite buyItemButtonSkin3FR;
+    public Sprite buyItemButtonSkin3ENG;
+    public Sprite chooseItemButtonSkin3FR;
+    public Sprite chooseItemButtonSkin3ENG;
+    public Sprite tutorialButtonSkin3FR;
+    public Sprite tutorialButtonSkin3ENG;
     public Sprite closeTutorialButtonSkin3;
     public Sprite cadenasOpened3;
 
     // SKIN 4 : PAR DEFAUT
     public Sprite quitButtonSkin4;
-    public Sprite playButtonSkin4;
+    public Sprite playButtonSkin4FR;
+    public Sprite playButtonSkin4ENG;
     public Sprite shopButonSkin4;
     public Sprite closeShopButtonSkin4;
     public Sprite moneyImageSkin4;
     public Material skyboxSkin4;
-    public Sprite buyItemButtonSkin4;
-    public Sprite chooseItemButtonSkin4;
-    public Sprite tutorialButtonSkin4;
+    public Sprite buyItemButtonSkin4FR;
+    public Sprite buyItemButtonSkin4ENG;
+    public Sprite chooseItemButtonSkin4FR;
+    public Sprite chooseItemButtonSkin4ENG;
+    public Sprite tutorialButtonSkin4FR;
+    public Sprite tutorialButtonSkin4ENG;
     public Sprite closeTutorialButtonSkin4;
 
 
@@ -161,10 +172,11 @@ public class EconomyManager : MonoBehaviour {
 
     public void ChangerLangage()
     {
-        if (langage != 1)
-        {
-            PlayerPrefs.SetInt("choixLangage", langage);
 
+        langage = PlayerPrefs.GetInt("choixLangage");
+
+        if (langage == 0)
+        {
             tutorialTextUp.text = "Pour faire pivoter le cube, faites glisser votre doigt dans la direction des flèches indiquées.";
             tutorialTextDown.text = "Faites correspondre les couleurs des faces du cube avec celles des objets arrivants pour gagner des points.";
             highScoreText.text = "MEILLEUR SCORE : ";
@@ -173,13 +185,87 @@ public class EconomyManager : MonoBehaviour {
             recompenseArgent.text = "1700 pièces";
             recompenseOr.text = "4800 pièces";
 
-            langage = 1;
+            if (activateItem1Bool == 1) // SI SKIN 1 ET LANGUE FR
+            {
+                playButton.image.overrideSprite = playButtonSkin1FR;
+
+
+                tutorialButton.image.overrideSprite = tutorialButtonSkin1FR;
+
+                buyItem2Button.image.overrideSprite = buyItemButtonSkin1FR;
+                buyItem3Button.image.overrideSprite = buyItemButtonSkin1FR;
+
+                chooseItem2Button.image.overrideSprite = chooseItemButtonSkin1FR;
+                chooseItem3Button.image.overrideSprite = chooseItemButtonSkin1FR;
+                chooseItem4Button.image.overrideSprite = chooseItemButtonSkin1FR;
+
+                langage = 1;
+                PlayerPrefs.SetInt("choixLangage", langage);
+            }
+
+            else if (activateItem2Bool == 1) // SI SKIN 2 ET LANGUE FR
+            {
+                //PlayerPrefs.SetInt("choixLangage", langage);
+
+                playButton.image.overrideSprite = playButtonSkin2FR;
+
+                tutorialButton.image.overrideSprite = tutorialButtonSkin2FR;
+
+                buyItem1Button.image.overrideSprite = buyItemButtonSkin2FR;
+                buyItem3Button.image.overrideSprite = buyItemButtonSkin2FR;
+
+                chooseItem1Button.image.overrideSprite = chooseItemButtonSkin2FR;
+                chooseItem3Button.image.overrideSprite = chooseItemButtonSkin2FR;
+                chooseItem4Button.image.overrideSprite = chooseItemButtonSkin2FR;
+
+                langage = 1;
+
+                PlayerPrefs.SetInt("choixLangage", langage);
+            }
+
+            else if (activateItem3Bool == 1) // SI SKIN 3 ET LANGUE FR
+            {
+                //   PlayerPrefs.SetInt("choixLangage", langage);
+
+                playButton.image.overrideSprite = playButtonSkin3FR;
+
+                tutorialButton.image.overrideSprite = tutorialButtonSkin3FR;
+
+                buyItem1Button.image.overrideSprite = buyItemButtonSkin3FR;
+                buyItem2Button.image.overrideSprite = buyItemButtonSkin3FR;
+
+                chooseItem1Button.image.overrideSprite = chooseItemButtonSkin3FR;
+                chooseItem2Button.image.overrideSprite = chooseItemButtonSkin3FR;
+                chooseItem4Button.image.overrideSprite = chooseItemButtonSkin3FR;
+
+                langage = 1;
+
+                PlayerPrefs.SetInt("choixLangage", langage);
+            }
+
+            else if (activateItem4Bool == 1) // SI SKIN 4 ET LANGUE FR
+            {
+                playButton.image.overrideSprite = playButtonSkin4FR;
+
+                tutorialButton.image.overrideSprite = tutorialButtonSkin4FR;
+
+                buyItem1Button.image.overrideSprite = buyItemButtonSkin4FR;
+                buyItem2Button.image.overrideSprite = buyItemButtonSkin4FR;
+                buyItem3Button.image.overrideSprite = buyItemButtonSkin4FR;
+
+                chooseItem1Button.image.overrideSprite = chooseItemButtonSkin4FR;
+                chooseItem2Button.image.overrideSprite = chooseItemButtonSkin4FR;
+                chooseItem3Button.image.overrideSprite = chooseItemButtonSkin4FR;
+
+                langage = 1;
+
+                PlayerPrefs.SetInt("choixLangage", langage);
+            }
+
         }
 
-       else if (langage == 1)
+        else if (langage == 1)
         {
-            PlayerPrefs.SetInt("choixLangage", langage);
-
             tutorialTextUp.text = "To rotate the cube, swipe your finger in direction of indicated arrows.";
             tutorialTextDown.text = "Make your cube's faces colors match with incoming items.";
             highScoreText.text = "HIGHSCORE : ";
@@ -188,8 +274,97 @@ public class EconomyManager : MonoBehaviour {
             recompenseArgent.text = "1700 coins";
             recompenseOr.text = "4800 coins";
 
-            langage = 0;
+             if (activateItem1Bool == 1) // SI SKIN 1 ET LANGUE ENG
+            {
+                // PlayerPrefs.SetInt("choixLangage", langage);
+
+                playButton.image.overrideSprite = playButtonSkin1ENG;
+
+                tutorialButton.image.overrideSprite = tutorialButtonSkin1ENG;
+
+                buyItem2Button.image.overrideSprite = buyItemButtonSkin1ENG;
+                buyItem3Button.image.overrideSprite = buyItemButtonSkin1ENG;
+
+                chooseItem2Button.image.overrideSprite = chooseItemButtonSkin1ENG;
+                chooseItem3Button.image.overrideSprite = chooseItemButtonSkin1ENG;
+                chooseItem4Button.image.overrideSprite = chooseItemButtonSkin1ENG;
+
+                langage = 0;
+
+                PlayerPrefs.SetInt("choixLangage", langage);
+            }
+
+
+
+            else if (activateItem2Bool == 1) // SI SKIN 2 ET LANGUE ENG
+            {
+                // PlayerPrefs.SetInt("choixLangage", langage);
+
+                playButton.image.overrideSprite = playButtonSkin2ENG;
+
+                tutorialButton.image.overrideSprite = tutorialButtonSkin2ENG;
+
+                buyItem1Button.image.overrideSprite = buyItemButtonSkin2ENG;
+                buyItem3Button.image.overrideSprite = buyItemButtonSkin2ENG;
+
+                chooseItem1Button.image.overrideSprite = chooseItemButtonSkin2ENG;
+                chooseItem3Button.image.overrideSprite = chooseItemButtonSkin2ENG;
+                chooseItem4Button.image.overrideSprite = chooseItemButtonSkin2ENG;
+
+                langage = 0;
+
+                PlayerPrefs.SetInt("choixLangage", langage);
+
+            }
+
+
+
+            else if (activateItem3Bool == 1) // SI SKIN 3 ET LANGUE ENG
+            {
+                playButton.image.overrideSprite = playButtonSkin3ENG;
+
+                tutorialButton.image.overrideSprite = tutorialButtonSkin3ENG;
+
+                buyItem1Button.image.overrideSprite = buyItemButtonSkin3ENG;
+                buyItem2Button.image.overrideSprite = buyItemButtonSkin3ENG;
+
+                chooseItem1Button.image.overrideSprite = chooseItemButtonSkin3ENG;
+                chooseItem2Button.image.overrideSprite = chooseItemButtonSkin3ENG;
+                chooseItem4Button.image.overrideSprite = chooseItemButtonSkin3ENG;
+
+                langage = 0;
+
+                PlayerPrefs.SetInt("choixLangage", langage);
+            }
+
+
+
+            else if (activateItem4Bool == 1)
+            {
+                playButton.image.overrideSprite = playButtonSkin4ENG;
+
+                tutorialButton.image.overrideSprite = tutorialButtonSkin4ENG;
+
+                buyItem1Button.image.overrideSprite = buyItemButtonSkin4ENG;
+                buyItem2Button.image.overrideSprite = buyItemButtonSkin4ENG;
+                buyItem3Button.image.overrideSprite = buyItemButtonSkin4ENG;
+
+                chooseItem1Button.image.overrideSprite = chooseItemButtonSkin4ENG;
+                chooseItem2Button.image.overrideSprite = chooseItemButtonSkin4ENG;
+                chooseItem3Button.image.overrideSprite = chooseItemButtonSkin4ENG;
+
+                langage = 0;
+
+                PlayerPrefs.SetInt("choixLangage", langage);
+            }
+
         }
+
+       
+      
+       
+
+        
     }
 
 
@@ -208,7 +383,15 @@ public class EconomyManager : MonoBehaviour {
     // Use this for initialization
     void Start ()
     {
+
+        currentMoney = PlayerPrefs.GetInt("currentMoney");
         langage = PlayerPrefs.GetInt("choixLangage");
+
+        if (langage != 0 && langage !=1)
+        {
+            langage = 0;
+            PlayerPrefs.SetInt("choixLangage", langage);
+        }
 
         ChangerLangage();
         
@@ -295,9 +478,11 @@ public class EconomyManager : MonoBehaviour {
     void Update ()
     {
 
+     
 
         currentMoney = PlayerPrefs.GetInt("currentMoney");
         moneyText.text = currentMoney.ToString();
+
         if (Input.GetKeyDown("c")) // Ajoute monnaie au joueur
         {
             currentMoney = currentMoney + 250;
@@ -315,6 +500,7 @@ public class EconomyManager : MonoBehaviour {
             buyItem1Bool = 0;
             buyItem2Bool = 0;
             buyItem3Bool = 0;
+            langage = 0;
             PlayerPrefs.SetInt("currentMoney", currentMoney);
             PlayerPrefs.SetInt("boolean1", activateItem1Bool);
             PlayerPrefs.SetInt("boolean2", activateItem2Bool);
@@ -323,6 +509,7 @@ public class EconomyManager : MonoBehaviour {
             PlayerPrefs.SetInt("EspaceVert", buyItem1Bool);
             PlayerPrefs.SetInt("EspaceRouge", buyItem2Bool);
             PlayerPrefs.SetInt("EspacePixel", buyItem3Bool);
+            PlayerPrefs.SetInt("choixLangage", langage);
             Debug.Log("jeu reinitialise");
         }
 
@@ -401,39 +588,12 @@ public void BuyItem1() // ACHETER SKIN 1
         PlayerPrefs.SetInt("boolean4", activateItem4Bool);
 
         ChooseItemButtonFunction();
+
         langage = PlayerPrefs.GetInt("choixLangage");
 
-        if (langage == 0)
-        {
-            quitButton.image.overrideSprite = quitButtonSkin1FR;
-            playButton.image.overrideSprite = playButtonSkin1FR;
+        ChangerLangage();
 
-
-            tutorialButton.image.overrideSprite = tutorialButtonSkin1FR;
-
-            buyItem2Button.image.overrideSprite = buyItemButtonSkin1FR;
-            buyItem3Button.image.overrideSprite = buyItemButtonSkin1FR;
-
-            chooseItem2Button.image.overrideSprite = chooseItemButtonSkin1FR;
-            chooseItem3Button.image.overrideSprite = chooseItemButtonSkin1FR;
-            chooseItem4Button.image.overrideSprite = chooseItemButtonSkin1FR;
-          
-        }
-
-        if (langage == 1)
-        {
-            quitButton.image.overrideSprite = quitButtonSkin1ENG;
-            playButton.image.overrideSprite = playButtonSkin1ENG;
-
-            tutorialButton.image.overrideSprite = tutorialButtonSkin1ENG;
-
-            buyItem2Button.image.overrideSprite = buyItemButtonSkin1ENG;
-            buyItem3Button.image.overrideSprite = buyItemButtonSkin1ENG;
-
-            chooseItem2Button.image.overrideSprite = chooseItemButtonSkin1ENG;
-            chooseItem3Button.image.overrideSprite = chooseItemButtonSkin1ENG;
-            chooseItem4Button.image.overrideSprite = chooseItemButtonSkin1ENG;
-        }
+        quitButton.image.overrideSprite = quitButtonSkin1;
 
         shopButton.image.overrideSprite = shopButtonSkin1;
 
@@ -542,11 +702,11 @@ public void BuyItem1() // ACHETER SKIN 1
         
         RenderSettings.skybox = skyboxSkin2;
         quitButton.image.overrideSprite = quitButtonSkin2;
-        playButton.image.overrideSprite = playButtonSkin2;
+        playButton.image.overrideSprite = playButtonSkin2FR;
         shopButton.image.overrideSprite = shopButtonSkin2;
         closeShopButton.image.overrideSprite = closeShopButtonSkin2;
 
-        tutorialButton.image.overrideSprite = tutorialButtonSkin2;
+        tutorialButton.image.overrideSprite = tutorialButtonSkin2FR;
         tutorialTextUp.color = Color.red;
         tutorialTextDown.color = Color.red;
 
@@ -555,12 +715,12 @@ public void BuyItem1() // ACHETER SKIN 1
         moneyText.font = basicFont;
         highScoreText.font = basicFont;
 
-        buyItem1Button.image.overrideSprite = buyItemButtonSkin2;
-        buyItem3Button.image.overrideSprite = buyItemButtonSkin2;
+        buyItem1Button.image.overrideSprite = buyItemButtonSkin2FR;
+        buyItem3Button.image.overrideSprite = buyItemButtonSkin2FR;
 
-        chooseItem1Button.image.overrideSprite = chooseItemButtonSkin2;
-        chooseItem3Button.image.overrideSprite = chooseItemButtonSkin2;
-        chooseItem4Button.image.overrideSprite = chooseItemButtonSkin2;
+        chooseItem1Button.image.overrideSprite = chooseItemButtonSkin2FR;
+        chooseItem3Button.image.overrideSprite = chooseItemButtonSkin2FR;
+        chooseItem4Button.image.overrideSprite = chooseItemButtonSkin2FR;
 
         //achatBronze.color = Color.red;
         //achatBronze.font = basicFont;
@@ -656,11 +816,11 @@ public void BuyItem1() // ACHETER SKIN 1
 
         RenderSettings.skybox = skyboxSkin3;
         quitButton.image.overrideSprite = quitButtonSkin3;
-        playButton.image.overrideSprite = playButtonSkin3;
+        playButton.image.overrideSprite = playButtonSkin3FR;
         shopButton.image.overrideSprite = shopButtonSkin3;
         closeShopButton.image.overrideSprite = closeShopButtonSkin3;
 
-        tutorialButton.image.overrideSprite = tutorialButtonSkin3;
+        tutorialButton.image.overrideSprite = tutorialButtonSkin3FR;
         tutorialTextDown.color = Color.white;
         tutorialTextUp.color = Color.white;
 
@@ -674,12 +834,12 @@ public void BuyItem1() // ACHETER SKIN 1
         moneyText.font = pixelFont;
         highScoreText.font = pixelFont;
 
-        buyItem1Button.image.overrideSprite = buyItemButtonSkin3;
-        buyItem2Button.image.overrideSprite = buyItemButtonSkin3;
+        buyItem1Button.image.overrideSprite = buyItemButtonSkin3FR;
+        buyItem2Button.image.overrideSprite = buyItemButtonSkin3FR;
 
-        chooseItem1Button.image.overrideSprite = chooseItemButtonSkin3;
-        chooseItem2Button.image.overrideSprite = chooseItemButtonSkin3;
-        chooseItem4Button.image.overrideSprite = chooseItemButtonSkin3;
+        chooseItem1Button.image.overrideSprite = chooseItemButtonSkin3FR;
+        chooseItem2Button.image.overrideSprite = chooseItemButtonSkin3FR;
+        chooseItem4Button.image.overrideSprite = chooseItemButtonSkin3FR;
 
         //achatBronze.color = Color.white;
         //achatBronze.font = pixelFont;
@@ -747,11 +907,11 @@ public void BuyItem1() // ACHETER SKIN 1
 
         RenderSettings.skybox = skyboxSkin4;
         quitButton.image.overrideSprite = quitButtonSkin4;
-        playButton.image.overrideSprite = playButtonSkin4;
+        playButton.image.overrideSprite = playButtonSkin4FR;
         shopButton.image.overrideSprite = shopButonSkin4;
         closeShopButton.image.overrideSprite = closeShopButtonSkin4;
 
-        tutorialButton.image.overrideSprite = tutorialButtonSkin4;
+        tutorialButton.image.overrideSprite = tutorialButtonSkin4FR;
         tutorialTextUp.color = Color.white;
         tutorialTextDown.color = Color.white;
 
@@ -760,13 +920,13 @@ public void BuyItem1() // ACHETER SKIN 1
         moneyText.font = basicFont;
         highScoreText.font = basicFont;
 
-        buyItem1Button.image.overrideSprite = buyItemButtonSkin4;
-        buyItem2Button.image.overrideSprite = buyItemButtonSkin4;
-        buyItem3Button.image.overrideSprite = buyItemButtonSkin4;
+        buyItem1Button.image.overrideSprite = buyItemButtonSkin4FR;
+        buyItem2Button.image.overrideSprite = buyItemButtonSkin4FR;
+        buyItem3Button.image.overrideSprite = buyItemButtonSkin4FR;
 
-        chooseItem1Button.image.overrideSprite = chooseItemButtonSkin4;
-        chooseItem2Button.image.overrideSprite = chooseItemButtonSkin4;
-        chooseItem3Button.image.overrideSprite = chooseItemButtonSkin4;
+        chooseItem1Button.image.overrideSprite = chooseItemButtonSkin4FR;
+        chooseItem2Button.image.overrideSprite = chooseItemButtonSkin4FR;
+        chooseItem3Button.image.overrideSprite = chooseItemButtonSkin4FR;
 
         //achatBronze.color = Color.white;
         //achatBronze.font = basicFont;
@@ -969,7 +1129,7 @@ public void BuyItem1() // ACHETER SKIN 1
     }
 
     public int GetMoney () {
-
+        currentMoney = PlayerPrefs.GetInt("currentMoney");
         return currentMoney;
     }
 
