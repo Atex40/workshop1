@@ -122,9 +122,9 @@ public void LooseLife (){
     void CoinsAffichage () {
 
         //currentMoney = currentMoney + EconomyManager.Instance().GetMoney();
-        currentMoney += addscore;
+        currentMoney += 1;
         PlayerPrefs.SetInt("currentMoney", currentMoney);
-    picesGagnees.text = "Pieces Totales	 : " + currentMoney.ToString();
+    	picesGagnees.text = "Pieces Totales	 : " + currentMoney.ToString();
         
     	
     }
