@@ -67,12 +67,12 @@ public class AttractObject : MonoBehaviour {
 
      	if (UImanag.Instance().ScoreSpeed() >= 1000)
      	{
-     		speed = 20f;
+     		speed = 5f;
      	}
 
      	if (UImanag.Instance().ScoreSpeed() >= 2000)
      	{
-     		speed = 30f;
+     		speed = 10f;
      	}
 
      	if (UImanag.Instance().ScoreSpeed() >= 3000)
