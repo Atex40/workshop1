@@ -94,6 +94,10 @@ public class EconomyManager : MonoBehaviour {
 
     private int langage;
 
+    public Button langageButton;
+    public Sprite langageButtonFR;
+    public Sprite langageButtonENG;
+
 
     // SKIN 1 : ESPACE VERT
     public Sprite quitButtonSkin1;
@@ -174,6 +178,16 @@ public class EconomyManager : MonoBehaviour {
     {
 
         langage = PlayerPrefs.GetInt("choixLangage");
+
+        if (langage == 1)
+        {
+            langageButton.image.overrideSprite = langageButtonFR;
+        }
+
+        if (langage == 0)
+        {
+            langageButton.image.overrideSprite = langageButtonENG;           
+        }
 
         if (langage == 1)
         {
@@ -390,7 +404,9 @@ public class EconomyManager : MonoBehaviour {
         if (langage != 0 && langage !=1)
         {
             langage = 0;
+           // highScoreText.text = "MEILLEUR SCORE : ";
             PlayerPrefs.SetInt("choixLangage", langage);
+
         }
 
         ChangerLangage();
@@ -590,19 +606,56 @@ public void BuyItem1() // ACHETER SKIN 1
 
         ChooseItemButtonFunction();
 
-        playButton.image.overrideSprite = playButtonSkin1FR;
+        if (langage == 0)
+        {
+            langageButton.image.overrideSprite = langageButtonFR;
+
+            tutorialTextUp.text = "Pour faire pivoter le cube, faites glisser votre doigt dans la direction des flèches indiquées.";
+            tutorialTextDown.text = "Faites correspondre les couleurs des faces du cube avec celles des objets arrivants pour gagner des points.";
+            highScoreText.text = "MEILLEUR SCORE : ";
+            infoItem4Text.text = "DEFAUT";
+            recompenseBronze.text = "500 pièces";
+            recompenseArgent.text = "1700 pièces";
+            recompenseOr.text = "4800 pièces";
+
+            playButton.image.overrideSprite = playButtonSkin1FR;
+            tutorialButton.image.overrideSprite = tutorialButtonSkin1FR;
+
+            buyItem2Button.image.overrideSprite = buyItemButtonSkin1FR;
+            buyItem3Button.image.overrideSprite = buyItemButtonSkin1FR;
+
+            chooseItem2Button.image.overrideSprite = chooseItemButtonSkin1FR;
+            chooseItem3Button.image.overrideSprite = chooseItemButtonSkin1FR;
+            chooseItem4Button.image.overrideSprite = chooseItemButtonSkin1FR;
+        }
+
+        else if (langage == 1)
+        {
+
+            langageButton.image.overrideSprite = langageButtonENG;
+
+            tutorialTextUp.text = "To rotate the cube, swipe your finger in direction of indicated arrows.";
+            tutorialTextDown.text = "Make your cube's faces colors match with incoming items.";
+            highScoreText.text = "HIGHSCORE : ";
+            infoItem4Text.text = "DEFAULT";
+            recompenseBronze.text = "500 coins";
+            recompenseArgent.text = "1700 coins";
+            recompenseOr.text = "4800 coins";
+
+            playButton.image.overrideSprite = playButtonSkin1ENG;
+            tutorialButton.image.overrideSprite = tutorialButtonSkin1ENG;
+
+            buyItem2Button.image.overrideSprite = buyItemButtonSkin1ENG;
+            buyItem3Button.image.overrideSprite = buyItemButtonSkin1ENG;
+
+            chooseItem2Button.image.overrideSprite = chooseItemButtonSkin1ENG;
+            chooseItem3Button.image.overrideSprite = chooseItemButtonSkin1ENG;
+            chooseItem4Button.image.overrideSprite = chooseItemButtonSkin1ENG;
+        }
+
         quitButton.image.overrideSprite = quitButtonSkin1;
-
-        tutorialButton.image.overrideSprite = tutorialButtonSkin1FR;
-
-        shopButton.image.overrideSprite = shopButtonSkin1;
-
-        buyItem2Button.image.overrideSprite = buyItemButtonSkin1FR;
-        buyItem3Button.image.overrideSprite = buyItemButtonSkin1FR;
-
-        chooseItem2Button.image.overrideSprite = chooseItemButtonSkin1FR;
-        chooseItem3Button.image.overrideSprite = chooseItemButtonSkin1FR;
-        chooseItem4Button.image.overrideSprite = chooseItemButtonSkin1FR;
+        
+        shopButton.image.overrideSprite = shopButtonSkin1;    
 
         closeTutorialButton.image.overrideSprite = closeTutorialButtonSkin1;
         closeShopButton.image.overrideSprite = closeShopButtonSkin1;
@@ -706,14 +759,60 @@ public void BuyItem1() // ACHETER SKIN 1
         PlayerPrefs.SetInt("boolean4", activateItem4Bool);
 
         ChooseItemButtonFunction();
-        
+
+        if (langage == 0)
+        {
+
+            langageButton.image.overrideSprite = langageButtonFR;
+
+            tutorialTextUp.text = "Pour faire pivoter le cube, faites glisser votre doigt dans la direction des flèches indiquées.";
+            tutorialTextDown.text = "Faites correspondre les couleurs des faces du cube avec celles des objets arrivants pour gagner des points.";
+            highScoreText.text = "MEILLEUR SCORE : ";
+            infoItem4Text.text = "DEFAUT";
+            recompenseBronze.text = "500 pièces";
+            recompenseArgent.text = "1700 pièces";
+            recompenseOr.text = "4800 pièces";
+
+            playButton.image.overrideSprite = playButtonSkin2FR;
+            tutorialButton.image.overrideSprite = tutorialButtonSkin2FR;
+
+            buyItem1Button.image.overrideSprite = buyItemButtonSkin2FR;
+            buyItem3Button.image.overrideSprite = buyItemButtonSkin2FR;
+
+            chooseItem1Button.image.overrideSprite = chooseItemButtonSkin2FR;
+            chooseItem3Button.image.overrideSprite = chooseItemButtonSkin2FR;
+            chooseItem4Button.image.overrideSprite = chooseItemButtonSkin2FR;
+        }
+
+        else if (langage == 1)
+        {
+
+            langageButton.image.overrideSprite = langageButtonENG;
+
+            tutorialTextUp.text = "To rotate the cube, swipe your finger in direction of indicated arrows.";
+            tutorialTextDown.text = "Make your cube's faces colors match with incoming items.";
+            highScoreText.text = "HIGHSCORE : ";
+            infoItem4Text.text = "DEFAULT";
+            recompenseBronze.text = "500 coins";
+            recompenseArgent.text = "1700 coins";
+            recompenseOr.text = "4800 coins";
+
+            playButton.image.overrideSprite = playButtonSkin2ENG;
+            tutorialButton.image.overrideSprite = tutorialButtonSkin2ENG;
+
+            buyItem1Button.image.overrideSprite = buyItemButtonSkin2ENG;
+            buyItem3Button.image.overrideSprite = buyItemButtonSkin2ENG;
+
+            chooseItem1Button.image.overrideSprite = chooseItemButtonSkin2ENG;
+            chooseItem3Button.image.overrideSprite = chooseItemButtonSkin2ENG;
+            chooseItem4Button.image.overrideSprite = chooseItemButtonSkin2ENG;
+        }
+
         RenderSettings.skybox = skyboxSkin2;
         quitButton.image.overrideSprite = quitButtonSkin2;
-        playButton.image.overrideSprite = playButtonSkin2FR;
         shopButton.image.overrideSprite = shopButtonSkin2;
         closeShopButton.image.overrideSprite = closeShopButtonSkin2;
 
-        tutorialButton.image.overrideSprite = tutorialButtonSkin2FR;
         tutorialTextUp.color = Color.red;
         tutorialTextDown.color = Color.red;
 
@@ -722,12 +821,6 @@ public void BuyItem1() // ACHETER SKIN 1
         moneyText.font = basicFont;
         highScoreText.font = basicFont;
 
-        buyItem1Button.image.overrideSprite = buyItemButtonSkin2FR;
-        buyItem3Button.image.overrideSprite = buyItemButtonSkin2FR;
-
-        chooseItem1Button.image.overrideSprite = chooseItemButtonSkin2FR;
-        chooseItem3Button.image.overrideSprite = chooseItemButtonSkin2FR;
-        chooseItem4Button.image.overrideSprite = chooseItemButtonSkin2FR;
 
         //achatBronze.color = Color.red;
         //achatBronze.font = basicFont;
@@ -821,32 +914,69 @@ public void BuyItem1() // ACHETER SKIN 1
 
         ChooseItemButtonFunction();
 
+        if (langage == 0)
+        {
+
+            langageButton.image.overrideSprite = langageButtonFR;
+
+            tutorialTextUp.text = "Pour faire pivoter le cube, faites glisser votre doigt dans la direction des flèches indiquées.";
+            tutorialTextDown.text = "Faites correspondre les couleurs des faces du cube avec celles des objets arrivants pour gagner des points.";
+            highScoreText.text = "MEILLEUR SCORE : ";
+            infoItem4Text.text = "DEFAUT";
+            recompenseBronze.text = "500 pièces";
+            recompenseArgent.text = "1700 pièces";
+            recompenseOr.text = "4800 pièces";
+
+            playButton.image.overrideSprite = playButtonSkin3FR;
+            tutorialButton.image.overrideSprite = tutorialButtonSkin3FR;
+
+            buyItem1Button.image.overrideSprite = buyItemButtonSkin3FR;
+            buyItem2Button.image.overrideSprite = buyItemButtonSkin3FR;
+
+            chooseItem1Button.image.overrideSprite = chooseItemButtonSkin3FR;
+            chooseItem2Button.image.overrideSprite = chooseItemButtonSkin3FR;
+            chooseItem4Button.image.overrideSprite = chooseItemButtonSkin3FR;
+        }
+
+        else if (langage == 1)
+        {
+
+            langageButton.image.overrideSprite = langageButtonENG;
+
+            tutorialTextUp.text = "To rotate the cube, swipe your finger in direction of indicated arrows.";
+            tutorialTextDown.text = "Make your cube's faces colors match with incoming items.";
+            highScoreText.text = "HIGHSCORE : ";
+            infoItem4Text.text = "DEFAULT";
+            recompenseBronze.text = "500 coins";
+            recompenseArgent.text = "1700 coins";
+            recompenseOr.text = "4800 coins";
+
+            playButton.image.overrideSprite = playButtonSkin3ENG;
+            tutorialButton.image.overrideSprite = tutorialButtonSkin3ENG;
+
+            buyItem1Button.image.overrideSprite = buyItemButtonSkin3ENG;
+            buyItem2Button.image.overrideSprite = buyItemButtonSkin3ENG;
+
+            chooseItem1Button.image.overrideSprite = chooseItemButtonSkin3ENG;
+            chooseItem2Button.image.overrideSprite = chooseItemButtonSkin3ENG;
+            chooseItem4Button.image.overrideSprite = chooseItemButtonSkin3ENG;
+        }
+
         RenderSettings.skybox = skyboxSkin3;
         quitButton.image.overrideSprite = quitButtonSkin3;
-        playButton.image.overrideSprite = playButtonSkin3FR;
         shopButton.image.overrideSprite = shopButtonSkin3;
         closeShopButton.image.overrideSprite = closeShopButtonSkin3;
 
-        tutorialButton.image.overrideSprite = tutorialButtonSkin3FR;
         tutorialTextDown.color = Color.white;
         tutorialTextUp.color = Color.white;
 
-        tutorialTextUp.font = basicFont;
-        tutorialTextDown.font = basicFont;
-        moneyText.font = basicFont;
-        highScoreText.font = basicFont;
 
         tutorialTextDown.font = pixelFont;
         tutorialTextUp.font = pixelFont;
         moneyText.font = pixelFont;
         highScoreText.font = pixelFont;
 
-        buyItem1Button.image.overrideSprite = buyItemButtonSkin3FR;
-        buyItem2Button.image.overrideSprite = buyItemButtonSkin3FR;
 
-        chooseItem1Button.image.overrideSprite = chooseItemButtonSkin3FR;
-        chooseItem2Button.image.overrideSprite = chooseItemButtonSkin3FR;
-        chooseItem4Button.image.overrideSprite = chooseItemButtonSkin3FR;
 
         //achatBronze.color = Color.white;
         //achatBronze.font = pixelFont;
@@ -912,13 +1042,63 @@ public void BuyItem1() // ACHETER SKIN 1
 
         ChooseItemButtonFunction();
 
+        ChooseItemButtonFunction();
+
+        if (langage == 0)
+        {
+            
+            langageButton.image.overrideSprite = langageButtonFR;
+
+            tutorialTextUp.text = "Pour faire pivoter le cube, faites glisser votre doigt dans la direction des flèches indiquées.";
+            tutorialTextDown.text = "Faites correspondre les couleurs des faces du cube avec celles des objets arrivants pour gagner des points.";
+            highScoreText.text = "MEILLEUR SCORE : ";
+            infoItem4Text.text = "DEFAUT";
+            recompenseBronze.text = "500 pièces";
+            recompenseArgent.text = "1700 pièces";
+            recompenseOr.text = "4800 pièces";
+
+            playButton.image.overrideSprite = playButtonSkin4FR;
+            tutorialButton.image.overrideSprite = tutorialButtonSkin4FR;
+
+            buyItem1Button.image.overrideSprite = buyItemButtonSkin4FR;
+            buyItem2Button.image.overrideSprite = buyItemButtonSkin4FR;
+
+            chooseItem1Button.image.overrideSprite = chooseItemButtonSkin4FR;
+            chooseItem2Button.image.overrideSprite = chooseItemButtonSkin4FR;
+            chooseItem4Button.image.overrideSprite = chooseItemButtonSkin4FR;
+        }
+
+        else if (langage == 1)
+        {
+
+            langageButton.image.overrideSprite = langageButtonENG;
+
+            tutorialTextUp.text = "To rotate the cube, swipe your finger in direction of indicated arrows.";
+            tutorialTextDown.text = "Make your cube's faces colors match with incoming items.";
+            highScoreText.text = "HIGHSCORE : ";
+            infoItem4Text.text = "DEFAULT";
+            recompenseBronze.text = "500 coins";
+            recompenseArgent.text = "1700 coins";
+            recompenseOr.text = "4800 coins";
+
+            playButton.image.overrideSprite = playButtonSkin4ENG;
+            tutorialButton.image.overrideSprite = tutorialButtonSkin4ENG;
+
+            buyItem1Button.image.overrideSprite = buyItemButtonSkin4ENG;
+            buyItem2Button.image.overrideSprite = buyItemButtonSkin4ENG;
+            buyItem3Button.image.overrideSprite = buyItemButtonSkin4ENG;
+
+            chooseItem1Button.image.overrideSprite = chooseItemButtonSkin4ENG;
+            chooseItem2Button.image.overrideSprite = chooseItemButtonSkin4ENG;
+            chooseItem3Button.image.overrideSprite = chooseItemButtonSkin4ENG;
+        }
+
+
         RenderSettings.skybox = skyboxSkin4;
         quitButton.image.overrideSprite = quitButtonSkin4;
-        playButton.image.overrideSprite = playButtonSkin4FR;
         shopButton.image.overrideSprite = shopButonSkin4;
         closeShopButton.image.overrideSprite = closeShopButtonSkin4;
 
-        tutorialButton.image.overrideSprite = tutorialButtonSkin4FR;
         tutorialTextUp.color = Color.white;
         tutorialTextDown.color = Color.white;
 
@@ -927,13 +1107,6 @@ public void BuyItem1() // ACHETER SKIN 1
         moneyText.font = basicFont;
         highScoreText.font = basicFont;
 
-        buyItem1Button.image.overrideSprite = buyItemButtonSkin4FR;
-        buyItem2Button.image.overrideSprite = buyItemButtonSkin4FR;
-        buyItem3Button.image.overrideSprite = buyItemButtonSkin4FR;
-
-        chooseItem1Button.image.overrideSprite = chooseItemButtonSkin4FR;
-        chooseItem2Button.image.overrideSprite = chooseItemButtonSkin4FR;
-        chooseItem3Button.image.overrideSprite = chooseItemButtonSkin4FR;
 
         //achatBronze.color = Color.white;
         //achatBronze.font = basicFont;
@@ -1047,7 +1220,9 @@ public void BuyItem1() // ACHETER SKIN 1
 
     public void AccepterAcheterBronze()
     {
+        currentMoney = PlayerPrefs.GetInt("currentMoney");
         currentMoney = currentMoney + 500;
+        PlayerPrefs.SetInt("currentMoney", currentMoney);
         thanksBronzePanel.SetActive(true);
         confirmerAchatBronzePanel.SetActive(false);
     }
@@ -1100,7 +1275,9 @@ public void BuyItem1() // ACHETER SKIN 1
 
     public void AccepterAcheterOr()
     {
+        currentMoney = PlayerPrefs.GetInt("currentMoney");
         currentMoney = currentMoney + 4800;
+        PlayerPrefs.SetInt("currentMoney", currentMoney);
         thanksOrPanel.SetActive(true);
         ConfirmerAchatOrPanel.SetActive(false);
     }
