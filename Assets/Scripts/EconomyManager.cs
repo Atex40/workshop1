@@ -339,7 +339,7 @@ public class EconomyManager : MonoBehaviour {
 
 
 
-            else if (activateItem4Bool == 1)
+            else if (activateItem4Bool == 1) // SI SKIN 3 ET LANGUE ENG
             {
                 playButton.image.overrideSprite = playButtonSkin4ENG;
 
@@ -589,10 +589,6 @@ public void BuyItem1() // ACHETER SKIN 1
         PlayerPrefs.SetInt("boolean4", activateItem4Bool);
 
         ChooseItemButtonFunction();
-
-        langage = PlayerPrefs.GetInt("choixLangage");
-
-        ChangerLangage();
 
         quitButton.image.overrideSprite = quitButtonSkin1;
 
