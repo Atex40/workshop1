@@ -204,7 +204,7 @@ Prefab:
     - target: {fileID: 114407904414922576, guid: bf16395e9471bac449626f801b9eb9c5,
         type: 2}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 224704540302850366, guid: bf16395e9471bac449626f801b9eb9c5,
         type: 2}
@@ -569,7 +569,7 @@ Prefab:
     - target: {fileID: 114407904414922576, guid: bf16395e9471bac449626f801b9eb9c5,
         type: 2}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
-      value: DeterminerLangage
+      value: PlaySelectSound
       objectReference: {fileID: 0}
     - target: {fileID: 114407904414922576, guid: bf16395e9471bac449626f801b9eb9c5,
         type: 2}

@@ -1528,6 +1528,11 @@ Prefab:
       propertyPath: atry
       value: 
       objectReference: {fileID: 1253882815}
+    - target: {fileID: 114817258755505410, guid: de399d78af44df74a95663e4ecae6e54,
+        type: 2}
+      propertyPath: turnSpeed
+      value: 650
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: de399d78af44df74a95663e4ecae6e54, type: 2}
   m_IsPrefabParent: 0
